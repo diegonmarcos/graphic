@@ -1,0 +1,8 @@
+{
+	"files.associations": {
+		"strings.h": "c",
+		"utils.h": "c",
+		"ft_mylib.h": "c",
+		"fdf.h": "c"
+	}
+}
