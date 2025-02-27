@@ -6,27 +6,22 @@
 #    By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/14 16:00:50 by dinepomu          #+#    #+#              #
-#    Updated: 2025/02/15 11:37:51 by dinepomu         ###   ########.fr        #
+#    Updated: 2025/02/27 11:55:55 by dinepomu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-UNAME_S := $(shell uname -s)
-MAKEFLAGS += --silent
-
-
-
+################################################################################
 ### VARIABELS ###
 
-NAME		:= fdf
+NAME			:= fdf
 
-SRC_DIR		:= src/
-OBJ_DIR		:= obj/
-CC			:= gcc
-CFLAGS		:= -g -O3 -Wall -Werror -Wextra
-#FSANITIZE	:= -fsanitize=address -g3
-FSANITIZE	:= 
-NOFLAGS		:= -g
-RM			:= rm -rf
+SRC_DIR			:= src/
+OBJ_DIR			:= obj/
+CC				:= gcc
+CFLAGS			:= -g -O3 -Wall -Werror -Wextra
+#FSANITIZE		:= -fsanitize=address -g3
+RM				:= rm -rf
+MAKEFLAGS 		+= --silent
 
 INC		 		:= inc/
 LIB				:= lib/
@@ -34,79 +29,71 @@ FT_MYLIB_NAME	:= ft_mylib
 FT_MYLIB_DIR	:= $(LIB)ft_mylib/
 FT_MYLIB		:= $(FT_MYLIB_DIR)libft_mylib.a
 
-ifeq ($(UNAME_S),Linux)
-	MINILIBX_DIR	:= $(LIB)minilibx/minilibx_linux/
-	#MINILIBX		:= $(MINILIBX_DIR)libmlx.a
-	MINILIBXCC		:= -I$(MINILIBX_DIR) -L $(MINILIBX_DIR) -lmlx
-	LIBS			:= -lXext -lX11 -lm
-else ifeq ($(UNAME_S),Darwin)
-	MINILIBX_DIR	:= $(LIB)minilibx/minilibx_macos/
-	#MINILIBX		:= $(MINILIBX_DIR)libmlx.a
-	MINILIBXCC		:= -I$(MINILIBX_DIR) -L $(MINILIBX_DIR) -lmlx
-	LIBS			:= -framework OpenGL -framework AppKit
-endif
+MINILIBX_DIR	:= $(LIB)minilibx/minilibx_linux/
+MINILIBXCC		:= -I$(MINILIBX_DIR) -L $(MINILIBX_DIR) -lmlx
+LIBS			:= -lXext -lX11 -lm
 
-HEADER 				:= -I$(INC) -I$(FT_MYLIB_DIR) -I$(MINILIBX_DIR)
-LIBRARIES			:= -L$(FT_MYLIB_DIR) -l$(FT_MYLIB_NAME) -L$(MINILIBX_DIR) -lmlx $(LIBS)
+HEADER 			:= -I$(INC) -I$(FT_MYLIB_DIR) -I$(MINILIBX_DIR)
+LIBRARIES		:= -L$(FT_MYLIB_DIR) -l$(FT_MYLIB_NAME) -L$(MINILIBX_DIR) -lmlx $(LIBS)
 
 
 
 
 
-
+################################################################################
 ### SOURCES ###
-SRC_FILES_MAIN	=						\
+SRC_FILES_MAIN		=						\
 					_main				
-SRC_FILES_SRC	= 						\
-					1...map_load \
-					1.0.load_mapini \
-					1.0.load_mapsize \
-					1.1.load_getpoints \
-					1.1.load_loadpoints \
-					1.2.load_colorize \
-					1.2.load_gopolar \
-					2...sys_ini \
-					3...map_draw \
-					3.1..draw_background \
-					3.2..draw_parsemap \
-					3.2.1.parse_geometry \
-					3.2.2.parse_matrix \
-					3.2.3.parse_scale \
-					3.3..draw_drawning \
-					3.3..drawning_gofit \
-					3.3.1.drawning_wired \
-					3.3.2.drawning_doted \
-					3.3.2.drawning_myputpixel \
-					3.4..draw_menu \
-					4...views_bonus \
-					5...control_keys \
-					5...control_keys2 \
-					5...control_mouse \
-					6...utils \
+SRC_FILES_SRC		= 						\
+					1___map_load 			\
+					1_0_load_mapini 		\
+					1_0_load_mapsize 		\
+					1_1_load_getpoints 		\
+					1_1_load_loadpoints 	\
+					1_2_load_colorize 		\
+					1_2_load_gopolar 		\
+					2___sys_ini 			\
+					3___map_draw 			\
+					3_1__draw_background 	\
+					3_2__draw_parsemap 		\
+					3_2_1_parse_geometry 	\
+					3_2_2_parse_matrix 		\
+					3_2_3_parse_scale 		\
+					3_3__draw_drawning 		\
+					3_3__drawning_gofit 	\
+					3_3_1_drawning_wired 	\
+					3_3_2_drawning_doted 	\
+					3_3_2_drawning_myputpixel \
+					3_4__draw_menu 			\
+					4___views_bonus 		\
+					5___control_keys 		\
+					5___control_keys2 		\
+					5___control_mouse 		\
+					6___utils 				\
 
-SRC_FILES	= $(SRC_FILES_MAIN) $(SRC_FILES_SRC)
+SRC_FILES			= $(SRC_FILES_MAIN) $(SRC_FILES_SRC)
 
-SRC 		= 	$(addprefix $(SRC_DIR), $(addsuffix .c, $(SRC_FILES)))
-OBJ 		= 	$(addprefix $(OBJ_DIR), $(addsuffix .o, $(SRC_FILES)))
-DEPS 		= 	$(addprefix $(OBJ_DIR), $(addsuffix .d, $(SRC_FILES)))
-INCS		= 	$(addprefix $(INCLUDE), $(addsuffix .h, $(INC_FILES)))
+SRC 				= 	$(addprefix $(SRC_DIR), $(addsuffix .c, $(SRC_FILES)))
+OBJ 				= 	$(addprefix $(OBJ_DIR), $(addsuffix .o, $(SRC_FILES)))
+DEPS 				= 	$(addprefix $(OBJ_DIR), $(addsuffix .d, $(SRC_FILES)))
+INCS				= 	$(addprefix $(INCLUDE), $(addsuffix .h, $(INC_FILES)))
 ###
 
-OBJF		=	.cache_exists
+OBJF				=	.cache_exists
 
 ### SUBMODULES ###
-MINILIBX_CODAM_URL = https://github.com/codam-coding-college/MLX42.git
-MINILIBX_CODAM_DIR = lib/minilibx/minilibx_codam
+MINILIBX_CODAM_URL	= https://github.com/codam-coding-college/MLX42.git
+MINILIBX_CODAM_DIR	= lib/minilibx/minilibx_codam
 
-MINILIBX_LINUX_URL = https://github.com/42Paris/minilibx-linux.git
-MINILIBX_LINUX_DIR = lib/minilibx/minilibx_linux
-
-
+MINILIBX_LINUX_URL	= https://github.com/42Paris/minilibx-linux.git
+MINILIBX_LINUX_DIR	= lib/minilibx/minilibx_linux
 
 
 
 
 
+
+################################################################################
 ### RULES ###
 all:	mkdir clone_repos makelibs $(NAME)
 
@@ -146,7 +133,7 @@ bonus:
 
 
 
-
+################################################################################
 ### CLEANERS ###
 clean:
 #			make clean -C $(FT_MYLIB_DIR)
@@ -179,7 +166,7 @@ fclean_all: fclean
 .PHONY:		all clean fclean re norm mkdir
 
 
-
+################################################################################
 ### TESTERS ###
 
 valgrind:	all
@@ -196,7 +183,7 @@ valgrind:	all
 
 
 
-
+################################################################################
 ### HELPERS ###
 mkdir:
 	mkdir -p $(OBJ_DIR)
@@ -213,6 +200,7 @@ helper:
 	printf "	- maps/...\n"	
 
 
+################################################################################
 ### COLORS ###
 DEF_COLOR = \033[0;39m
 GRAY = \033[0;90m
