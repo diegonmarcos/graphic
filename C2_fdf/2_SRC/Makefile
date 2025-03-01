@@ -6,7 +6,7 @@
 #    By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/14 16:00:50 by dinepomu          #+#    #+#              #
-#    Updated: 2025/02/27 11:55:55 by dinepomu         ###   ########.fr        #
+#    Updated: 2025/03/01 12:44:34 by dinepomu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,21 +19,18 @@ SRC_DIR			:= src/
 OBJ_DIR			:= obj/
 CC				:= gcc
 CFLAGS			:= -g -O3 -Wall -Werror -Wextra
-#FSANITIZE		:= -fsanitize=address -g3
 RM				:= rm -rf
 MAKEFLAGS 		+= --silent
 
-INC		 		:= inc/
-LIB				:= lib/
-FT_MYLIB_NAME	:= ft_mylib
-FT_MYLIB_DIR	:= $(LIB)ft_mylib/
-FT_MYLIB		:= $(FT_MYLIB_DIR)libft_mylib.a
+FT_MYLIB_NAME	:= mylibc
+FT_MYLIB_DIR	:= libs/mylibc/
+FT_MYLIB		:= $(FT_MYLIB_DIR)mylibc.a
 
-MINILIBX_DIR	:= $(LIB)minilibx/minilibx_linux/
+MINILIBX_DIR	:= libs/minilibx/minilibx_linux/
 MINILIBXCC		:= -I$(MINILIBX_DIR) -L $(MINILIBX_DIR) -lmlx
 LIBS			:= -lXext -lX11 -lm
 
-HEADER 			:= -I$(INC) -I$(FT_MYLIB_DIR) -I$(MINILIBX_DIR)
+HEADER 			:= -Iinc -I$(FT_MYLIB_DIR) -I$(MINILIBX_DIR)
 LIBRARIES		:= -L$(FT_MYLIB_DIR) -l$(FT_MYLIB_NAME) -L$(MINILIBX_DIR) -lmlx $(LIBS)
 
 
@@ -83,10 +80,10 @@ OBJF				=	.cache_exists
 
 ### SUBMODULES ###
 MINILIBX_CODAM_URL	= https://github.com/codam-coding-college/MLX42.git
-MINILIBX_CODAM_DIR	= lib/minilibx/minilibx_codam
+MINILIBX_CODAM_DIR	= libs/minilibx/minilibx_codam
 
 MINILIBX_LINUX_URL	= https://github.com/42Paris/minilibx-linux.git
-MINILIBX_LINUX_DIR	= lib/minilibx/minilibx_linux
+MINILIBX_LINUX_DIR	= libs/minilibx/minilibx_linux
 
 
 
@@ -98,8 +95,8 @@ MINILIBX_LINUX_DIR	= lib/minilibx/minilibx_linux
 all:	mkdir clone_repos makelibs $(NAME)
 
 #### Clone Repos ####
-clone_repos: mkdir lib/minilibx/minilibx_linux
-lib/minilibx/minilibx_linux:
+clone_repos: mkdir libs/minilibx/minilibx_linux
+libs/minilibx/minilibx_linux:
 	git clone $(MINILIBX_CODAM_URL) $(MINILIBX_CODAM_DIR)
 	git clone $(MINILIBX_LINUX_URL) $(MINILIBX_LINUX_DIR)
 
@@ -137,11 +134,11 @@ bonus:
 ### CLEANERS ###
 clean:
 #			make clean -C $(FT_MYLIB_DIR)
-			@echo "$(CYAN)ft_mylib object and dependency files cleaned.$(DEF_COLOR)"
+			@echo "$(CYAN)ft_mylib object and dependency files deleted.$(DEF_COLOR)"
 			make clean -C $(MINILIBX_DIR)
-			@echo "$(CYAN)Minilibx object files cleaned.$(DEF_COLOR)"	
+			@echo "$(CYAN)Minilibx object files deleted.$(DEF_COLOR)"	
 			$(RM) -rf $(OBJ_DIR)
-			@echo "$(CYAN)Fdf object files cleaned!$(DEF_COLOR)"
+			@echo "$(CYAN)Object files deleted!$(DEF_COLOR)"
 
 fclean:		clean
 #			make fclean -C $(FT_MYLIB_DIR)
@@ -149,19 +146,16 @@ fclean:		clean
 			$(RM) -f $(MINILIBX_DIR)libmlx.a
 			@echo "$(CYAN)libmlx.a lib cleaned!$(DEF_COLOR)"			
 			$(RM) -f $(NAME)
-			@echo "$(CYAN)Fdf executable files cleaned!$(DEF_COLOR)"
+			@echo "$(CYAN)files cleaned!$(DEF_COLOR)"
 			rm -rf log
 
 
 re:			fclean all
 			@$(MAKE)	
-			@echo "$(GREEN)Cleaned and rebuilt everything for Fdf!$(DEF_COLOR)"
-
-norm:
-			@norminette $(SRC) $(INCLUDE) | grep -v Norme -B1 || true
+			@echo "$(GREEN)Rebuilded!$(DEF_COLOR)"
 
 fclean_all: fclean
-			$(RM) lib/minilibx
+			$(RM) libs/minilibx
 
 .PHONY:		all clean fclean re norm mkdir
 
@@ -181,17 +175,19 @@ valgrind:	all
 			| tee log/valgrind_sum2.log \
 
 
-
+normimette:
+			@echo "$(CYAN)Norminette:$(DEF_COLOR)"
+			@norminette $(SRC) $(INCLUDE) | grep -v Norme -B1 || true
 
 ################################################################################
 ### HELPERS ###
 mkdir:
 	mkdir -p $(OBJ_DIR)
-	mkdir -p $(LIB)
+#	mkdir -p $(LIB)
 	mkdir -p $(FT_MYLIB_DIR)
 	mkdir -p log/2.Memory_Check/allocs
 
-helper:
+help:
 	printf "Usage: ./fdf [maps]\n\n"
 	printf "Maps:\n"
 	printf "	- maps/42.fdf\n"
