@@ -6,7 +6,7 @@
 #    By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/14 16:00:50 by dinepomu          #+#    #+#              #
-#    Updated: 2025/03/01 12:44:34 by dinepomu         ###   ########.fr        #
+#    Updated: 2025/03/01 13:48:15 by dinepomu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -85,14 +85,26 @@ MINILIBX_CODAM_DIR	= libs/minilibx/minilibx_codam
 MINILIBX_LINUX_URL	= https://github.com/42Paris/minilibx-linux.git
 MINILIBX_LINUX_DIR	= libs/minilibx/minilibx_linux
 
-
-
-
+MAP = 0
+MAPS = maps/$(MAP).fdf
+ifeq ($(MAP),earth)
+MAP1 = MGDS_WHOLE_WORLD_OCEAN0_L
+MAPS = maps/$(MAP1).fdf
+else ifeq ($(MAP),mars)
+MAP1 = mars_org
+MAPS = maps/$(MAP1).fdf
+else ifeq ($(MAP),fractol)
+MAP1 = julia
+MAPS = maps/$(MAP1).fdf
+else ifeq ($(MAP),mandel)
+MAP1 = mandelbrot
+MAPS = maps/$(MAP1).fdf
+endif
 
 
 ################################################################################
 ### RULES ###
-all:	mkdir clone_repos makelibs $(NAME)
+all:	mkdir clone_repos makelibs $(NAME) run
 
 #### Clone Repos ####
 clone_repos: mkdir libs/minilibx/minilibx_linux
@@ -114,7 +126,8 @@ endif
 $(NAME):	$(OBJ)		
 			$(CC) $(CFLAGS) $(FSANITIZE) $(OBJ) $(LIBRARIES) -o $(NAME)		
 			@echo " $(BLUE)$(CC) $(CFLAGS) $(FSANITIZE) $(OBJ) $(LIBRARIES) -o $(NAME)$(DEF_COLOR)"
-			@echo "$(GREEN)✨ FDF compiled!$(DEF_COLOR)"
+			@echo "$(GREEN) Bin Linked!$(DEF_COLOR)"
+			$(MAKE) run
 			
 $(OBJ_DIR)%.o: $(SRC_DIR)%.c $(INCS)
 			mkdir -p $(OBJ_DIR)
@@ -125,9 +138,10 @@ $(OBJ_DIR)%.o: $(SRC_DIR)%.c $(INCS)
 bonus:		
 			$(MAKE) all
 
-
-
-
+run:
+ifneq ($(MAP), 0)
+	./fdf $(MAPS)
+endif
 
 
 ################################################################################
