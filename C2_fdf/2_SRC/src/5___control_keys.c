@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   5...control_keys.c                                 :+:      :+:    :+:   */
+/*   5___control_keys.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 16:00:24 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/02/15 11:39:32 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/05 17:15:10 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ void	control_keys1(int key, t_meta *meta)
 			meta->map.zdivisor = meta->map.proportion * 30;
 		colorize(&meta->map);
 		draw_map(meta, FIT);
-	}	
+	}
 	if (key == KEY_C)
 	{
 		meta->map.source.axis[X] = ((WINX - MENU_WIDTH) / 2) + MENU_WIDTH;
@@ -69,7 +69,7 @@ void	control_keys1(int key, t_meta *meta)
 	{
 		parallel(&meta->map);
 		draw_map(meta, FIT);
-	}			
+	}
 }
 
 /* 
@@ -124,5 +124,5 @@ void	control_keys3(int key, t_meta *meta)
 	{
 		isometric(&meta->map);
 		draw_map(meta, FIT);
-	}			
+	}
 }
