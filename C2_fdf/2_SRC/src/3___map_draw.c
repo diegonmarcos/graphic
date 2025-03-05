@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   3...map_draw.c                                     :+:      :+:    :+:   */
+/*   3___map_draw.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 15:58:57 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/02/15 09:53:55 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/05 13:15:45 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,32 @@
 
 /* 
 *	This function draw the proyection of map->points acording all
+/**
+ * @file 3___map_draw.c
+ * @brief This file contains functions and logic for drawing maps in the application.
+ * 
+ * This source file is part of the map drawing module of the application. It includes
+ * functions that handle the rendering of maps, applying various transformations and
+ * modifiers such as translation (x, y, z) and scaling. The file ensures that the map
+ * is drawn correctly according to the specified parameters and fits within the desired
+ * dimensions if the 'fit' parameter is set to 1.
+ * 
+ * The main functionalities provided by this file include:
+ * - Applying transformations to map coordinates.
+ * - Scaling the map to fit within a specified area.
+ * - Handling different rendering modes and options.
+ * 
+ * The functions in this file are designed to be efficient and handle large maps with
+ * minimal performance overhead. Proper error handling and validation are implemented
+ * to ensure robustness.
+ * 
+ * @note This file is part of a larger project and interacts with other modules for
+ *       complete functionality. Ensure that dependencies are correctly managed.
+ * 
+ * @author 
+ * @date 
+ * @version 
+ */
 *	the modifiers (x,y,z, scale..). If fit = 1, will caculate the 
 *	scale needed to fit the screen.
 */

@@ -6,7 +6,7 @@
 #    By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/14 16:00:50 by dinepomu          #+#    #+#              #
-#    Updated: 2025/03/01 13:48:15 by dinepomu         ###   ########.fr        #
+#    Updated: 2025/03/05 13:17:38 by dinepomu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,34 +39,34 @@ LIBRARIES		:= -L$(FT_MYLIB_DIR) -l$(FT_MYLIB_NAME) -L$(MINILIBX_DIR) -lmlx $(LIB
 
 ################################################################################
 ### SOURCES ###
-SRC_FILES_MAIN		=						\
+SRC_FILES_MAIN		=							\
 					_main				
-SRC_FILES_SRC		= 						\
-					1___map_load 			\
-					1_0_load_mapini 		\
-					1_0_load_mapsize 		\
-					1_1_load_getpoints 		\
-					1_1_load_loadpoints 	\
-					1_2_load_colorize 		\
-					1_2_load_gopolar 		\
-					2___sys_ini 			\
-					3___map_draw 			\
-					3_1__draw_background 	\
-					3_2__draw_parsemap 		\
-					3_2_1_parse_geometry 	\
-					3_2_2_parse_matrix 		\
-					3_2_3_parse_scale 		\
-					3_3__draw_drawning 		\
-					3_3__drawning_gofit 	\
-					3_3_1_drawning_wired 	\
-					3_3_2_drawning_doted 	\
-					3_3_2_drawning_myputpixel \
-					3_4__draw_menu 			\
-					4___views_bonus 		\
-					5___control_keys 		\
-					5___control_keys2 		\
-					5___control_mouse 		\
-					6___utils 				\
+SRC_FILES_SRC		= 							\
+					1___map_load 				\
+					1_0_load_mapini 			\
+					1_0_load_mapsize 			\
+					1_1_load_getpoints 			\
+					1_1_load_loadpoints 		\
+					1_2_load_colorize 			\
+					1_2_load_gopolar 			\
+					2___sys_ini 				\
+					3___map_draw 				\
+					3_1__draw_background 		\
+					3_2__draw_parsemap 			\
+					3_2_1_parse_geometry 		\
+					3_2_2_parse_matrix 			\
+					3_2_3_parse_scale 			\
+					3_3__draw_drawning 			\
+					3_3__drawning_gofit 		\
+					3_3_1_drawning_wired 		\
+					3_3_2_drawning_doted 		\
+					3_3_2_drawning_myputpixel 	\
+					4___views_bonus 			\
+					5___draw_menu 				\
+					5___control_keys 			\
+					5___control_keys2 			\
+					5___control_mouse 			\
+					6___utils 					\
 
 SRC_FILES			= $(SRC_FILES_MAIN) $(SRC_FILES_SRC)
 

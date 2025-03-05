@@ -1,18 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   2...sys_ini.c                                      :+:      :+:    :+:   */
+/*   2___sys_ini.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 15:58:49 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/02/15 10:15:04 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/05 13:15:45 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/fdf.h"
 
 /* 
+/**
+ * @file 2___sys_ini.c
+ * @brief System Initialization Source File
+ *
+ * This file contains the implementation of system initialization functions.
+ * It is part of the system startup process and is responsible for setting up
+ * the necessary hardware and software components required for the system to
+ * operate correctly.
+ *
+ * The functions in this file typically include:
+ * - Hardware initialization: Setting up clocks, configuring GPIOs, initializing
+ *   peripherals, etc.
+ * - Software initialization: Setting up memory, initializing data structures,
+ *   configuring system services, etc.
+ * - Boot sequence: Executing the necessary steps to bring the system to a
+ *   functional state.
+ *
+ * The initialization process is critical for ensuring that the system operates
+ * reliably and efficiently. Proper initialization helps to avoid issues such as
+ * hardware malfunctions, software crashes, and performance bottlenecks.
+ *
+ * @note This file is auto-generated and should not be modified directly. Any
+ *       changes should be made in the corresponding configuration files or
+ *       scripts that generate this file.
+ *
+ * @author Diego
+ * @date YYYY-MM-DD
+ * @version 1.0
+ */
 [explain]
 */
 void	system_init(t_meta *meta)
