@@ -12,14 +12,21 @@
 ---
 ``` mermaid
 flowchart LR
-classDef blue fill:#bbf,stroke:#333,stroke-width:2px;
+classDef black fill:#000,stroke:#333,stroke-width:2px,color:#a0a0a0;
+classDef silver fill:#c0c0c0,stroke:#333,stroke-width:2px, color:#a0a0a0;
+classDef red fill:#a52a2a,stroke:#333,stroke-width:2px;
+classDef orange1 fill:#f90,stroke:#333,stroke-width:2px,color:#a0a0a0;
+classDef orange2 fill:#ffa700,stroke:#333,stroke-width:2px,color:#a0a0a0;
+classDef yellow1 fill:#ffb700,stroke:#333,stroke-width:2px,color:#a0a0a0;
+classDef yellow2 fill:#ffd700,stroke:#333,stroke-width:2px,color:#a0a0a0;
+classDef gold fill:#fff700,stroke:#333,stroke-width:2px,color:#a0a0a0;
+
+classDef blue fill:#bbf,stroke:#333,stroke-width:2px,color:#a0a0a0;
 classDef green fill:#bfb,stroke:#333,stroke-width:2px;
-classDef yellow fill:#ffb,stroke:#333,stroke-width:2px;
+classDef green1 fill:#ffb,stroke:#333,stroke-width:2px,color:#a0a0a0;
 classDef purple fill:#d0b,stroke:#333,stroke-width:2px;
-classDef orange fill:#f90,stroke:#333,stroke-width:2px;
-classDef brown fill:#a52a2a,stroke:#333,stroke-width:2px;
-classDef silver fill:#c0c0c0,stroke:#333,stroke-width:2px;
-classDef gold fill:#ffd700,stroke:#333,stroke-width:2px;
+
+classDef indigo fill:#4b0082,stroke:#333,stroke-width:2px;
 
     Node000001["main"] --> Node000002["map_draw"]
     Node000001 --> Node000041["map_load"]
@@ -52,10 +59,12 @@ classDef gold fill:#ffd700,stroke:#333,stroke-width:2px;
     Node000041 --> Node000050["load_mapini"]
     Node000041 --> Node000052["load_mapsize"]
 	
-	class Node000001 gold
+	class Node000001 black
 	class Node000053,Node000054,Node000004 silver
-	class Node000002,Node000041 yellow
-	class Node000011,Node000020,Node000003 brown
+	class Node000002,Node000041 orange1
+	class Node000011,Node000020,Node000003 yellow1
+	
+	class Node000017,Node000028 indigo
 ```
 ---
 
