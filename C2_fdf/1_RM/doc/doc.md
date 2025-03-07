@@ -30,8 +30,7 @@ classDef indigo fill:#4b0082,stroke:#333,stroke-width:2px;
 
     Node000001["main"] --> Node000002["map_draw"]
     Node000001 --> Node000041["map_load"]
-    Node000001 --> Node000053["sys_ini"]
-    Node000001 --> Node000054["sys_ini2"]
+    Node000001 --> Node000053["sys_ini and sys_ini2"]
 
     Node000002 --> Node000003["draw_background"]
     Node000002 --> Node000004["draw_menu"]
@@ -53,11 +52,7 @@ classDef indigo fill:#4b0082,stroke:#333,stroke-width:2px;
     
     Node000027 --> Node000027
     
-    Node000041 --> Node000042["load_colorize"]
-    Node000041 --> Node000044["load_gopolar"]
-    Node000041 --> Node000045["load_getpoints"]
-    Node000041 --> Node000050["load_mapini"]
-    Node000041 --> Node000052["load_mapsize"]
+    Node000041 --> Node000042["*load_colorize<br>*load_getpoints<br>*load_gopolar<br>*load_mapini<br>*load_mapsize"]
 	
 	class Node000001 black
 	class Node000053,Node000054,Node000004 silver
@@ -65,6 +60,8 @@ classDef indigo fill:#4b0082,stroke:#333,stroke-width:2px;
 	class Node000011,Node000020,Node000003 yellow1
 	
 	class Node000017,Node000028 indigo
+
+	style Node000042 width:200px,height:150px;
 ```
 ---
 
