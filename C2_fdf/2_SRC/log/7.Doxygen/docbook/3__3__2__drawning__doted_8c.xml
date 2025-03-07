@@ -1,0 +1,97 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_3__3__2__drawning__doted_8c" xml:lang="en-US">
+<title>src/3_3_2_drawning_doted.c File Reference</title>
+<indexterm><primary>src/3_3_2_drawning_doted.c</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;../inc/fdf.h&quot;<?linebreak?></programlisting>Include dependency graph for 3_3_2_drawning_doted.c:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="3__3__2__drawning__doted_8c__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_3__3__2__drawning__doted_8c_1ac9d3a1064e72e74f79ec962804b3a3bd">doted</link> (t_meta *meta, t_point *proyect)</para>
+</listitem>
+            <listitem><para>void <link linkend="_3__3__2__drawning__doted_8c_1aadd4e25f84bb94a9dc2692649a9f69a3">draw_dot</link> (t_meta *meta, t_point point, int radius)</para>
+</listitem>
+            <listitem><para>void <link linkend="_3__3__2__drawning__doted_8c_1aa4b74395091c497d72d13b7d3353d12b">dot_util</link> (t_meta *meta, t_point pixel, t_point point, int coord)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_3__3__2__drawning__doted_8c_1aa4b74395091c497d72d13b7d3353d12b"/><section>
+    <title>dot_util()</title>
+<indexterm><primary>dot_util</primary><secondary>3_3_2_drawning_doted.c</secondary></indexterm>
+<indexterm><primary>3_3_2_drawning_doted.c</primary><secondary>dot_util</secondary></indexterm>
+<para><computeroutput>void dot_util (t_meta * meta, t_point pixel, t_point point, int coord)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="3__3__2__drawning__doted_8c_aa4b74395091c497d72d13b7d3353d12b_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="3__3__2__drawning__doted_8c_aa4b74395091c497d72d13b7d3353d12b_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_3__3__2__drawning__doted_8c_1ac9d3a1064e72e74f79ec962804b3a3bd"/><section>
+    <title>doted()</title>
+<indexterm><primary>doted</primary><secondary>3_3_2_drawning_doted.c</secondary></indexterm>
+<indexterm><primary>3_3_2_drawning_doted.c</primary><secondary>doted</secondary></indexterm>
+<para><computeroutput>void doted (t_meta * meta, t_point * proyect)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="3__3__2__drawning__doted_8c_ac9d3a1064e72e74f79ec962804b3a3bd_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="3__3__2__drawning__doted_8c_ac9d3a1064e72e74f79ec962804b3a3bd_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_3__3__2__drawning__doted_8c_1aadd4e25f84bb94a9dc2692649a9f69a3"/><section>
+    <title>draw_dot()</title>
+<indexterm><primary>draw_dot</primary><secondary>3_3_2_drawning_doted.c</secondary></indexterm>
+<indexterm><primary>3_3_2_drawning_doted.c</primary><secondary>draw_dot</secondary></indexterm>
+<para><computeroutput>void draw_dot (t_meta * meta, t_point point, int radius)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="3__3__2__drawning__doted_8c_aadd4e25f84bb94a9dc2692649a9f69a3_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="3__3__2__drawning__doted_8c_aadd4e25f84bb94a9dc2692649a9f69a3_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+</section>

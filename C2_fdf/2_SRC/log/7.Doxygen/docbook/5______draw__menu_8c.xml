@@ -1,0 +1,147 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_5______draw__menu_8c" xml:lang="en-US">
+<title>src/5___draw_menu.c File Reference</title>
+<indexterm><primary>src/5___draw_menu.c</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;../inc/fdf.h&quot;<?linebreak?></programlisting>Include dependency graph for 5___draw_menu.c:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="5______draw__menu_8c__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_5______draw__menu_8c_1a4c015c62d75cc794c569b6ffbf2ff699">draw_colorscheme</link> (t_meta *meta)</para>
+</listitem>
+            <listitem><para>void <link linkend="_5______draw__menu_8c_1acefba8ac786e9df8418ee1d9ff7ef63c">draw_mapinfo</link> (t_meta *meta)</para>
+</listitem>
+            <listitem><para>void <link linkend="_5______draw__menu_8c_1ac2d3bd6adb781e0a2d9372a82793bb28">draw_controls</link> (t_meta *meta)</para>
+</listitem>
+            <listitem><para>void <link linkend="_5______draw__menu_8c_1a7d54ff16a0e4f430442bcfa359b7fe4f">draw_info</link> (t_meta *meta)</para>
+</listitem>
+            <listitem><para>void <link linkend="_5______draw__menu_8c_1a5fb8b0df20abd23a527a04cd5e71343b">draw_menu</link> (t_meta *meta)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_5______draw__menu_8c_1a4c015c62d75cc794c569b6ffbf2ff699"/><section>
+    <title>draw_colorscheme()</title>
+<indexterm><primary>draw_colorscheme</primary><secondary>5___draw_menu.c</secondary></indexterm>
+<indexterm><primary>5___draw_menu.c</primary><secondary>draw_colorscheme</secondary></indexterm>
+<para><computeroutput>void draw_colorscheme (t_meta * meta)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="5______draw__menu_8c_a4c015c62d75cc794c569b6ffbf2ff699_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="5______draw__menu_8c_a4c015c62d75cc794c569b6ffbf2ff699_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_5______draw__menu_8c_1ac2d3bd6adb781e0a2d9372a82793bb28"/><section>
+    <title>draw_controls()</title>
+<indexterm><primary>draw_controls</primary><secondary>5___draw_menu.c</secondary></indexterm>
+<indexterm><primary>5___draw_menu.c</primary><secondary>draw_controls</secondary></indexterm>
+<para><computeroutput>void draw_controls (t_meta * meta)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="5______draw__menu_8c_ac2d3bd6adb781e0a2d9372a82793bb28_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="5______draw__menu_8c_ac2d3bd6adb781e0a2d9372a82793bb28_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_5______draw__menu_8c_1a7d54ff16a0e4f430442bcfa359b7fe4f"/><section>
+    <title>draw_info()</title>
+<indexterm><primary>draw_info</primary><secondary>5___draw_menu.c</secondary></indexterm>
+<indexterm><primary>5___draw_menu.c</primary><secondary>draw_info</secondary></indexterm>
+<para><computeroutput>void draw_info (t_meta * meta)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="5______draw__menu_8c_a7d54ff16a0e4f430442bcfa359b7fe4f_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="5______draw__menu_8c_a7d54ff16a0e4f430442bcfa359b7fe4f_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_5______draw__menu_8c_1acefba8ac786e9df8418ee1d9ff7ef63c"/><section>
+    <title>draw_mapinfo()</title>
+<indexterm><primary>draw_mapinfo</primary><secondary>5___draw_menu.c</secondary></indexterm>
+<indexterm><primary>5___draw_menu.c</primary><secondary>draw_mapinfo</secondary></indexterm>
+<para><computeroutput>void draw_mapinfo (t_meta * meta)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="5______draw__menu_8c_acefba8ac786e9df8418ee1d9ff7ef63c_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="5______draw__menu_8c_acefba8ac786e9df8418ee1d9ff7ef63c_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_5______draw__menu_8c_1a5fb8b0df20abd23a527a04cd5e71343b"/><section>
+    <title>draw_menu()</title>
+<indexterm><primary>draw_menu</primary><secondary>5___draw_menu.c</secondary></indexterm>
+<indexterm><primary>5___draw_menu.c</primary><secondary>draw_menu</secondary></indexterm>
+<para><computeroutput>void draw_menu (t_meta * meta)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="5______draw__menu_8c_a5fb8b0df20abd23a527a04cd5e71343b_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="5______draw__menu_8c_a5fb8b0df20abd23a527a04cd5e71343b_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+</section>

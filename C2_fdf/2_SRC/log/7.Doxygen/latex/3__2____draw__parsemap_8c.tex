@@ -1,0 +1,110 @@
+\doxysection{src/3\+\_\+2\+\_\+\+\_\+draw\+\_\+parsemap.c File Reference}
+\hypertarget{3__2____draw__parsemap_8c}{}\label{3__2____draw__parsemap_8c}\index{src/3\_2\_\_draw\_parsemap.c@{src/3\_2\_\_draw\_parsemap.c}}
+
+
+This file contains the implementation of functions to modify points in a space.  
+
+
+{\ttfamily \#include "{}../inc/fdf.\+h"{}}\newline
+Include dependency graph for 3\+\_\+2\+\_\+\+\_\+draw\+\_\+parsemap.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=228pt]{3__2____draw__parsemap_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{3__2____draw__parsemap_8c_a272b4e7a32e9fdbd2043c39351550ddc}{parse\+\_\+map}} (t\+\_\+meta \texorpdfstring{$\ast$}{*}meta, t\+\_\+point \texorpdfstring{$\ast$}{*}proyect)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains the implementation of functions to modify points in a space. 
+
+This source file is part of a larger project that involves manipulating and rendering points in a 2D or 3D space. The primary purpose of this file is to call various functions that perform transformations, modifications, and other operations on points within the space. These operations may include translation, rotation, scaling, and other geometric transformations.
+
+The functions defined in this file are designed to be modular and reusable, allowing for flexible manipulation of points based on different requirements. The file is structured to ensure that each function performs a specific task, making the code easier to maintain and extend.
+
+The following key functionalities are provided by this file\+:
+\begin{DoxyItemize}
+\item Initialization of point data structures.
+\item Application of geometric transformations to points.
+\item Parsing and interpreting map data to modify points accordingly.
+\item Integration with other modules to ensure seamless data flow and transformation.
+\end{DoxyItemize}
+
+Usage\+:
+\begin{DoxyItemize}
+\item Include this file in your project to access the point modification functions.
+\item Ensure that the necessary dependencies and data structures are defined before calling these functions.
+\item Call the appropriate functions to perform the desired transformations on your points.
+\end{DoxyItemize}
+
+Dependencies\+:
+\begin{DoxyItemize}
+\item This file may depend on other modules for data structures, mathematical operations, and rendering functions.
+\item Ensure that all required headers and libraries are included in your project.
+\end{DoxyItemize}
+
+Example\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ Example\ usage\ of\ functions\ in\ 3\_2\_\_draw\_parsemap.c}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include\ "{}3\_2\_\_draw\_parsemap.h"{}}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{int}\ \mbox{\hyperlink{__main_8c_a1c03069360f1f90a556eb537e0ff8a72}{main}}()\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Initialize\ points\ and\ other\ necessary\ data\ structures}}
+\DoxyCodeLine{\ \ \ \ Point\ points[MAX\_POINTS];}
+\DoxyCodeLine{\ \ \ \ initialize\_points(points,\ MAX\_POINTS);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Apply\ transformations\ to\ points}}
+\DoxyCodeLine{\ \ \ \ translate\_points(points,\ MAX\_POINTS,\ 10,\ 20);}
+\DoxyCodeLine{\ \ \ \ rotate\_points(points,\ MAX\_POINTS,\ 45);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Parse\ map\ data\ and\ modify\ points\ accordingly}}
+\DoxyCodeLine{\ \ \ \ parse\_map\_data(\textcolor{stringliteral}{"{}mapfile.txt"{}},\ points,\ MAX\_POINTS);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Render\ or\ further\ process\ the\ modified\ points}}
+\DoxyCodeLine{\ \ \ \ render\_points(points,\ MAX\_POINTS);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+\begin{DoxyNote}{Note}
+Ensure that the map data file is correctly formatted and accessible. 
+
+Handle any errors or exceptions that may arise during point modifications.
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+Other related files and modules for additional functionalities. 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{3__2____draw__parsemap_8c_a272b4e7a32e9fdbd2043c39351550ddc}\label{3__2____draw__parsemap_8c_a272b4e7a32e9fdbd2043c39351550ddc} 
+\index{3\_2\_\_draw\_parsemap.c@{3\_2\_\_draw\_parsemap.c}!parse\_map@{parse\_map}}
+\index{parse\_map@{parse\_map}!3\_2\_\_draw\_parsemap.c@{3\_2\_\_draw\_parsemap.c}}
+\doxysubsubsection{\texorpdfstring{parse\_map()}{parse\_map()}}
+{\footnotesize\ttfamily void parse\+\_\+map (\begin{DoxyParamCaption}\item[{t\+\_\+meta \texorpdfstring{$\ast$}{*}}]{meta,  }\item[{t\+\_\+point \texorpdfstring{$\ast$}{*}}]{proyect }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{3__2____draw__parsemap_8c_a272b4e7a32e9fdbd2043c39351550ddc_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{3__2____draw__parsemap_8c_a272b4e7a32e9fdbd2043c39351550ddc_icgraph}
+\end{center}
+\end{figure}

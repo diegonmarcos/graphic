@@ -1,0 +1,129 @@
+\doxysection{src/3\+\_\+2\+\_\+2\+\_\+parse\+\_\+matrix.c File Reference}
+\hypertarget{3__2__2__parse__matrix_8c}{}\label{3__2__2__parse__matrix_8c}\index{src/3\_2\_2\_parse\_matrix.c@{src/3\_2\_2\_parse\_matrix.c}}
+{\ttfamily \#include "{}../inc/fdf.\+h"{}}\newline
+Include dependency graph for 3\+\_\+2\+\_\+2\+\_\+parse\+\_\+matrix.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=220pt]{3__2__2__parse__matrix_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{3__2__2__parse__matrix_8c_adbe7ee568d3728d0fb5eb394e453d706}{rotate\+\_\+x}} (t\+\_\+point \texorpdfstring{$\ast$}{*}points, t\+\_\+point \texorpdfstring{$\ast$}{*}projection, float ang, int len)
+\item 
+void \mbox{\hyperlink{3__2__2__parse__matrix_8c_acacbaa97b22341c1c25a42c3ae4a840a}{rotate\+\_\+y}} (t\+\_\+point \texorpdfstring{$\ast$}{*}points, t\+\_\+point \texorpdfstring{$\ast$}{*}projection, float ang, int len)
+\item 
+void \mbox{\hyperlink{3__2__2__parse__matrix_8c_aa3cb0788ca290feb399c71338b5fc0d4}{rotate\+\_\+z}} (t\+\_\+point \texorpdfstring{$\ast$}{*}points, t\+\_\+point \texorpdfstring{$\ast$}{*}projection, float ang, int len)
+\item 
+void \mbox{\hyperlink{3__2__2__parse__matrix_8c_a8ea04d299bba5f1af945487003b4c690}{ortogonal\+\_\+projection}} (t\+\_\+point \texorpdfstring{$\ast$}{*}points, t\+\_\+point \texorpdfstring{$\ast$}{*}projection, int len)
+\item 
+t\+\_\+point \mbox{\hyperlink{3__2__2__parse__matrix_8c_a7b0cf91ce9454e90dc07de68e49f8726}{matrix3\+\_\+multp}} (float matrix\mbox{[}3\mbox{]}\mbox{[}3\mbox{]}, t\+\_\+point point)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{3__2__2__parse__matrix_8c_a7b0cf91ce9454e90dc07de68e49f8726}\label{3__2__2__parse__matrix_8c_a7b0cf91ce9454e90dc07de68e49f8726} 
+\index{3\_2\_2\_parse\_matrix.c@{3\_2\_2\_parse\_matrix.c}!matrix3\_multp@{matrix3\_multp}}
+\index{matrix3\_multp@{matrix3\_multp}!3\_2\_2\_parse\_matrix.c@{3\_2\_2\_parse\_matrix.c}}
+\doxysubsubsection{\texorpdfstring{matrix3\_multp()}{matrix3\_multp()}}
+{\footnotesize\ttfamily t\+\_\+point matrix3\+\_\+multp (\begin{DoxyParamCaption}\item[{float}]{matrix\mbox{[}3\mbox{]}\mbox{[}3\mbox{]},  }\item[{t\+\_\+point}]{point }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{3__2__2__parse__matrix_8c_a7b0cf91ce9454e90dc07de68e49f8726_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{3__2__2__parse__matrix_8c_a8ea04d299bba5f1af945487003b4c690}\label{3__2__2__parse__matrix_8c_a8ea04d299bba5f1af945487003b4c690} 
+\index{3\_2\_2\_parse\_matrix.c@{3\_2\_2\_parse\_matrix.c}!ortogonal\_projection@{ortogonal\_projection}}
+\index{ortogonal\_projection@{ortogonal\_projection}!3\_2\_2\_parse\_matrix.c@{3\_2\_2\_parse\_matrix.c}}
+\doxysubsubsection{\texorpdfstring{ortogonal\_projection()}{ortogonal\_projection()}}
+{\footnotesize\ttfamily void ortogonal\+\_\+projection (\begin{DoxyParamCaption}\item[{t\+\_\+point \texorpdfstring{$\ast$}{*}}]{points,  }\item[{t\+\_\+point \texorpdfstring{$\ast$}{*}}]{projection,  }\item[{int}]{len }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=322pt]{3__2__2__parse__matrix_8c_a8ea04d299bba5f1af945487003b4c690_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{3__2__2__parse__matrix_8c_a8ea04d299bba5f1af945487003b4c690_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{3__2__2__parse__matrix_8c_adbe7ee568d3728d0fb5eb394e453d706}\label{3__2__2__parse__matrix_8c_adbe7ee568d3728d0fb5eb394e453d706} 
+\index{3\_2\_2\_parse\_matrix.c@{3\_2\_2\_parse\_matrix.c}!rotate\_x@{rotate\_x}}
+\index{rotate\_x@{rotate\_x}!3\_2\_2\_parse\_matrix.c@{3\_2\_2\_parse\_matrix.c}}
+\doxysubsubsection{\texorpdfstring{rotate\_x()}{rotate\_x()}}
+{\footnotesize\ttfamily void rotate\+\_\+x (\begin{DoxyParamCaption}\item[{t\+\_\+point \texorpdfstring{$\ast$}{*}}]{points,  }\item[{t\+\_\+point \texorpdfstring{$\ast$}{*}}]{projection,  }\item[{float}]{ang,  }\item[{int}]{len }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=262pt]{3__2__2__parse__matrix_8c_adbe7ee568d3728d0fb5eb394e453d706_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{3__2__2__parse__matrix_8c_adbe7ee568d3728d0fb5eb394e453d706_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{3__2__2__parse__matrix_8c_acacbaa97b22341c1c25a42c3ae4a840a}\label{3__2__2__parse__matrix_8c_acacbaa97b22341c1c25a42c3ae4a840a} 
+\index{3\_2\_2\_parse\_matrix.c@{3\_2\_2\_parse\_matrix.c}!rotate\_y@{rotate\_y}}
+\index{rotate\_y@{rotate\_y}!3\_2\_2\_parse\_matrix.c@{3\_2\_2\_parse\_matrix.c}}
+\doxysubsubsection{\texorpdfstring{rotate\_y()}{rotate\_y()}}
+{\footnotesize\ttfamily void rotate\+\_\+y (\begin{DoxyParamCaption}\item[{t\+\_\+point \texorpdfstring{$\ast$}{*}}]{points,  }\item[{t\+\_\+point \texorpdfstring{$\ast$}{*}}]{projection,  }\item[{float}]{ang,  }\item[{int}]{len }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=262pt]{3__2__2__parse__matrix_8c_acacbaa97b22341c1c25a42c3ae4a840a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{3__2__2__parse__matrix_8c_acacbaa97b22341c1c25a42c3ae4a840a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{3__2__2__parse__matrix_8c_aa3cb0788ca290feb399c71338b5fc0d4}\label{3__2__2__parse__matrix_8c_aa3cb0788ca290feb399c71338b5fc0d4} 
+\index{3\_2\_2\_parse\_matrix.c@{3\_2\_2\_parse\_matrix.c}!rotate\_z@{rotate\_z}}
+\index{rotate\_z@{rotate\_z}!3\_2\_2\_parse\_matrix.c@{3\_2\_2\_parse\_matrix.c}}
+\doxysubsubsection{\texorpdfstring{rotate\_z()}{rotate\_z()}}
+{\footnotesize\ttfamily void rotate\+\_\+z (\begin{DoxyParamCaption}\item[{t\+\_\+point \texorpdfstring{$\ast$}{*}}]{points,  }\item[{t\+\_\+point \texorpdfstring{$\ast$}{*}}]{projection,  }\item[{float}]{ang,  }\item[{int}]{len }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=261pt]{3__2__2__parse__matrix_8c_aa3cb0788ca290feb399c71338b5fc0d4_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{3__2__2__parse__matrix_8c_aa3cb0788ca290feb399c71338b5fc0d4_icgraph}
+\end{center}
+\end{figure}

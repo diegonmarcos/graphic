@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_1______map__load_8c" xml:lang="en-US">
+<title>src/1___map_load.c File Reference</title>
+<indexterm><primary>src/1___map_load.c</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;../inc/fdf.h&quot;<?linebreak?></programlisting>Include dependency graph for 1___map_load.c:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="1______map__load_8c__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_1______map__load_8c_1a9e6afc9eb0bc2b4309b3c7cbc67c2948">load_map</link> (t_map *map, char *path)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_1______map__load_8c_1a9e6afc9eb0bc2b4309b3c7cbc67c2948"/><section>
+    <title>load_map()</title>
+<indexterm><primary>load_map</primary><secondary>1___map_load.c</secondary></indexterm>
+<indexterm><primary>1___map_load.c</primary><secondary>load_map</secondary></indexterm>
+<para><computeroutput>void load_map (t_map * map, char * path)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="1______map__load_8c_a9e6afc9eb0bc2b4309b3c7cbc67c2948_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="1______map__load_8c_a9e6afc9eb0bc2b4309b3c7cbc67c2948_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+</section>

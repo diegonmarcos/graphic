@@ -1,0 +1,9 @@
+<map id="load_points" name="load_points">
+<area shape="rect" id="Node000001" title=" " alt="" coords="417,5,515,31"/>
+<area shape="rect" id="Node000002" href="$1__1__load__getpoints_8c.html#a6f82c460fc8ddb181d08d7af77b63486" title=" " alt="" coords="243,5,369,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="404,21,369,21,369,15,404,15"/>
+<area shape="rect" id="Node000003" href="$1______map__load_8c.html#a9e6afc9eb0bc2b4309b3c7cbc67c2948" title=" " alt="" coords="108,5,195,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="229,21,195,21,195,15,229,15"/>
+<area shape="rect" id="Node000004" href="$__main_8c.html#a1c03069360f1f90a556eb537e0ff8a72" title="Implementation of the FdF project from 42 school." alt="" coords="5,5,60,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="94,21,60,21,60,15,94,15"/>
+</map>

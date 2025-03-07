@@ -1,0 +1,84 @@
+\doxysection{src/\+\_\+main.c File Reference}
+\hypertarget{__main_8c}{}\label{__main_8c}\index{src/\_main.c@{src/\_main.c}}
+{\ttfamily \#include "{}../inc/fdf.\+h"{}}\newline
+Include dependency graph for \+\_\+main.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=152pt]{__main_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{__main_8c_a1c03069360f1f90a556eb537e0ff8a72}{main}} (int argv, char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}argc)
+\begin{DoxyCompactList}\small\item\em Implementation of the FdF project from 42 school. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{__main_8c_a1c03069360f1f90a556eb537e0ff8a72}\label{__main_8c_a1c03069360f1f90a556eb537e0ff8a72} 
+\index{\_main.c@{\_main.c}!main@{main}}
+\index{main@{main}!\_main.c@{\_main.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argv,  }\item[{char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{argc }\end{DoxyParamCaption})}
+
+
+
+Implementation of the FdF project from 42 school. 
+
+\begin{DoxyParagraph}{Details\+:}
+
+\begin{DoxyItemize}
+\item The FdF project is a graphical representation project that involves creating a wireframe model of a 3D landscape from a given set of coordinates. The goal is to display the model in a window and allow for basic interactions such as zooming and rotating.
+\end{DoxyItemize}
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Usage Make\+: make MAP=\mbox{[}map\mbox{]}}
+
+\begin{DoxyItemize}
+\item \mbox{[}42\mbox{]} make MAP=42
+\item \mbox{[}mars\mbox{]} make MAP=mars
+\item \mbox{[}earth\mbox{]} make MAP=earth
+\item \mbox{[}fractol\mbox{]} make MAP=fractol
+\end{DoxyItemize}
+\end{DoxyParagraph}
+
+\begin{DoxyItemize}
+\item \mbox{[}mandel\mbox{]} make MAP=mandel
+\end{DoxyItemize}
+
+\begin{DoxyParagraph}{Usage Program\+: ./fdf maps/\mbox{[}X\mbox{]}}
+
+\begin{DoxyItemize}
+\item \mbox{[}parm2\mbox{]} {\bfseries{argv\+:}} file containing the coordinates of the landscape.
+\item return\+: {\bfseries{return}} void
+\item \mbox{[}X\mbox{]}\+:
+\begin{DoxyItemize}
+\item maps/42.\+fdf
+\item maps/mars.\+fdf
+\item maps/fract.\+fdf
+\item maps/julia.\+fdf 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{make\ \&\&\(\backslash\)}
+\DoxyCodeLine{./fdf\ maps/42.fdf}
+
+\end{DoxyCode}
+
+\end{DoxyItemize}
+\end{DoxyItemize}
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Usage Make\+:}
+
+\begin{DoxyItemize}
+\item \mbox{[}static analysis\mbox{]} make linting
+\item \mbox{[}leaks\mbox{]} make leaks 
+\end{DoxyItemize}
+\end{DoxyParagraph}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{__main_8c_a1c03069360f1f90a556eb537e0ff8a72_cgraph}
+\end{center}
+\end{figure}

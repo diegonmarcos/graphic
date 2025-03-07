@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_3__3__1__drawning__wired_8c" xml:lang="en-US">
+<title>src/3_3_1_drawning_wired.c File Reference</title>
+<indexterm><primary>src/3_3_1_drawning_wired.c</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;../inc/fdf.h&quot;<?linebreak?></programlisting>Include dependency graph for 3_3_1_drawning_wired.c:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="3__3__1__drawning__wired_8c__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_3__3__1__drawning__wired_8c_1a997eac12a167d54c726faa7352a89152">wired</link> (t_meta *meta, t_point *wire)</para>
+</listitem>
+            <listitem><para>void <link linkend="_3__3__1__drawning__wired_8c_1a11932e395358ec8bf821944b55800f94">wire_line</link> (t_point *point, t_meta *meta, int density, int line)</para>
+</listitem>
+            <listitem><para>int <link linkend="_3__3__1__drawning__wired_8c_1af8733d9a589b2664eb8017d42cdebca7">draw_line</link> (t_meta *meta, t_point start, t_point end)</para>
+</listitem>
+            <listitem><para>int <link linkend="_3__3__1__drawning__wired_8c_1aca55829eb9d4811c7f329c0a03058730">valid_pixel</link> (t_point pixel)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_3__3__1__drawning__wired_8c_1af8733d9a589b2664eb8017d42cdebca7"/><section>
+    <title>draw_line()</title>
+<indexterm><primary>draw_line</primary><secondary>3_3_1_drawning_wired.c</secondary></indexterm>
+<indexterm><primary>3_3_1_drawning_wired.c</primary><secondary>draw_line</secondary></indexterm>
+<para><computeroutput>int draw_line (t_meta * meta, t_point start, t_point end)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="3__3__1__drawning__wired_8c_af8733d9a589b2664eb8017d42cdebca7_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="3__3__1__drawning__wired_8c_af8733d9a589b2664eb8017d42cdebca7_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_3__3__1__drawning__wired_8c_1aca55829eb9d4811c7f329c0a03058730"/><section>
+    <title>valid_pixel()</title>
+<indexterm><primary>valid_pixel</primary><secondary>3_3_1_drawning_wired.c</secondary></indexterm>
+<indexterm><primary>3_3_1_drawning_wired.c</primary><secondary>valid_pixel</secondary></indexterm>
+<para><computeroutput>int valid_pixel (t_point pixel)</computeroutput></para>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="3__3__1__drawning__wired_8c_aca55829eb9d4811c7f329c0a03058730_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_3__3__1__drawning__wired_8c_1a11932e395358ec8bf821944b55800f94"/><section>
+    <title>wire_line()</title>
+<indexterm><primary>wire_line</primary><secondary>3_3_1_drawning_wired.c</secondary></indexterm>
+<indexterm><primary>3_3_1_drawning_wired.c</primary><secondary>wire_line</secondary></indexterm>
+<para><computeroutput>void wire_line (t_point * point, t_meta * meta, int density, int line)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="3__3__1__drawning__wired_8c_a11932e395358ec8bf821944b55800f94_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="3__3__1__drawning__wired_8c_a11932e395358ec8bf821944b55800f94_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_3__3__1__drawning__wired_8c_1a997eac12a167d54c726faa7352a89152"/><section>
+    <title>wired()</title>
+<indexterm><primary>wired</primary><secondary>3_3_1_drawning_wired.c</secondary></indexterm>
+<indexterm><primary>3_3_1_drawning_wired.c</primary><secondary>wired</secondary></indexterm>
+<para><computeroutput>void wired (t_meta * meta, t_point * wire)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="3__3__1__drawning__wired_8c_a997eac12a167d54c726faa7352a89152_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="3__3__1__drawning__wired_8c_a997eac12a167d54c726faa7352a89152_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+</section>

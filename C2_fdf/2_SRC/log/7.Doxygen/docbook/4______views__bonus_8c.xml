@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_4______views__bonus_8c" xml:lang="en-US">
+<title>src/4___views_bonus.c File Reference</title>
+<indexterm><primary>src/4___views_bonus.c</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;../inc/fdf.h&quot;<?linebreak?></programlisting>Include dependency graph for 4___views_bonus.c:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="4______views__bonus_8c__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_4______views__bonus_8c_1a027131f96e696bd3a26412db7e394935">isometric</link> (t_map *map)</para>
+</listitem>
+            <listitem><para>void <link linkend="_4______views__bonus_8c_1ad9db0e0587bc11c378b59e2b73ad4e95">parallel</link> (t_map *map)</para>
+</listitem>
+            <listitem><para>void <link linkend="_4______views__bonus_8c_1ae179fd30df2a64ad10023a8cf80549b3">spherize</link> (t_map *map, t_point *points)</para>
+</listitem>
+            <listitem><para>void <link linkend="_4______views__bonus_8c_1a89b9b686d5e5d4d8dbc85abc8942acba">shadow</link> (t_point *points, int len)</para>
+</listitem>
+            <listitem><para>void <link linkend="_4______views__bonus_8c_1a48fc49b3f0061a50452938c49337802e">generate_stars</link> (t_meta *meta)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_4______views__bonus_8c_1a48fc49b3f0061a50452938c49337802e"/><section>
+    <title>generate_stars()</title>
+<indexterm><primary>generate_stars</primary><secondary>4___views_bonus.c</secondary></indexterm>
+<indexterm><primary>4___views_bonus.c</primary><secondary>generate_stars</secondary></indexterm>
+<para><computeroutput>void generate_stars (t_meta * meta)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="4______views__bonus_8c_a48fc49b3f0061a50452938c49337802e_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="4______views__bonus_8c_a48fc49b3f0061a50452938c49337802e_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_4______views__bonus_8c_1a027131f96e696bd3a26412db7e394935"/><section>
+    <title>isometric()</title>
+<indexterm><primary>isometric</primary><secondary>4___views_bonus.c</secondary></indexterm>
+<indexterm><primary>4___views_bonus.c</primary><secondary>isometric</secondary></indexterm>
+<para><computeroutput>void isometric (t_map * map)</computeroutput></para>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="4______views__bonus_8c_a027131f96e696bd3a26412db7e394935_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_4______views__bonus_8c_1ad9db0e0587bc11c378b59e2b73ad4e95"/><section>
+    <title>parallel()</title>
+<indexterm><primary>parallel</primary><secondary>4___views_bonus.c</secondary></indexterm>
+<indexterm><primary>4___views_bonus.c</primary><secondary>parallel</secondary></indexterm>
+<para><computeroutput>void parallel (t_map * map)</computeroutput></para>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="4______views__bonus_8c_ad9db0e0587bc11c378b59e2b73ad4e95_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_4______views__bonus_8c_1a89b9b686d5e5d4d8dbc85abc8942acba"/><section>
+    <title>shadow()</title>
+<indexterm><primary>shadow</primary><secondary>4___views_bonus.c</secondary></indexterm>
+<indexterm><primary>4___views_bonus.c</primary><secondary>shadow</secondary></indexterm>
+<para><computeroutput>void shadow (t_point * points, int len)</computeroutput></para>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="4______views__bonus_8c_a89b9b686d5e5d4d8dbc85abc8942acba_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_4______views__bonus_8c_1ae179fd30df2a64ad10023a8cf80549b3"/><section>
+    <title>spherize()</title>
+<indexterm><primary>spherize</primary><secondary>4___views_bonus.c</secondary></indexterm>
+<indexterm><primary>4___views_bonus.c</primary><secondary>spherize</secondary></indexterm>
+<para><computeroutput>void spherize (t_map * map, t_point * points)</computeroutput></para>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="4______views__bonus_8c_ae179fd30df2a64ad10023a8cf80549b3_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+</section>

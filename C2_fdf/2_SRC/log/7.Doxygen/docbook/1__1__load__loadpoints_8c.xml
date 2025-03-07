@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_1__1__load__loadpoints_8c" xml:lang="en-US">
+<title>src/1_1_load_loadpoints.c File Reference</title>
+<indexterm><primary>src/1_1_load_loadpoints.c</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;../inc/fdf.h&quot;<?linebreak?></programlisting>Include dependency graph for 1_1_load_loadpoints.c:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="1__1__load__loadpoints_8c__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_1__1__load__loadpoints_8c_1a317f24be88bdbc6719302371b2627b2a">load_points</link> (char *line, t_map *map, int numline)</para>
+</listitem>
+            <listitem><para>int <link linkend="_1__1__load__loadpoints_8c_1acdc65a51a4fcfb297d325f832d290b4e">valid_point</link> (char *value)</para>
+</listitem>
+            <listitem><para>int <link linkend="_1__1__load__loadpoints_8c_1ac01ecb8a278e45cf2c705a408e728b73">has_hexcolors</link> (char *line)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_1__1__load__loadpoints_8c_1ac01ecb8a278e45cf2c705a408e728b73"/><section>
+    <title>has_hexcolors()</title>
+<indexterm><primary>has_hexcolors</primary><secondary>1_1_load_loadpoints.c</secondary></indexterm>
+<indexterm><primary>1_1_load_loadpoints.c</primary><secondary>has_hexcolors</secondary></indexterm>
+<para><computeroutput>int has_hexcolors (char * line)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="1__1__load__loadpoints_8c_ac01ecb8a278e45cf2c705a408e728b73_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="1__1__load__loadpoints_8c_ac01ecb8a278e45cf2c705a408e728b73_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_1__1__load__loadpoints_8c_1a317f24be88bdbc6719302371b2627b2a"/><section>
+    <title>load_points()</title>
+<indexterm><primary>load_points</primary><secondary>1_1_load_loadpoints.c</secondary></indexterm>
+<indexterm><primary>1_1_load_loadpoints.c</primary><secondary>load_points</secondary></indexterm>
+<para><computeroutput>int load_points (char * line, t_map * map, int numline)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="1__1__load__loadpoints_8c_a317f24be88bdbc6719302371b2627b2a_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="1__1__load__loadpoints_8c_a317f24be88bdbc6719302371b2627b2a_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_1__1__load__loadpoints_8c_1acdc65a51a4fcfb297d325f832d290b4e"/><section>
+    <title>valid_point()</title>
+<indexterm><primary>valid_point</primary><secondary>1_1_load_loadpoints.c</secondary></indexterm>
+<indexterm><primary>1_1_load_loadpoints.c</primary><secondary>valid_point</secondary></indexterm>
+<para><computeroutput>int valid_point (char * value)</computeroutput></para>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="1__1__load__loadpoints_8c_acdc65a51a4fcfb297d325f832d290b4e_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+</section>

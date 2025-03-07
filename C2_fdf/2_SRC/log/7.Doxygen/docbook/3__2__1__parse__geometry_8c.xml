@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_3__2__1__parse__geometry_8c" xml:lang="en-US">
+<title>src/3_2_1_parse_geometry.c File Reference</title>
+<indexterm><primary>src/3_2_1_parse_geometry.c</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;../inc/fdf.h&quot;<?linebreak?></programlisting>Include dependency graph for 3_2_1_parse_geometry.c:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="3__2__1__parse__geometry_8c__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_3__2__1__parse__geometry_8c_1acb409792d78f96ec43ad47c10c639994">z_division</link> (t_point *proyect, float divisor, int len)</para>
+</listitem>
+            <listitem><para>void <link linkend="_3__2__1__parse__geometry_8c_1a90430b955702f3dfc625f3065ae7b00b">bending</link> (t_point *points, int len, float range)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_3__2__1__parse__geometry_8c_1a90430b955702f3dfc625f3065ae7b00b"/><section>
+    <title>bending()</title>
+<indexterm><primary>bending</primary><secondary>3_2_1_parse_geometry.c</secondary></indexterm>
+<indexterm><primary>3_2_1_parse_geometry.c</primary><secondary>bending</secondary></indexterm>
+<para><computeroutput>void bending (t_point * points, int len, float range)</computeroutput></para>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="3__2__1__parse__geometry_8c_a90430b955702f3dfc625f3065ae7b00b_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_3__2__1__parse__geometry_8c_1acb409792d78f96ec43ad47c10c639994"/><section>
+    <title>z_division()</title>
+<indexterm><primary>z_division</primary><secondary>3_2_1_parse_geometry.c</secondary></indexterm>
+<indexterm><primary>3_2_1_parse_geometry.c</primary><secondary>z_division</secondary></indexterm>
+<para><computeroutput>void z_division (t_point * proyect, float divisor, int len)</computeroutput></para>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="3__2__1__parse__geometry_8c_acb409792d78f96ec43ad47c10c639994_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+</section>

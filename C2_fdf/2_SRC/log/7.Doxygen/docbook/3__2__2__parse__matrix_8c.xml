@@ -1,0 +1,138 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_3__2__2__parse__matrix_8c" xml:lang="en-US">
+<title>src/3_2_2_parse_matrix.c File Reference</title>
+<indexterm><primary>src/3_2_2_parse_matrix.c</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;../inc/fdf.h&quot;<?linebreak?></programlisting>Include dependency graph for 3_2_2_parse_matrix.c:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="3__2__2__parse__matrix_8c__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_3__2__2__parse__matrix_8c_1adbe7ee568d3728d0fb5eb394e453d706">rotate_x</link> (t_point *points, t_point *projection, float ang, int len)</para>
+</listitem>
+            <listitem><para>void <link linkend="_3__2__2__parse__matrix_8c_1acacbaa97b22341c1c25a42c3ae4a840a">rotate_y</link> (t_point *points, t_point *projection, float ang, int len)</para>
+</listitem>
+            <listitem><para>void <link linkend="_3__2__2__parse__matrix_8c_1aa3cb0788ca290feb399c71338b5fc0d4">rotate_z</link> (t_point *points, t_point *projection, float ang, int len)</para>
+</listitem>
+            <listitem><para>void <link linkend="_3__2__2__parse__matrix_8c_1a8ea04d299bba5f1af945487003b4c690">ortogonal_projection</link> (t_point *points, t_point *projection, int len)</para>
+</listitem>
+            <listitem><para>t_point <link linkend="_3__2__2__parse__matrix_8c_1a7b0cf91ce9454e90dc07de68e49f8726">matrix3_multp</link> (float matrix[3][3], t_point point)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_3__2__2__parse__matrix_8c_1a7b0cf91ce9454e90dc07de68e49f8726"/><section>
+    <title>matrix3_multp()</title>
+<indexterm><primary>matrix3_multp</primary><secondary>3_2_2_parse_matrix.c</secondary></indexterm>
+<indexterm><primary>3_2_2_parse_matrix.c</primary><secondary>matrix3_multp</secondary></indexterm>
+<para><computeroutput>t_point matrix3_multp (float matrix[3][3], t_point point)</computeroutput></para>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="3__2__2__parse__matrix_8c_a7b0cf91ce9454e90dc07de68e49f8726_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_3__2__2__parse__matrix_8c_1a8ea04d299bba5f1af945487003b4c690"/><section>
+    <title>ortogonal_projection()</title>
+<indexterm><primary>ortogonal_projection</primary><secondary>3_2_2_parse_matrix.c</secondary></indexterm>
+<indexterm><primary>3_2_2_parse_matrix.c</primary><secondary>ortogonal_projection</secondary></indexterm>
+<para><computeroutput>void ortogonal_projection (t_point * points, t_point * projection, int len)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="3__2__2__parse__matrix_8c_a8ea04d299bba5f1af945487003b4c690_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="3__2__2__parse__matrix_8c_a8ea04d299bba5f1af945487003b4c690_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_3__2__2__parse__matrix_8c_1adbe7ee568d3728d0fb5eb394e453d706"/><section>
+    <title>rotate_x()</title>
+<indexterm><primary>rotate_x</primary><secondary>3_2_2_parse_matrix.c</secondary></indexterm>
+<indexterm><primary>3_2_2_parse_matrix.c</primary><secondary>rotate_x</secondary></indexterm>
+<para><computeroutput>void rotate_x (t_point * points, t_point * projection, float ang, int len)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="3__2__2__parse__matrix_8c_adbe7ee568d3728d0fb5eb394e453d706_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="3__2__2__parse__matrix_8c_adbe7ee568d3728d0fb5eb394e453d706_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_3__2__2__parse__matrix_8c_1acacbaa97b22341c1c25a42c3ae4a840a"/><section>
+    <title>rotate_y()</title>
+<indexterm><primary>rotate_y</primary><secondary>3_2_2_parse_matrix.c</secondary></indexterm>
+<indexterm><primary>3_2_2_parse_matrix.c</primary><secondary>rotate_y</secondary></indexterm>
+<para><computeroutput>void rotate_y (t_point * points, t_point * projection, float ang, int len)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="3__2__2__parse__matrix_8c_acacbaa97b22341c1c25a42c3ae4a840a_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="3__2__2__parse__matrix_8c_acacbaa97b22341c1c25a42c3ae4a840a_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_3__2__2__parse__matrix_8c_1aa3cb0788ca290feb399c71338b5fc0d4"/><section>
+    <title>rotate_z()</title>
+<indexterm><primary>rotate_z</primary><secondary>3_2_2_parse_matrix.c</secondary></indexterm>
+<indexterm><primary>3_2_2_parse_matrix.c</primary><secondary>rotate_z</secondary></indexterm>
+<para><computeroutput>void rotate_z (t_point * points, t_point * projection, float ang, int len)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="3__2__2__parse__matrix_8c_aa3cb0788ca290feb399c71338b5fc0d4_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="3__2__2__parse__matrix_8c_aa3cb0788ca290feb399c71338b5fc0d4_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+</section>

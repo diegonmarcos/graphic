@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_1__2__load__colorize_8c" xml:lang="en-US">
+<title>src/1_2_load_colorize.c File Reference</title>
+<indexterm><primary>src/1_2_load_colorize.c</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;../inc/fdf.h&quot;<?linebreak?></programlisting>Include dependency graph for 1_2_load_colorize.c:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="1__2__load__colorize_8c__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_1__2__load__colorize_8c_1a45577be5a552543e4300055cfb0c85f0">colorize</link> (t_map *map)</para>
+</listitem>
+            <listitem><para>void <link linkend="_1__2__load__colorize_8c_1a9366a408861b36503b900e981e86ef67">load_color</link> (int max, int min, t_point *point, t_colors colors)</para>
+</listitem>
+            <listitem><para>int <link linkend="_1__2__load__colorize_8c_1a0e4dac81b29e0889721877364c6424eb">gradient</link> (int startcolor, int endcolor, int len, int pix)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_1__2__load__colorize_8c_1a45577be5a552543e4300055cfb0c85f0"/><section>
+    <title>colorize()</title>
+<indexterm><primary>colorize</primary><secondary>1_2_load_colorize.c</secondary></indexterm>
+<indexterm><primary>1_2_load_colorize.c</primary><secondary>colorize</secondary></indexterm>
+<para><computeroutput>void colorize (t_map * map)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="1__2__load__colorize_8c_a45577be5a552543e4300055cfb0c85f0_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="1__2__load__colorize_8c_a45577be5a552543e4300055cfb0c85f0_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_1__2__load__colorize_8c_1a0e4dac81b29e0889721877364c6424eb"/><section>
+    <title>gradient()</title>
+<indexterm><primary>gradient</primary><secondary>1_2_load_colorize.c</secondary></indexterm>
+<indexterm><primary>1_2_load_colorize.c</primary><secondary>gradient</secondary></indexterm>
+<para><computeroutput>int gradient (int startcolor, int endcolor, int len, int pix)</computeroutput></para>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="1__2__load__colorize_8c_a0e4dac81b29e0889721877364c6424eb_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_1__2__load__colorize_8c_1a9366a408861b36503b900e981e86ef67"/><section>
+    <title>load_color()</title>
+<indexterm><primary>load_color</primary><secondary>1_2_load_colorize.c</secondary></indexterm>
+<indexterm><primary>1_2_load_colorize.c</primary><secondary>load_color</secondary></indexterm>
+<para><computeroutput>void load_color (int max, int min, t_point * point, t_colors colors)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="1__2__load__colorize_8c_a9366a408861b36503b900e981e86ef67_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="1__2__load__colorize_8c_a9366a408861b36503b900e981e86ef67_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+</section>

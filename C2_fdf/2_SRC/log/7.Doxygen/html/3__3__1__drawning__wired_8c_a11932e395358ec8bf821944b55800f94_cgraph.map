@@ -1,0 +1,13 @@
+<map id="wire_line" name="wire_line">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,55,87,80"/>
+<area shape="rect" id="Node000002" href="$3__3__1__drawning__wired_8c.html#af8733d9a589b2664eb8017d42cdebca7" title=" " alt="" coords="135,55,220,80"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="87,65,121,65,121,70,87,70"/>
+<area shape="rect" id="Node000003" href="$1__2__load__colorize_8c.html#a0e4dac81b29e0889721877364c6424eb" title=" " alt="" coords="281,5,357,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="214,52,268,33,270,38,215,57"/>
+<area shape="rect" id="Node000004" href="$3__3__2__drawning__myputpixel_8c.html#abe1c5fa6cf7496fe44819982cfc464db" title=" " alt="" coords="268,55,371,80"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="220,65,254,65,254,70,220,70"/>
+<area shape="rect" id="Node000006" href="$3__3__1__drawning__wired_8c.html#aca55829eb9d4811c7f329c0a03058730" title=" " alt="" coords="273,104,365,129"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="215,78,270,97,268,102,214,83"/>
+<area shape="rect" id="Node000005" href="$3__3__2__drawning__myputpixel_8c.html#a6c40b49ca16ac46b7e567a397bfe158d" title=" " alt="" coords="419,55,500,80"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="371,65,405,65,405,70,371,70"/>
+</map>

@@ -1,0 +1,71 @@
+\doxysection{src/3\+\_\+\+\_\+\+\_\+map\+\_\+draw.c File Reference}
+\hypertarget{3______map__draw_8c}{}\label{3______map__draw_8c}\index{src/3\_\_\_map\_draw.c@{src/3\_\_\_map\_draw.c}}
+
+
+This file contains functions and logic for drawing maps.  
+
+
+{\ttfamily \#include "{}../inc/fdf.\+h"{}}\newline
+Include dependency graph for 3\+\_\+\+\_\+\+\_\+map\+\_\+draw.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=194pt]{3______map__draw_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{3______map__draw_8c_a2a4345c37b1abc753cef1b4abf5abb29}{draw\+\_\+map}} (t\+\_\+meta \texorpdfstring{$\ast$}{*}meta, int fit)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains functions and logic for drawing maps. 
+
+This source file is part of the map drawing module of the application. It includes functions that handle the rendering of maps, applying various transformations and modifiers such as translation (x, y, z) and scaling. The file ensures that the map is drawn correctly according to the specified parameters and fits within the desireddimensions if the \textquotesingle{}fit\textquotesingle{} parameter is set to 1.
+
+The main functionalities provided by this file include\+:
+\begin{DoxyItemize}
+\item Applying transformations to map coordinates.
+\item Scaling the map to fit within a specified area.
+\item Handling different rendering modes and options.
+\end{DoxyItemize}
+
+The functions in this file are designed to be efficient and handle large maps with minimal performance overhead. Proper error handling and validation are implemented to ensure robustness.
+
+\begin{DoxyAuthor}{Author}
+
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+
+\end{DoxyVersion}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{3______map__draw_8c_a2a4345c37b1abc753cef1b4abf5abb29}\label{3______map__draw_8c_a2a4345c37b1abc753cef1b4abf5abb29} 
+\index{3\_\_\_map\_draw.c@{3\_\_\_map\_draw.c}!draw\_map@{draw\_map}}
+\index{draw\_map@{draw\_map}!3\_\_\_map\_draw.c@{3\_\_\_map\_draw.c}}
+\doxysubsubsection{\texorpdfstring{draw\_map()}{draw\_map()}}
+{\footnotesize\ttfamily int draw\+\_\+map (\begin{DoxyParamCaption}\item[{t\+\_\+meta \texorpdfstring{$\ast$}{*}}]{meta,  }\item[{int}]{fit }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{3______map__draw_8c_a2a4345c37b1abc753cef1b4abf5abb29_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{3______map__draw_8c_a2a4345c37b1abc753cef1b4abf5abb29_icgraph}
+\end{center}
+\end{figure}

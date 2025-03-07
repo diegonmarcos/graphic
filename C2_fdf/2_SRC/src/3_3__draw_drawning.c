@@ -6,14 +6,12 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 15:59:41 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/05 13:15:45 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/07 07:42:20 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/fdf.h"
 
-/**
- * @brief 
 /**
  * @file 3_3__draw_drawning.c
  * @brief This file contains the implementation of drawing functionalities.

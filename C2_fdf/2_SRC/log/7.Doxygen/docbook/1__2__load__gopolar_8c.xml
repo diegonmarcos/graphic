@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_1__2__load__gopolar_8c" xml:lang="en-US">
+<title>src/1_2_load_gopolar.c File Reference</title>
+<indexterm><primary>src/1_2_load_gopolar.c</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;../inc/fdf.h&quot;<?linebreak?></programlisting>Include dependency graph for 1_2_load_gopolar.c:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="1__2__load__gopolar_8c__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_1__2__load__gopolar_8c_1aa6292d01b5b52014121e9412ed74111c">go_polar</link> (t_map *map)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_1__2__load__gopolar_8c_1aa6292d01b5b52014121e9412ed74111c"/><section>
+    <title>go_polar()</title>
+<indexterm><primary>go_polar</primary><secondary>1_2_load_gopolar.c</secondary></indexterm>
+<indexterm><primary>1_2_load_gopolar.c</primary><secondary>go_polar</secondary></indexterm>
+<para><computeroutput>void go_polar (t_map * map)</computeroutput></para>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="1__2__load__gopolar_8c_aa6292d01b5b52014121e9412ed74111c_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+</section>

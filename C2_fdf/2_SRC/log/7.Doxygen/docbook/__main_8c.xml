@@ -1,0 +1,108 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="___main_8c" xml:lang="en-US">
+<title>src/_main.c File Reference</title>
+<indexterm><primary>src/_main.c</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;../inc/fdf.h&quot;<?linebreak?></programlisting>Include dependency graph for _main.c:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="__main_8c__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="___main_8c_1a1c03069360f1f90a556eb537e0ff8a72">main</link> (int argv, char **argc)</para>
+
+<para>Implementation of the FdF project from 42 school. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="___main_8c_1a1c03069360f1f90a556eb537e0ff8a72"/><section>
+    <title>main()</title>
+<indexterm><primary>main</primary><secondary>_main.c</secondary></indexterm>
+<indexterm><primary>_main.c</primary><secondary>main</secondary></indexterm>
+<para><computeroutput>int main (int argv, char ** argc)</computeroutput></para><para>
+
+<para>Implementation of the FdF project from 42 school. </para>
+</para>
+
+<para><formalpara>
+<title>Details:</title>
+<para><itemizedlist>
+<listitem>
+<para>The FdF project is a graphical representation project that involves creating a wireframe model of a 3D landscape from a given set of coordinates. The goal is to display the model in a window and allow for basic interactions such as zooming and rotating.</para>
+</listitem></itemizedlist>
+</para>
+</formalpara>
+<formalpara>
+<title>Usage Make: make MAP=[map]</title>
+<para><itemizedlist>
+<listitem>
+<para>[42] make MAP=42</para>
+</listitem><listitem>
+<para>[mars] make MAP=mars</para>
+</listitem><listitem>
+<para>[earth] make MAP=earth</para>
+</listitem><listitem>
+<para>[fractol] make MAP=fractol</para>
+</listitem></itemizedlist>
+</para>
+</formalpara>
+<itemizedlist>
+<listitem>
+<para>[mandel] make MAP=mandel</para>
+</listitem></itemizedlist>
+</para>
+
+<para><formalpara>
+<title>Usage Program: ./fdf maps/[X]</title>
+<para><itemizedlist>
+<listitem>
+<para>[parm2] <emphasis role="bold">argv:</emphasis> file containing the coordinates of the landscape.</para>
+</listitem><listitem>
+<para>return: <emphasis role="bold">return</emphasis> void</para>
+</listitem><listitem>
+<para>[X]:<itemizedlist>
+<listitem>
+<para>maps/42.fdf</para>
+</listitem><listitem>
+<para>maps/mars.fdf</para>
+</listitem><listitem>
+<para>maps/fract.fdf</para>
+</listitem><listitem>
+<para>maps/julia.fdf <literallayout><computeroutput>make&#32;&amp;&amp;\
+./fdf&#32;maps/42.fdf
+</computeroutput></literallayout></para>
+</listitem></itemizedlist>
+</para>
+</listitem></itemizedlist>
+</para>
+</formalpara>
+<formalpara>
+<title>Usage Make:</title>
+<para><itemizedlist>
+<listitem>
+<para>[static analysis] make linting</para>
+</listitem><listitem>
+<para>[leaks] make leaks </para>
+</listitem></itemizedlist>
+</para>
+</formalpara>
+</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="__main_8c_a1c03069360f1f90a556eb537e0ff8a72_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+</section>

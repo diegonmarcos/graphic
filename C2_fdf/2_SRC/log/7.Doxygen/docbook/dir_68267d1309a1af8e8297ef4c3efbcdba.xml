@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_68267d1309a1af8e8297ef4c3efbcdba" xml:lang="en-US">
+<title>src Directory Reference</title>
+<indexterm><primary>src Directory Reference</primary></indexterm>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="_1__0__load__mapini_8c">1_0_load_mapini.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_1__0__load__mapsize_8c">1_0_load_mapsize.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_1__1__load__getpoints_8c">1_1_load_getpoints.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_1__1__load__loadpoints_8c">1_1_load_loadpoints.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_1__2__load__colorize_8c">1_2_load_colorize.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_1__2__load__gopolar_8c">1_2_load_gopolar.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_1______map__load_8c">1___map_load.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_2______sys__ini_8c">2___sys_ini.c</link></para>
+
+<para>System Initialization Source File. </para>
+</listitem>
+            <listitem><para>file <link linkend="_3__1____draw__background_8c">3_1__draw_background.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_3__2__1__parse__geometry_8c">3_2_1_parse_geometry.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_3__2__2__parse__matrix_8c">3_2_2_parse_matrix.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_3__2__3__parse__scale_8c">3_2_3_parse_scale.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_3__2____draw__parsemap_8c">3_2__draw_parsemap.c</link></para>
+
+<para>This file contains the implementation of functions to modify points in a space. </para>
+</listitem>
+            <listitem><para>file <link linkend="_3__3__1__drawning__wired_8c">3_3_1_drawning_wired.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_3__3__2__drawning__doted_8c">3_3_2_drawning_doted.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_3__3__2__drawning__myputpixel_8c">3_3_2_drawning_myputpixel.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_3__3____draw__drawning_8c">3_3__draw_drawning.c</link></para>
+
+<para>This file contains the implementation of drawing functionalities. </para>
+</listitem>
+            <listitem><para>file <link linkend="_3__3____drawning__gofit_8c">3_3__drawning_gofit.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_3______map__draw_8c">3___map_draw.c</link></para>
+
+<para>This file contains functions and logic for drawing maps. </para>
+</listitem>
+            <listitem><para>file <link linkend="_4______views__bonus_8c">4___views_bonus.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_5______control__keys_8c">5___control_keys.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_5______control__keys2_8c">5___control_keys2.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_5______control__mouse_8c">5___control_mouse.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_5______draw__menu_8c">5___draw_menu.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_6______utils_8c">6___utils.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="___main_8c">_main.c</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

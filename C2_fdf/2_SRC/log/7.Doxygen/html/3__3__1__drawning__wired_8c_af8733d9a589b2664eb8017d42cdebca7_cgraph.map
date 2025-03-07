@@ -1,0 +1,11 @@
+<map id="draw_line" name="draw_line">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,55,91,80"/>
+<area shape="rect" id="Node000002" href="$1__2__load__colorize_8c.html#a0e4dac81b29e0889721877364c6424eb" title=" " alt="" coords="152,5,228,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="84,52,139,33,141,38,86,57"/>
+<area shape="rect" id="Node000003" href="$3__3__2__drawning__myputpixel_8c.html#abe1c5fa6cf7496fe44819982cfc464db" title=" " alt="" coords="139,55,241,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="91,65,125,65,125,70,91,70"/>
+<area shape="rect" id="Node000005" href="$3__3__1__drawning__wired_8c.html#aca55829eb9d4811c7f329c0a03058730" title=" " alt="" coords="144,104,236,129"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="86,78,141,97,139,102,84,83"/>
+<area shape="rect" id="Node000004" href="$3__3__2__drawning__myputpixel_8c.html#a6c40b49ca16ac46b7e567a397bfe158d" title=" " alt="" coords="289,55,371,80"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="242,65,275,65,275,70,242,70"/>
+</map>

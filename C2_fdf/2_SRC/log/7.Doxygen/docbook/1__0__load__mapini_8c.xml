@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_1__0__load__mapini_8c" xml:lang="en-US">
+<title>src/1_0_load_mapini.c File Reference</title>
+<indexterm><primary>src/1_0_load_mapini.c</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;../inc/fdf.h&quot;<?linebreak?></programlisting>Include dependency graph for 1_0_load_mapini.c:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="1__0__load__mapini_8c__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_1__0__load__mapini_8c_1a8214f0ae89b3b1e4ff5231513f82c338">map_ini</link> (t_map *map, int total)</para>
+</listitem>
+            <listitem><para>void <link linkend="_1__0__load__mapini_8c_1a32681554a7286ba3e2077749d2bef713">map_ini_colors</link> (t_map *map)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_1__0__load__mapini_8c_1a8214f0ae89b3b1e4ff5231513f82c338"/><section>
+    <title>map_ini()</title>
+<indexterm><primary>map_ini</primary><secondary>1_0_load_mapini.c</secondary></indexterm>
+<indexterm><primary>1_0_load_mapini.c</primary><secondary>map_ini</secondary></indexterm>
+<para><computeroutput>void map_ini (t_map * map, int total)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="1__0__load__mapini_8c_a8214f0ae89b3b1e4ff5231513f82c338_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="1__0__load__mapini_8c_a8214f0ae89b3b1e4ff5231513f82c338_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_1__0__load__mapini_8c_1a32681554a7286ba3e2077749d2bef713"/><section>
+    <title>map_ini_colors()</title>
+<indexterm><primary>map_ini_colors</primary><secondary>1_0_load_mapini.c</secondary></indexterm>
+<indexterm><primary>1_0_load_mapini.c</primary><secondary>map_ini_colors</secondary></indexterm>
+<para><computeroutput>void map_ini_colors (t_map * map)</computeroutput></para>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="1__0__load__mapini_8c_a32681554a7286ba3e2077749d2bef713_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+</section>

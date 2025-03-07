@@ -6,14 +6,12 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 15:58:57 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/05 17:12:41 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/07 07:42:12 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/fdf.h"
 
-/* 
-*	This function draw the proyection of map->points acording all
 /**
  * @file 3___map_draw.c
  * @brief This file contains functions and logic for drawing maps.

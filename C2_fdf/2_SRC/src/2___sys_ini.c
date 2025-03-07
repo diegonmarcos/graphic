@@ -6,13 +6,12 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 15:58:49 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/05 13:15:45 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/07 07:42:02 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/fdf.h"
 
-/* 
 /**
  * @file 2___sys_ini.c
  * @brief System Initialization Source File
@@ -42,8 +41,6 @@
  * @date YYYY-MM-DD
  * @version 1.0
  */
-[explain]
-*/
 void	system_init(t_meta *meta)
 {
 	meta->map.renders = 0;

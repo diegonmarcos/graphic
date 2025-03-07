@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_3__1____draw__background_8c" xml:lang="en-US">
+<title>src/3_1__draw_background.c File Reference</title>
+<indexterm><primary>src/3_1__draw_background.c</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;../inc/fdf.h&quot;<?linebreak?></programlisting>Include dependency graph for 3_1__draw_background.c:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="3__1____draw__background_8c__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_3__1____draw__background_8c_1a0dd1a99ae1c5d26845c7dd3a5501fe7d">copy_map</link> (t_point *src, t_point *dst, int len)</para>
+</listitem>
+            <listitem><para>int <link linkend="_3__1____draw__background_8c_1a2a1cfd58a20f10717d2e12b326b05fb9">get_color</link> (t_meta *meta, int color)</para>
+</listitem>
+            <listitem><para>void <link linkend="_3__1____draw__background_8c_1af47424a4ac9da745e5fa98a4d4a1da72">generate_background</link> (t_meta *meta, int backcolor, int menucolor)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_3__1____draw__background_8c_1a0dd1a99ae1c5d26845c7dd3a5501fe7d"/><section>
+    <title>copy_map()</title>
+<indexterm><primary>copy_map</primary><secondary>3_1__draw_background.c</secondary></indexterm>
+<indexterm><primary>3_1__draw_background.c</primary><secondary>copy_map</secondary></indexterm>
+<para><computeroutput>void copy_map (t_point * src, t_point * dst, int len)</computeroutput></para>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="3__1____draw__background_8c_a0dd1a99ae1c5d26845c7dd3a5501fe7d_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_3__1____draw__background_8c_1af47424a4ac9da745e5fa98a4d4a1da72"/><section>
+    <title>generate_background()</title>
+<indexterm><primary>generate_background</primary><secondary>3_1__draw_background.c</secondary></indexterm>
+<indexterm><primary>3_1__draw_background.c</primary><secondary>generate_background</secondary></indexterm>
+<para><computeroutput>void generate_background (t_meta * meta, int backcolor, int menucolor)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="3__1____draw__background_8c_af47424a4ac9da745e5fa98a4d4a1da72_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="3__1____draw__background_8c_af47424a4ac9da745e5fa98a4d4a1da72_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_3__1____draw__background_8c_1a2a1cfd58a20f10717d2e12b326b05fb9"/><section>
+    <title>get_color()</title>
+<indexterm><primary>get_color</primary><secondary>3_1__draw_background.c</secondary></indexterm>
+<indexterm><primary>3_1__draw_background.c</primary><secondary>get_color</secondary></indexterm>
+<para><computeroutput>int get_color (t_meta * meta, int color)</computeroutput></para>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="3__1____draw__background_8c_a2a1cfd58a20f10717d2e12b326b05fb9_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+</section>

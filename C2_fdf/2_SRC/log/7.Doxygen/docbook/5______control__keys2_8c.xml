@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_5______control__keys2_8c" xml:lang="en-US">
+<title>src/5___control_keys2.c File Reference</title>
+<indexterm><primary>src/5___control_keys2.c</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;../inc/fdf.h&quot;<?linebreak?></programlisting>Include dependency graph for 5___control_keys2.c:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="5______control__keys2_8c__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_5______control__keys2_8c_1a2233fff36fea2398733f7e63b62e8f95">angle_control</link> (int key, t_meta *meta)</para>
+</listitem>
+            <listitem><para>void <link linkend="_5______control__keys2_8c_1a5093e533e1f6b50886b91393f34e9e28">control_colorscheme</link> (int key, t_map *map)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_5______control__keys2_8c_1a2233fff36fea2398733f7e63b62e8f95"/><section>
+    <title>angle_control()</title>
+<indexterm><primary>angle_control</primary><secondary>5___control_keys2.c</secondary></indexterm>
+<indexterm><primary>5___control_keys2.c</primary><secondary>angle_control</secondary></indexterm>
+<para><computeroutput>void angle_control (int key, t_meta * meta)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="5______control__keys2_8c_a2233fff36fea2398733f7e63b62e8f95_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="5______control__keys2_8c_a2233fff36fea2398733f7e63b62e8f95_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_5______control__keys2_8c_1a5093e533e1f6b50886b91393f34e9e28"/><section>
+    <title>control_colorscheme()</title>
+<indexterm><primary>control_colorscheme</primary><secondary>5___control_keys2.c</secondary></indexterm>
+<indexterm><primary>5___control_keys2.c</primary><secondary>control_colorscheme</secondary></indexterm>
+<para><computeroutput>void control_colorscheme (int key, t_map * map)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="5______control__keys2_8c_a5093e533e1f6b50886b91393f34e9e28_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="5______control__keys2_8c_a5093e533e1f6b50886b91393f34e9e28_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+</section>

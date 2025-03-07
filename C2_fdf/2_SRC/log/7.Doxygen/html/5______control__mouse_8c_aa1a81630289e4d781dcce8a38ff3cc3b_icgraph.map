@@ -1,0 +1,14 @@
+<map id="angle" name="angle">
+<area shape="rect" id="Node000001" title=" " alt="" coords="608,31,667,56"/>
+<area shape="rect" id="Node000002" href="$5______control__keys2_8c.html#a2233fff36fea2398733f7e63b62e8f95" title=" " alt="" coords="449,5,560,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="594,38,560,31,561,26,595,33"/>
+<area shape="rect" id="Node000006" href="$5______control__mouse_8c.html#ad59d7527d091755522b6f3e52d8d48a5" title=" " alt="" coords="291,56,401,81"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="595,50,402,67,401,61,594,44"/>
+<area shape="rect" id="Node000003" href="$5______control__keys_8c.html#abdb5b19e949a14c4cf10089c9b916e8a" title=" " alt="" coords="303,7,389,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="436,21,390,22,390,16,436,16"/>
+<area shape="rect" id="Node000004" href="$2______sys__ini_8c.html#a0c82e491651d3ab392edef32e9a02f32" title=" " alt="" coords="108,32,243,57"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="289,30,244,37,243,32,288,25"/>
+<area shape="rect" id="Node000005" href="$__main_8c.html#a1c03069360f1f90a556eb537e0ff8a72" title="Implementation of the FdF project from 42 school." alt="" coords="5,32,60,57"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="94,47,60,47,60,42,94,42"/>
+<area shape="poly" id="edge6_Node000006_Node000004" title=" " alt="" coords="277,62,243,57,243,52,278,56"/>
+</map>
