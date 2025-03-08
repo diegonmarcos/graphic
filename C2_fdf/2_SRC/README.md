@@ -17,6 +17,12 @@ Subtypes and techniques within the Rasterization rendering category:
 
 ### Rasterization Subtypes and Techniques
 
+#### Vector-Based Wireframe Algorithm
+- Represents 3D objects using only their edges (vectors/lines)
+- Focuses on geometric structure rather than solid surfaces
+- Efficiently displays objects with minimal computational resources
+- Often used as a visualization mode in CAD software, modeling applications, and during the development process
+
 #### Polygon/Triangle Rasterization
 - Converts polygons (usually triangles) into pixels
 - The foundation of most real-time 3D graphics
@@ -142,6 +148,24 @@ Wireframe rendering is particularly important in:
 - Limited computing environments where full rendering is too resource-intensive
 
 It's worth noting that wireframe rendering represents an earlier, more fundamental approach to computer graphics that predates more sophisticated techniques like filled polygon rendering, texture mapping, and lighting models. However, it remains useful as both a visualization option and as an initial step in more complex rendering pipelines.
+Scanning and rasterization are related concepts in computer graphics but aren't exactly the same thing:
+
+<br><br><br>
+
+**Rasterization** is the broader process of converting vector graphics (shapes defined by mathematical descriptions) into raster graphics (a grid of pixels). This complete process typically involves:
+
+1. Processing geometric primitives (like triangles)
+2. Determining which pixels these primitives cover
+3. Calculating the color and other properties for each affected pixel
+4. Writing these values to a frame buffer
+
+**Scan conversion** (often just called "scanning") is specifically the part of rasterization that determines which pixels are covered by a primitive. It's a subset of the rasterization process.
+
+Common scan conversion techniques include:
+- Scan-line algorithms: Process primitives one horizontal line of pixels at a time
+- Edge-walking algorithms: Follow the edges of primitives to determine their boundaries
+- Half-space functions: Test whether points lie inside or outside a triangle
+
 
 <br><br><br><br><br><br>
 
