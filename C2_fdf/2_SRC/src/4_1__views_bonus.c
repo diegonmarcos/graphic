@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   4...views_bonus.c                                  :+:      :+:    :+:   */
+/*   4_0__views_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 16:00:15 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/02/15 10:59:30 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/08 14:46:13 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,23 +40,6 @@ void	parallel(t_map *map)
 	map->source.axis[Y] = WINY / 2;
 }
 
-void	spherize(t_map *map, t_point *points)
-{
-	int	i;
-
-	i = 0;
-	while (i < map->len)
-	{
-		points[i].axis[X] = (map->radius + points[i].axis[Z]) * \
-		cos(points[i].polar[LONG]) * sin(points[i].polar[LAT]);
-		points[i].axis[Y] = (map->radius + points[i].axis[Z]) * \
-		sin(points[i].polar[LONG]) * sin(points[i].polar[LAT]);
-		points[i].axis[Z] = (map->radius + points[i].axis[Z]) * \
-		cos(points[i].polar[LAT]);
-		i++;
-	}
-}
-
 void	shadow(t_point *points, int len)
 {
 	int		i;
@@ -71,7 +54,6 @@ void	shadow(t_point *points, int len)
 		i++;
 	}
 }
-
 void	generate_stars(t_meta *meta)
 {
 	int		i;

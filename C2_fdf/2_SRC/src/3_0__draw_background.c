@@ -1,43 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   3.1..draw_background.c                             :+:      :+:    :+:   */
+/*   4_1__draw_background_bonus.c                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 15:59:06 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/02/15 11:16:54 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/08 14:26:13 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/fdf.h"
-
-/* 
-*	This function copy len points of the array from src to dst
-*/
-
-void	copy_map(t_point *src, t_point *dst, int len)
-{
-	int	i;
-
-	i = 0;
-	while (i < len)
-	{
-		dst[i] = src[i];
-		i++;
-	}
-}
-
-/*
-*	This function set the color value to 32bits value in case of need
-*/
-
-int	get_color(t_meta *meta, int color)
-{
-	if (meta->bitmap.bitxpixel != 32)
-		color = mlx_get_color_value(meta->vars.mlx, color);
-	return (color);
-}
 
 /*
 *	This function generate all the pixel colors and fill the img array propertly

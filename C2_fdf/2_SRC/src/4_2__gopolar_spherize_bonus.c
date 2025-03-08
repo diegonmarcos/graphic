@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   1.2.load_gopolar.c                                 :+:      :+:    :+:   */
+/*   4_1__gopolar_spherize_bonus.c                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 15:58:41 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/02/15 10:15:04 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/08 14:46:13 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,23 @@ void	go_polar(t_map *map)
 		else
 			map->points[i].polar[LAT] = (map->points[i].axis[Y] + \
 			(map->limits.axis[Y] / 2) - 1) * steps_y + 0.5 * steps_y;
+		i++;
+	}
+}
+
+void	spherize(t_map *map, t_point *points)
+{
+	int	i;
+
+	i = 0;
+	while (i < map->len)
+	{
+		points[i].axis[X] = (map->radius + points[i].axis[Z]) * \
+		cos(points[i].polar[LONG]) * sin(points[i].polar[LAT]);
+		points[i].axis[Y] = (map->radius + points[i].axis[Z]) * \
+		sin(points[i].polar[LONG]) * sin(points[i].polar[LAT]);
+		points[i].axis[Z] = (map->radius + points[i].axis[Z]) * \
+		cos(points[i].polar[LAT]);
 		i++;
 	}
 }
