@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   1.0.load_mapsize.c                                 :+:      :+:    :+:   */
+/*   1_0_load_mapsize.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 15:58:20 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/02/15 09:59:46 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/09 10:58:10 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/fdf.h"
+#include "../../inc/fdf.h"
 
 /* 
 *	This function determinates the max values x, y, z of the map

@@ -6,11 +6,11 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 16:00:42 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/08 14:55:05 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/09 10:58:10 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/fdf.h"
+#include "../../inc/fdf.h"
 
 void	print_nbr(t_meta *meta, int x, int y, int nbr)
 {

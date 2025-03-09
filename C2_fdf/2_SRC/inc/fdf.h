@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 15:40:13 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/01 12:46:03 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/09 11:30:35 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,18 +32,21 @@
 /* ***************************************************************** */
 /* 0.2 Program Headers												 */
 /* ***************************************************************** */
-# include "data.h"
-# include "defines.h"
-# include "keycodes.h"
+# include "fdf_data.h"
+# include "fdf_defines.h"
+# include "fdf_keycodes.h"
 
 /* ***************************************************************** */
 /* 0.3 Dependencies Headers											 */
 /* ***************************************************************** */
 /* ************************************************************* */
 /* ************************************************************* */
-# include "../libs/minilibx/minilibx_linux/mlx.h"
+//# include "../libs/minilibx/minilibx_linux/mlx.h"
 # include "../libs/mylibc/include/mylibc.h"
 # include "../libs/mylibc/include/mylibc_data.h"
+# include "../libs/mylibc/include/mylibc_defines.h"
+# include "../libs/mylibx/inc/mylibx.h"
+# include "../libs/mylibx/inc/mylibx_data.h"
 
 // ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓	//
 /*#####################################################################	*/

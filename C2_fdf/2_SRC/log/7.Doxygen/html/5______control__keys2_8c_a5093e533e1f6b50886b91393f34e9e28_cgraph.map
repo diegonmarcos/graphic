@@ -1,9 +1,0 @@
-<map id="control_colorscheme" name="control_colorscheme">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,163,31"/>
-<area shape="rect" id="Node000002" href="$1__2__load__colorize_8c.html#a45577be5a552543e4300055cfb0c85f0" title=" " alt="" coords="211,5,284,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="163,15,197,15,197,21,163,21"/>
-<area shape="rect" id="Node000003" href="$1__2__load__colorize_8c.html#a9366a408861b36503b900e981e86ef67" title=" " alt="" coords="332,5,421,31"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="284,15,318,15,318,21,284,21"/>
-<area shape="rect" id="Node000004" href="$1__2__load__colorize_8c.html#a0e4dac81b29e0889721877364c6424eb" title=" " alt="" coords="469,5,545,31"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="421,15,456,15,456,21,421,21"/>
-</map>

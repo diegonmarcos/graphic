@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   3.3.1.drawning_wired.c                             :+:      :+:    :+:   */
+/*   3_2_1_drawning_wired.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 15:59:49 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/02/15 11:14:35 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/09 10:58:10 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/fdf.h"
+#include "../../inc/fdf.h"
 
 /* 
 *	This ft iterate all the points of the wire array and draw a line between:

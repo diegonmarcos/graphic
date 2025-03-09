@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   3_1_3_parse_operations_bonus.c                     :+:      :+:    :+:   */
+/*   4_0__parse_operations_bonus.c                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 15:59:34 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/08 14:26:13 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/09 10:58:10 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/fdf.h"
+#include "../../inc/fdf.h"
 
 /*
 * - Scaling of points to fit the display

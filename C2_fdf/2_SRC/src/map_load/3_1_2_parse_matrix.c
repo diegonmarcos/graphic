@@ -6,11 +6,11 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 15:59:26 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/08 14:56:57 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/09 10:58:10 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/fdf.h"
+#include "../../inc/fdf.h"
 
 /*
 *   Calculate len "points" of the array with the "ang" rotation in X axis

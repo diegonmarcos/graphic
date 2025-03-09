@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   keycodes.h                                         :+:      :+:    :+:   */
+/*   fdf_keycodes.h                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 15:40:24 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/02/27 11:27:43 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/09 10:02:45 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef KEYCODES_H
-# define KEYCODES_H
+#ifndef FDF_KEYCODES_H
+# define FDF_KEYCODES_H
 
 # ifdef __linux__
 #  define KEY_ESC     65307

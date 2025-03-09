@@ -1,9 +1,0 @@
-<map id="draw_dot" name="draw_dot">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,88,31"/>
-<area shape="rect" id="Node000002" href="$3__3__2__drawning__doted_8c.html#aa4b74395091c497d72d13b7d3353d12b" title=" " alt="" coords="136,5,207,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="88,15,123,15,123,21,88,21"/>
-<area shape="rect" id="Node000003" href="$3__3__2__drawning__myputpixel_8c.html#abe1c5fa6cf7496fe44819982cfc464db" title=" " alt="" coords="255,5,357,31"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="207,15,241,15,241,21,207,21"/>
-<area shape="rect" id="Node000004" href="$3__3__2__drawning__myputpixel_8c.html#a6c40b49ca16ac46b7e567a397bfe158d" title=" " alt="" coords="405,5,487,31"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="358,15,391,15,391,21,358,21"/>
-</map>

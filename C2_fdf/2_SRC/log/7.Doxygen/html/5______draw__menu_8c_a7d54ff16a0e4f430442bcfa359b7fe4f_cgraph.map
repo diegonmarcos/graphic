@@ -1,7 +1,0 @@
-<map id="draw_info" name="draw_info">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,92,56"/>
-<area shape="rect" id="Node000002" href="$6______utils_8c.html#a2b07a45d4f4c29cdb931d14b3b8dee06" title=" " alt="" coords="140,5,220,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="92,32,126,26,127,31,93,38"/>
-<area shape="rect" id="Node000003" href="$6______utils_8c.html#a13e900dbde21ead012d97d35585f0663" title=" " alt="" coords="142,55,218,80"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="93,49,129,55,128,61,92,54"/>
-</map>

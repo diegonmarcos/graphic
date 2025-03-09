@@ -6,7 +6,7 @@
 #    By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/14 16:00:50 by dinepomu          #+#    #+#              #
-#    Updated: 2025/03/07 07:38:46 by dinepomu         ###   ########.fr        #
+#    Updated: 2025/03/09 11:29:37 by dinepomu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,23 +15,27 @@
 
 NAME			:= fdf
 
-SRC_DIR			:= src/
+SRC_DIR			:= src/src_all/
 OBJ_DIR			:= obj/
 CC				:= gcc
 CFLAGS			:= -g -O3 -Wall -Werror -Wextra
 RM				:= rm -rf
-MAKEFLAGS 		+= --silent
+#MAKEFLAGS 		+= --silent
 
 FT_MYLIB_NAME	:= mylibc
 FT_MYLIB_DIR	:= libs/mylibc/
 FT_MYLIB		:= $(FT_MYLIB_DIR)mylibc.a
+FT_MYLIBX_NAME	:= mylibx_
+FT_MYLIBX_DIR	:= libs/mylibx/
+FT_MYLIBX		:= $(FT_MYLIB_DIR)mylibx.a
 
 MINILIBX_DIR	:= libs/minilibx/minilibx_linux/
-MINILIBXCC		:= -I$(MINILIBX_DIR) -L $(MINILIBX_DIR) -lmlx
 LIBS			:= -lXext -lX11 -lm
 
-HEADER 			:= -Iinc -I$(FT_MYLIB_DIR) -I$(MINILIBX_DIR)
-LIBRARIES		:= -L$(FT_MYLIB_DIR) -l$(FT_MYLIB_NAME) -L$(MINILIBX_DIR) -lmlx $(LIBS)
+HEADER 			:= -Iinc -I$(FT_MYLIB_DIR) -I$(FT_MYLIBX_DIR)
+#HEADER 			:= -Iinc -I$(FT_MYLIB_DIR) -I$(MINILIBX_DIR)
+LIBRARIES		:= -L$(FT_MYLIB_DIR) -l$(FT_MYLIB_NAME) -L$(FT_MYLIBX_DIR) -l$(FT_MYLIBX_NAME)
+#LIBRARIES		:= -L$(FT_MYLIB_DIR) -l$(FT_MYLIB_NAME) -L$(FT_MYLIBX_DIR) -l$(FT_MYLIBX_NAME) -L$(MINILIBX_DIR) -lmlx $(LIBS)
 
 
 
@@ -42,33 +46,34 @@ LIBRARIES		:= -L$(FT_MYLIB_DIR) -l$(FT_MYLIB_NAME) -L$(MINILIBX_DIR) -lmlx $(LIB
 SRC_FILES_MAIN		=							\
 					_main				
 SRC_FILES_SRC		= 							\
-					1___map_load 				\
-					1_0_load_mapini 			\
-					1_0_load_mapsize 			\
-					1_1_load_getpoints 			\
-					1_1_load_loadpoints 		\
-					1_2_load_colorize 			\
-					1_2_load_gopolar 			\
-					2___sys_ini 				\
-					3___map_draw 				\
-					3_1__draw_background 		\
-					3_2__draw_parsemap 			\
-					3_2_1_parse_geometry 		\
-					3_2_2_parse_matrix 			\
-					3_2_3_parse_scale 			\
-					3_3__draw_drawning 			\
-					3_3__drawning_gofit 		\
-					3_3_1_drawning_wired 		\
-					3_3_2_drawning_doted 		\
-					3_3_2_drawning_myputpixel 	\
-					4___views_bonus 			\
-					5___draw_menu 				\
-					5___control_keys 			\
-					5___control_keys2 			\
-					5___control_mouse 			\
-					6___utils 					\
+					1_0_load_mapini				\
+					1_0_load_mapsize			\
+					1_1_load_getpoints			\
+					1_1_load_loadpoints			\
+					1_2_load_colorize			\
+					1___map_load				\
+					2___sys_ini					\
+					3_0__draw_background		\
+					3_1_2_parse_matrix			\
+					3_1__draw_parsemap			\
+					3_2_1_drawning_wired		\
+					3_2_2_drawning_doted		\
+					3_2_2_drawning_myputpixel	\
+					3_2__draw_drawning			\
+					3_2__drawning_gofit			\
+					3___map_draw				\
+					3_ft_x11_XDrawLine			\
+					5___control_keys			\
+					5___control_keys2			\
+					5___control_mouse			\
+					6___utils
+SRC_FILES_BONUS = 									\
+					4_0__parse_operations_bonus		\
+					4_1__views_bonus				\
+					4_2__gopolar_spherize_bonus		\
+					5___draw_menu_bonus
 
-SRC_FILES			= $(SRC_FILES_MAIN) $(SRC_FILES_SRC)
+SRC_FILES			= $(SRC_FILES_MAIN) $(SRC_FILES_SRC) $(SRC_FILES_BONUS)
 
 SRC 				= 	$(addprefix $(SRC_DIR), $(addsuffix .c, $(SRC_FILES)))
 OBJ 				= 	$(addprefix $(OBJ_DIR), $(addsuffix .o, $(SRC_FILES)))
@@ -109,18 +114,18 @@ all:	mkdir clone_repos makelibs $(NAME) run
 #### Clone Repos ####
 clone_repos: mkdir libs/minilibx/minilibx_linux
 libs/minilibx/minilibx_linux:
-	git clone $(MINILIBX_CODAM_URL) $(MINILIBX_CODAM_DIR)
-	git clone $(MINILIBX_LINUX_URL) $(MINILIBX_LINUX_DIR)
+#	git clone $(MINILIBX_CODAM_URL) $(MINILIBX_CODAM_DIR)
+#	git clone $(MINILIBX_LINUX_URL) $(MINILIBX_LINUX_DIR)
 
 #### Make Libs ####
 makelibs:	
-	$(MAKE) -C $(FT_MYLIB_DIR)
+#	$(MAKE) -C $(FT_MYLIB_DIR)
 
 ifeq ($(UNAME_S),Linux)
 	cd $(MINILIBX_DIR) && ./configure
 	cd ../../..
 endif
-	@$(MAKE) -C $(MINILIBX_DIR)
+#	@$(MAKE) -C $(MINILIBX_DIR)
 
 #### Make Program ####
 $(NAME):	$(OBJ)		
@@ -148,17 +153,17 @@ endif
 ### CLEANERS ###
 clean:
 #			make clean -C $(FT_MYLIB_DIR)
-			@echo "$(CYAN)ft_mylib object and dependency files deleted.$(DEF_COLOR)"
-			make clean -C $(MINILIBX_DIR)
-			@echo "$(CYAN)Minilibx object files deleted.$(DEF_COLOR)"	
+#			@echo "$(CYAN)ft_mylib object and dependency files deleted.$(DEF_COLOR)"
+#			make clean -C $(MINILIBX_DIR)
+#			@echo "$(CYAN)Minilibx object files deleted.$(DEF_COLOR)"	
 			$(RM) -rf $(OBJ_DIR)
 			@echo "$(CYAN)Object files deleted!$(DEF_COLOR)"
 
 fclean:		clean
 #			make fclean -C $(FT_MYLIB_DIR)
-			@echo "$(CYAN)libft_mylib.a lib cleaned!$(DEF_COLOR)"
-			$(RM) -f $(MINILIBX_DIR)libmlx.a
-			@echo "$(CYAN)libmlx.a lib cleaned!$(DEF_COLOR)"			
+#			@echo "$(CYAN)libft_mylib.a lib cleaned!$(DEF_COLOR)"
+#			$(RM) -f $(MINILIBX_DIR)libmlx.a
+#			@echo "$(CYAN)libmlx.a lib cleaned!$(DEF_COLOR)"			
 			$(RM) -f $(NAME)
 			@echo "$(CYAN)files cleaned!$(DEF_COLOR)"
 			rm -rf log

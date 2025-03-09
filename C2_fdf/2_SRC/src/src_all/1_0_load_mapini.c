@@ -1,0 +1,1 @@
+../map_load/1_0_load_mapini.c

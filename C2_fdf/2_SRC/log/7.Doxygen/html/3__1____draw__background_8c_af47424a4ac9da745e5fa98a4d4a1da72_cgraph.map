@@ -1,7 +1,0 @@
-<map id="generate_background" name="generate_background">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,168,56"/>
-<area shape="rect" id="Node000002" href="$3__1____draw__background_8c.html#a2a1cfd58a20f10717d2e12b326b05fb9" title=" " alt="" coords="216,5,299,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="168,29,202,23,203,29,168,34"/>
-<area shape="rect" id="Node000003" href="$3__3__2__drawning__myputpixel_8c.html#a6c40b49ca16ac46b7e567a397bfe158d" title=" " alt="" coords="217,55,298,80"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="168,52,204,57,203,62,168,57"/>
-</map>

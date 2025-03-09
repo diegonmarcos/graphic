@@ -1,0 +1,1 @@
+../map_load/3_2_1_drawning_wired.c

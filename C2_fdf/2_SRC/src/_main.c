@@ -6,11 +6,11 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 15:58:01 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/01 13:48:15 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/09 10:55:48 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/fdf.h"
+#include "../../inc/fdf.h"
 
 /**
  * @brief Implementation of the FdF project from 42 school.
