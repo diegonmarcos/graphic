@@ -4,7 +4,11 @@
 
 
 
-# A) GRAPHICS ALGOS, FRAMEWORKS AND APIs
+# A) GRAPHICS RENDER ALGOS, FRAMEWORKS AND APIs: 
+> From Vector-Based Wireframing to Polygon Filled to Textures|Light|Camera Controls
+
+> from Ortoghonal Projection to a Perspective Projection
+
 ## Rendering Algorithms
 <details>
 
@@ -132,14 +136,82 @@ Each of these techniques can be combined in various ways within a rasterization 
 </details>
 <br><br><br><br><br><br>
 
+## Vector-Based Wireframe vs. Polyg Rasterization
+<details><summary>Expand for details</summary>
+
+### Vector-Based Wireframe Rendering
+Vector-based wireframe rendering focuses on displaying the edges (lines) that define the structure of a 3D model.
+
+Characteristics:
+Only renders the edges/outlines of objects
+Computationally efficient - only processes vertices and edges
+Creates a skeletal representation that shows structure clearly
+Doesn't require textures or complex shading
+Useful for technical visualizations, debugging, and design
+Implementation:
+
+### Polygon Rasterization
+Polygon rasterization fills in the surfaces defined by the vertices, creating solid objects.
+
+Characteristics:
+Renders filled surfaces rather than just outlines
+Computationally more intensive - processes every pixel within polygons
+Creates a more realistic visual representation
+Supports textures, lighting, and shading
+Essential for creating visually rich 3D environments
+</details>
+
+## Perspective vs. Orthographic Projection
+<details>
+
+> Perspective and orthographic projections are two fundamentally different ways of projecting 3D objects onto a 2D surface (like your screen). They are not the same thing, and they create distinctly different visual results.
+
+### Perspective Projection
+Perspective projection mimics how human eyes and cameras see the world:
+- Objects appear smaller as they get farther away
+- Parallel lines converge at vanishing points
+- Creates a sense of depth and distance
+- Closer objects appear larger than distant objects of the same size
+- In the transformation matrix, perspective projection includes a division by distance (the "perspective divide"), which creates the effect of size diminishing with distance.
+
+#### Use Perspective When:
+
+- Aiming for realistic visual representation
+- Creating immersive 3D environments
+- Simulating what a camera would see
+- Wanting to emphasize depth and distance in a scene
+
+### Orthographic Projection
+Orthographic (or orthogonal) projection shows objects with their true relative sizes, regardless of distance:
+
+Objects remain the same size regardless of distance
+Parallel lines remain parallel (no convergence)
+No sense of depth from perspective
+Often used in engineering, architecture, and 2D games
+Sometimes called "isometric" in game contexts (though true isometric is a specific type of orthographic)
+In the transformation matrix, orthographic projection has no division by distance - it's a simple linear mapping.
+
+#### Common Variations:
+- Cabinet Projection: 3/4 view where depth is shown at 45° but half-scaled
+- Isometric Projection: Equal foreshortening of all three axes (30° angles)
+- Dimetric Projection: Two axes have equal foreshortening, third is different
+- Military Projection: Top-down view with full-scale depth at 45°
+
+> The key difference is that orthographic projection simply scales the coordinates, while perspective projection divides by the Z coordinate (depth) to create the illusion of depth.
+
+Use Orthographic When:
+- You need to preserve measurements and proportions
+- Working with technical drawings or diagrams
+- Creating isometric games or UI elements
+- Showing multiple views of an object simultaneously
 
 
-
-
+</details>
+<br><br><br><br><br><br>
 
 
 # THE CHOSEN METHOD
-## Rasterization Category
+## Rasterization Category with Orthogonal Projection
 ### Vector-Based Wireframe Algorithm
 - Represents 3D objects using only their edges (vectors/lines)
 - Focuses on geometric structure rather than solid surfaces
@@ -249,7 +321,7 @@ Key characteristics of X11:
 
 
 # THE CHOSEN GRAPHIC LIBRARY IN UNIX
-The choice of X11 for MiniLibX was likely made because:
+The choice is MiniLibX that is on top of X11:
 1. It was ubiquitous on Linux systems when MiniLibX was created
 2. It provides a reasonable balance of simplicity and capability
 3. It doesn't require additional dependencies beyond what's standard on Linux

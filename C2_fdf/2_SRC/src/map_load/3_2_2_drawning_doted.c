@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 15:59:55 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/09 10:58:10 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/09 12:51:20 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,15 @@
 /* 
 *	This ft iterate all the points of the array and draw a dot for each point
 */
-void	doted(t_meta *meta, t_point *proyect)
+void	doted(t_meta *meta, t_point *project)
 {
 	int	i;
 
 	i = 0;
 	while (i < meta->map.len)
 	{
-		if (proyect[i].paint)
-			draw_dot(meta, proyect[i], 1);
+		if (project[i].paint)
+			draw_dot(meta, project[i], 1);
 		i++;
 	}
 }
