@@ -396,7 +396,36 @@ This fdf project demonstrates an example of structured code organization for a g
 This organization follows good software engineering principles, making the code maintainable and extensible. The pipeline structure (load → transform → render) is particularly suitable for graphics projects as it follows the natural flow of data processing.
 
 ## (ii) Manipulating MiniLibX
+In the case of line drawing in the MiniLibX and X11 ecosystem, the implementation varies depending on where the line drawing occurs:
 
+### Line Drawing 
+#### in X11
+X11's Xlib provides the `XDrawLine()` function which uses the Bresenham line algorithm internally for drawing lines. This is a highly efficient integer-based algorithm for rasterizing lines that:
+- Uses only integer addition, subtraction, and bit shifting
+- Avoids floating-point calculations
+- Determines which pixels should be illuminated to form a close approximation to a straight line
+
+#### Line Drawing in MiniLibX
+MiniLibX itself doesn't provide a built-in line drawing function in its core API. This is why students using MiniLibX typically need to implement their own line drawing algorithm. The most common approaches implemented by students are:
+
+1. **Bresenham's Line Algorithm**
+   - Same algorithm used by X11 internally
+   - Efficient and uses only integer arithmetic
+   - Commonly taught in graphics programming courses
+
+2. **DDA (Digital Differential Analyzer)**
+   - Uses floating-point calculations
+   - Conceptually simpler than Bresenham's algorithm
+   - Less efficient but easier to understand for beginners
+
+3. **Wu's Line Algorithm**
+   - An anti-aliased line drawing algorithm
+   - More complex but produces smoother lines
+   - Less commonly implemented in student projects
+
+To draw lines, one of these algorithms will draw into the image buffer before displaying it with `mlx_put_image_to_window()`.
+
+### Usage
 The project shows several ways of interacting with the miniLibX library:
 
 1. **Window and Image Management**:
