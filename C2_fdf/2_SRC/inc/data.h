@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 15:39:49 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/02/15 09:53:55 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/08 15:05:08 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ typedef struct s_point
 	int		hex_color;
 	bool	paint;
 	float	polar[2];
-}	t_point;
+}			t_point;
 
 typedef struct m_colors
 {
@@ -34,7 +34,7 @@ typedef struct m_colors
 	int	bottomcolor;
 	int	backcolor;
 	int	menucolor;	
-}	t_colors;
+}		t_colors;
 
 typedef struct s_bitmap
 {
@@ -43,13 +43,13 @@ typedef struct s_bitmap
 	int		bitxpixel;
 	int		lines;
 	int		endian;
-}	t_bitmap;
+}			t_bitmap;
 
 typedef struct s_vars
 {
 	void	*mlx;
 	void	*win;
-}	t_vars;
+}			t_vars;
 
 typedef struct s_keys
 {
@@ -58,7 +58,7 @@ typedef struct s_keys
 	bool	b_keyctrl;
 	t_point	last_click_l;
 	t_point	last_click_r;
-}	t_keys;
+}			t_keys;
 
 typedef struct m_map
 {
@@ -84,7 +84,7 @@ typedef struct m_map
 	double		performance;
 	float		proportion;
 	float		radius;
-}	t_map;
+}				t_map;
 
 typedef struct s_meta
 {
@@ -92,6 +92,6 @@ typedef struct s_meta
 	t_bitmap	bitmap;
 	t_map		map;
 	t_keys		keys;
-}	t_meta;
+}				t_meta;
 
 #endif
