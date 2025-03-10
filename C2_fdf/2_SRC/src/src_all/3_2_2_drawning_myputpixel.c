@@ -1,1 +1,1 @@
-../map_load/3_2_2_drawning_myputpixel.c
+../map_draw/3_2_2_drawning_myputpixel.c

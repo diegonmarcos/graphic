@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 15:58:57 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/09 10:58:10 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/10 13:55:27 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,30 +32,32 @@
  * large maps with minimal performance overhead. Proper error handling and 
  * validation are implemented to ensure robustness.
  * 
- * 
- * @author 
- * @date 
- * @version 
+ * map->renders is incremented each time the map is drawn.
+ * map->performance stores the time taken to draw the map.
+ * copy_map() is used to create a copy of the map points for rendering.
+ * parse_map() is used to apply transformations to the map points.
+ * drawing() is used to render the map on the screen.
+ * draw_menu() is used to display the menu and other information.
  */
 int	draw_map(t_meta *meta, int fit)
 {
-	t_point	*proyect;
+	t_point	*map_points;
 	clock_t	t;
 
 	t = clock();
-	proyect = malloc (meta->map.len * sizeof(t_point));
-	if (!proyect)
+	map_points = malloc (meta->map.len * sizeof(t_point));
+	if (!map_points)
 		terminate1(ERR_MEM, meta);
 	meta->map.renders = meta->map.renders + 1;
 	generate_background(meta, meta->map.colors.backcolor, \
 						meta->map.colors.menucolor);
-	copy_map(meta->map.points, proyect, meta->map.len);
-	parse_map(meta, proyect);
-	drawing(meta, proyect, fit);
+	copy_map(meta->map.points, map_points, meta->map.len);
+	parse_map(meta, map_points);
+	drawing(meta, map_points, fit);
 	mlx_put_image_to_window(meta->vars.mlx, meta->vars.win, \
 							meta->bitmap.img, 0, 0);
 	draw_menu(meta);
-	free (proyect);
+	free (map_points);
 	t = clock() - t;
 	meta->map.performance = ((double)t) / CLOCKS_PER_SEC;
 	return (1);

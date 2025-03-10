@@ -1,1 +1,1 @@
-../map_load/3_2__drawning_gofit.c
+../map_draw/3_2__drawning_gofit.c

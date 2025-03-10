@@ -1,1 +1,1 @@
-../controls/5___control_keys2.c
+../sys_controls/5___control_keys2.c

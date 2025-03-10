@@ -6,14 +6,15 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 15:58:41 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/09 10:58:10 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/10 13:43:02 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../inc/fdf.h"
 
 /* 
-*	Colorize all the points of the map
+*	Colorize all the points of the map apliying a gradient acording the z value
+*	of the point and the max and min values of the map.
 */
 
 void	colorize(t_map *map)
@@ -59,9 +60,24 @@ void	load_color(int max, int min, t_point *point, t_colors	colors)
 
 /*
 *	This function generates the color of each pixel between starcolor/endcolor
-*	To do that get the RGB chanels independtly and create a 
-*	linear escale between each channel.
-*	The function return the color number "pix" of line "0->len".
+* 	| Red (8 bits) | Green (8 bits) | Blue (8 bits) |
+*   	Bits 16-23     Bits 8-15        Bits 0-7
+*
+* Example:
+* 	startcolor = 0x00FF00 	(pure green: 	R=0, 	G=255, 	B=0)
+* 	endcolor = 0xFF0000 	(pure red: 		R=255, 	G=0, 	B=0)
+* 	len = 100 				(total steps in gradient)
+* 	pix = 50 				(halfway point)
+*
+* The increments would be:
+* 	Red increment: (255 - 0) / 100 = 2.55 per step
+* 	Green increment: (0 - 255) / 100 = -2.55 per step
+* 	Blue increment: (0 - 0) / 100 = 0 per step
+*
+* At position 50:
+* 	New red: 0 + round(50 * 2.55) = 128
+* 	New green: 255 + round(50 * -2.55) = 128
+* 	New blue: 0 + round(50 * 0) = 0
 */
 int	gradient(int startcolor, int endcolor, int len, int pix)
 {

@@ -1,1 +1,1 @@
-../map_load/3_2__draw_drawning.c
+../map_draw/3_2__draw_drawning.c

@@ -435,9 +435,45 @@ Provides a simplified memory buffer management system for:
 
 
 
+## Cartesian vs. Polar Coordinates in FDF
 
+Converting maps coordinates from Cartesian to polar coordinates provides several advantages for certain visualization and manipulation needs.
 
+<details>
 
+### Cartesian Coordinates
+Points represented as (x, y, z)
+Based on perpendicular axes
+Good for representing grid-based data
+Simple to understand and manipulate for linear transformations
+
+### Polar Coordinates
+Points represented as (r, θ, z) where:
+r = distance from origin
+θ = angle in the x-y plane
+z = height (unchanged from Cartesian)
+Based on distance from a central point and angles
+Better for radial operations and circular patterns
+Benefits of Polar Coordinates in FDF
+Rotation Simplification:
+
+### Diferences
+Radial Operations:
+- In polar coordinates, rotating around the z-axis is just adding a value to θ
+Much simpler than the matrix multiplication required in Cartesian coordinates
+- Operations like scaling from the center become trivial (just multiply r)
+- Creating circular or spiral patterns becomes more intuitive
+
+Distance Calculation:
+- The distance from the center is immediately available as the r value
+Useful for effects that depend on distance from a focal point
+
+Visual Effects: 
+- Simplifies creating radial gradients or color transitions
+Makes it easier to implement wave-like deformations
+
+</details>
+<br><br><br><br><br><br>
 
 # C) THE PROJECT
 ## (i) Code Organization for a Graphic Project

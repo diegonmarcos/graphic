@@ -6,15 +6,26 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 15:58:20 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/09 10:58:10 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/10 13:05:58 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../inc/fdf.h"
 
-/* 
-*	This function determinates the max values x, y, z of the map
-*	and terminate if the maps has different line sizes.
+/*
+* This function calculates:
+*	- the number of elements in a line
+*	- the number of lines
+*	- the total number of elements in the map
+*	- the size of the map 
+*
+* num_elems is the number of elements in a line.
+* map->limits.axis[X] is the number of elements in a line.
+* map->limits.axis[Y] is the number of lines.
+* map->len is the total number of elements in the map.
+*
+* map->memory is a string with the content of the file.
+*
 */
 void	map_size(t_map *map)
 {

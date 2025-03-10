@@ -6,7 +6,7 @@
 #    By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/14 16:00:50 by dinepomu          #+#    #+#              #
-#    Updated: 2025/03/10 12:40:42 by dinepomu         ###   ########.fr        #
+#    Updated: 2025/03/10 13:10:22 by dinepomu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -53,7 +53,6 @@ SRC_FILES_SRC		= 							\
 					1_0_load_mapini				\
 					1_0_load_mapsize			\
 					1_1_load_getpoints			\
-					1_1_load_loadpoints			\
 					1_2_load_colorize			\
 					1___map_load				\
 					2___sys_ini					\

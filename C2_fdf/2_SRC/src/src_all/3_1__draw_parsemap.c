@@ -1,1 +1,1 @@
-../map_load/3_1__draw_parsemap.c
+../map_draw/3_1__draw_parsemap.c

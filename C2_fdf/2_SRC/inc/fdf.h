@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 15:40:13 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/10 11:09:21 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/10 13:49:31 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,8 @@
 /* ***************************************************************** */
 # include "fdf_data.h"
 # include "fdf_defines.h"
-# include "fdf_keycodes.h"
+# include "fdf_defines_keys.h"
+# include "fdf_defines_colors.h"
 
 /* ***************************************************************** */
 /* 0.3 Dependencies Headers											 */

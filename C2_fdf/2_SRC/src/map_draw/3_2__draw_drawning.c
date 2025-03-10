@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 15:59:41 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/09 10:58:10 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/10 13:55:27 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,14 +44,14 @@
  * 
  * @author Diego
  */
-void	drawing(t_meta *meta, t_point *proyect, int fit)
+void	drawing(t_meta *meta, t_point *map_points, int fit)
 {
 	if (meta->map.b_stars)
 		generate_stars(meta);
 	if (fit)
-		go_fit(meta, proyect);
+		go_fit(meta, map_points);
 	if (meta->map.b_lines)
-		wired(meta, proyect);
+		wired(meta, map_points);
 	if (meta->map.b_dots)
-		doted(meta, proyect);
+		doted(meta, map_points);
 }

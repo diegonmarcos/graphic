@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   fdf_keycodes.h                                     :+:      :+:    :+:   */
+/*   fdf_defines_keys.h                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 15:40:24 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/10 10:58:58 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/10 13:50:06 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 /* https://linktr.ee/diegonmarcos											  */
 /* ************************************************************************** */
 
-#ifndef FDF_KEYCODES_H
-# define FDF_KEYCODES_H
+#ifndef FDF_DEFINES_KEYS_H
+# define FDF_DEFINES_KEYS_H
 
 # ifdef __linux__
 #  define KEY_ESC     65307
