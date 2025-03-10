@@ -6,7 +6,7 @@
 #    By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/14 16:00:50 by dinepomu          #+#    #+#              #
-#    Updated: 2025/03/09 11:29:37 by dinepomu         ###   ########.fr        #
+#    Updated: 2025/03/10 12:04:55 by dinepomu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ OBJ_DIR			:= obj/
 CC				:= gcc
 CFLAGS			:= -g -O3 -Wall -Werror -Wextra
 RM				:= rm -rf
-#MAKEFLAGS 		+= --silent
+MAKEFLAGS 		+= --silent
 
 FT_MYLIB_NAME	:= mylibc
 FT_MYLIB_DIR	:= libs/mylibc/
@@ -62,7 +62,6 @@ SRC_FILES_SRC		= 							\
 					3_2__draw_drawning			\
 					3_2__drawning_gofit			\
 					3___map_draw				\
-					3_ft_x11_XDrawLine			\
 					5___control_keys			\
 					5___control_keys2			\
 					5___control_mouse			\
