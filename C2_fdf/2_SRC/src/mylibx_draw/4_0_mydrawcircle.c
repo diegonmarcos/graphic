@@ -6,24 +6,36 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 15:59:55 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/09 12:51:20 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/10 15:15:23 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../inc/fdf.h"
 
 /* 
-*	This ft iterate all the points of the array and draw a dot for each point
+*	This function implements Bresenham's circle drawing algorithm, which
+* creates a filled circle with a specified radius at a given point on the screen.
+*
+*
+*	Bresenham's algorithm works by tracking points along the circumference of 
+* the circle in one octant (1/8th of the circle), and then using symmetry 
+* to determine the points in the other seven octants.
+*
+* 	The change tracks the incremental changes needed for the algorithm, 
+* and radius_error keeps track of the accumulated error in the approximation.
+* The function also creates a pixel structure that inherits its color from the
+* input point, which will be used to render each pixel  of the circle.
+*
 */
-void	doted(t_meta *meta, t_point *project)
+void	doted(t_meta *meta, t_point *map_points)
 {
 	int	i;
 
 	i = 0;
 	while (i < meta->map.len)
 	{
-		if (project[i].paint)
-			draw_dot(meta, project[i], 1);
+		if (map_points[i].paint)
+			draw_dot(meta, map_points[i], 1);
 		i++;
 	}
 }

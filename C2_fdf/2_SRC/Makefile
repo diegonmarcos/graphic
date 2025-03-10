@@ -6,7 +6,7 @@
 #    By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/14 16:00:50 by dinepomu          #+#    #+#              #
-#    Updated: 2025/03/10 13:10:22 by dinepomu         ###   ########.fr        #
+#    Updated: 2025/03/10 15:16:35 by dinepomu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -59,9 +59,9 @@ SRC_FILES_SRC		= 							\
 					3_0__draw_background		\
 					3_1_2_parse_matrix			\
 					3_1__draw_parsemap			\
-					3_2_1_drawning_wired		\
-					3_2_2_drawning_doted		\
-					3_2_2_drawning_myputpixel	\
+					4_0_mydrawcircle.c			\
+					4_0_mydrawline				\
+					4_1_myputpixel				\
 					3_2__draw_drawning			\
 					3_2__drawning_gofit			\
 					3___map_draw				\

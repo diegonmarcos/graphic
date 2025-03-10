@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 15:58:57 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/10 13:55:27 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/10 14:09:06 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,16 +28,15 @@
  * - Scaling the map to fit within a specified area.
  * - Handling different rendering modes and options.
  * 
- * The functions in this file are designed to be efficient and handle 
- * large maps with minimal performance overhead. Proper error handling and 
- * validation are implemented to ensure robustness.
- * 
  * map->renders is incremented each time the map is drawn.
- * map->performance stores the time taken to draw the map.
+ * 
+ * generate_background() is used to create the background for the map.
  * copy_map() is used to create a copy of the map points for rendering.
  * parse_map() is used to apply transformations to the map points.
  * drawing() is used to render the map on the screen.
+ * 
  * draw_menu() is used to display the menu and other information.
+ * map->performance stores the time taken to draw the map.
  */
 int	draw_map(t_meta *meta, int fit)
 {

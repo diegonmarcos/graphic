@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   3_2_1_drawning_wired.c                             :+:      :+:    :+:   */
+/*   4_0_mydrawline.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 15:59:49 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/09 10:58:10 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/10 15:05:29 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,17 +91,5 @@ int	draw_line(t_meta *meta, t_point start, t_point end)
 		pixel.axis[Y] += delta.axis[Y];
 		pixels = pixels - 1;
 	}
-	return (1);
-}
-
-/*
-*	This function checks if the point is in the windows limit to avoid draw it
-*/
-int	valid_pixel(t_point pixel)
-{
-	if (pixel.axis[X] < 0 || pixel.axis[X] > WINX)
-		return (0);
-	if (pixel.axis[Y] < 0 || pixel.axis[Y] > WINY)
-		return (0);
 	return (1);
 }

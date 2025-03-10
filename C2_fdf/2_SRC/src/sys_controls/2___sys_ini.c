@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 15:58:49 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/09 10:58:10 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/10 14:38:25 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,13 +33,12 @@
  * reliably and efficiently. Proper initialization helps to avoid issues such as
  * hardware malfunctions, software crashes, and performance bottlenecks.
  *
- * @note This file is auto-generated and should not be modified directly. Any
- *       changes should be made in the corresponding configuration files or
- *       scripts that generate this file.
- *
- * @author Diego
- * @date YYYY-MM-DD
- * @version 1.0
+ * mlx_get_data_addr wil return the address of the first byte of the image buffer
+ * mlx_new_image will create a new image in memory
+ * mlx_new_window will create a new window
+ * mlx_init will initialize the mlx library
+ * mlx_loop will start the event loop
+ * mlx_hook will set the hooks for the events
  */
 void	system_init(t_meta *meta)
 {

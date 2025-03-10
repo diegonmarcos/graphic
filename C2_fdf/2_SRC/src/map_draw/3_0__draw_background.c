@@ -6,14 +6,16 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 15:59:06 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/09 10:58:10 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/10 14:56:51 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../inc/fdf.h"
 
 /*
-*	This function generate all the pixel colors and fill the img array propertly
+* - This function generate all the pixel colors 
+* - Fill the img array propertly
+* - The fucntion get_color will convert to a 32 bit color the color received
 */
 
 void	generate_background(t_meta *meta, int backcolor, int menucolor)
@@ -22,8 +24,8 @@ void	generate_background(t_meta *meta, int backcolor, int menucolor)
 	int	pixel;
 	int	color;
 
-	backcolor = get_color(meta, backcolor);
-	menucolor = get_color(meta, menucolor);
+	backcolor = color_convert_depth(meta, backcolor);
+	menucolor = color_convert_depth(meta, menucolor);
 	axis[X] = 0;
 	axis[Y] = 0;
 	while (axis[Y] < WINY)
@@ -35,7 +37,7 @@ void	generate_background(t_meta *meta, int backcolor, int menucolor)
 			else
 				color = backcolor;
 			pixel = (axis[Y] * meta->bitmap.lines) + (axis[X] * 4);
-			set_color(&meta->bitmap.buffer[pixel], \
+			my_putpixel_writer(&meta->bitmap.buffer[pixel], \
 						meta->bitmap.endian, color, 1);
 			axis[X]++;
 		}

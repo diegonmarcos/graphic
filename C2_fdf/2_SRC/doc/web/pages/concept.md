@@ -1,5 +1,47 @@
 
 
+# PUT PIXEL:
+<details>
+
+The formula: `(Y * WINX * 4) + (X * 4)`, is used to convert 2D coordinates `(X, Y)` into a 1D memory offset in the image buffer. Let me break down exactly how it works:
+
+## The Formula Explained
+Where:
+- `Y` is the vertical coordinate (row)
+- `X` is the horizontal coordinate (column)
+- `WINX` is the width of the window/image in pixels
+- `4` represents the number of bytes per pixel
+
+## How Memory is Organized
+In a graphics buffer, even though we think of pixels in a 2D grid, the actual memory is organized as a single, continuous array of bytes:
+
+Each pixel typically requires 4 bytes (32 bits) to store:
+- 1 byte for Red component
+- 1 byte for Green component
+- 1 byte for Blue component
+- 1 byte for Alpha (transparency)
+
+## Breaking Down the Calculation
+- `Y * WINX` gives us the number of pixels from the top of the image to the start of row `Y`
+- `Y * WINX * 4` converts this to bytes (since each pixel is 4 bytes)
+- `X * 4` gives us the byte offset from the start of the row to the specific pixel's `X` position
+- Adding these together: `(Y * WINX * 4) + (X * 4)` gives us the exact byte offset where the pixel data should be stored
+
+## Example
+Let's say:
+- `WINX = 800` (image is 800 pixels wide)
+- We want to access the pixel at coordinates `(10, 5)`
+
+The calculation would be:
+```markdown
+Offset = (5 * 800 * 4) + (10 * 4)
+	= 16000 + 40
+	= 16040
+```
+So the pixel data starts at byte `16,040` in the buffer.
+
+</details>
+<br><br><br><br><br><br>
 
 
 

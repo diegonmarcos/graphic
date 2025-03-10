@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 15:40:13 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/10 13:49:31 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/10 14:56:51 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,8 +100,8 @@ int		draw_map(t_meta *meta, int fit);
 /* 3.1 Generate Background											 */
 /* ***************************************************************** */
 void	generate_background(t_meta *meta, int backcolor, int menucolor);
-int		get_color(t_meta *meta, int color);
-void	set_color(char *buffer, int endian, int color, int alpha);
+int		color_convert_depth(t_meta *meta, int color);
+void	my_putpixel_writer(char *buffer, int endian, int color, int alpha);
 void	copy_map(t_point *src, t_point *dst, int len);
 
 /* ***************************************************************** */

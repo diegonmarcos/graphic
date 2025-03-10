@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 16:00:42 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/09 10:58:10 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/10 14:09:06 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,15 +60,4 @@ int	halt_exit_program(void *param)
 	free(meta->map.memory);
 	free(meta->map.points);
 	exit(0);
-}
-
-/*
-*	This function set the color value to 32bits value in case of need
-* 	but is not being used
-*/
-int	get_color(t_meta *meta, int color)
-{
-	if (meta->bitmap.bitxpixel != 32)
-		color = mlx_get_color_value(meta->vars.mlx, color);
-	return (color);
 }
