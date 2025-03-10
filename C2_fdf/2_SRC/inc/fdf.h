@@ -6,9 +6,10 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 15:40:13 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/09 11:30:35 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/10 10:57:56 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #ifndef FDF_H
 # define FDF_H
