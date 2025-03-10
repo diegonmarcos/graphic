@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 15:40:13 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/10 10:57:56 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/10 11:09:21 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,9 +43,9 @@
 /* ************************************************************* */
 /* ************************************************************* */
 //# include "../libs/minilibx/minilibx_linux/mlx.h"
-# include "../libs/mylibc/include/mylibc.h"
-# include "../libs/mylibc/include/mylibc_data.h"
-# include "../libs/mylibc/include/mylibc_defines.h"
+# include "../libs/mylibc/inc/mylibc.h"
+# include "../libs/mylibc/inc/mylibc_data.h"
+# include "../libs/mylibc/inc/mylibc_defines.h"
 # include "../libs/mylibx/inc/mylibx.h"
 # include "../libs/mylibx/inc/mylibx_data.h"
 
