@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   4_0__parse_operations_bonus.c                      :+:      :+:    :+:   */
+/*   2_1__trasnformation_2.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 15:59:34 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/09 10:58:10 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/11 16:53:42 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,14 +51,14 @@ void	traslate(t_point *points, t_point move, int len)
 /* 
 *	Z-divisor to control the height effect
 */
-void	z_division(t_point *proyect, float divisor, int len)
+void	z_division(t_point *map_points, float divisor, int len)
 {
 	int	i;
 
 	i = 0;
 	while (i < len)
 	{
-		proyect[i].axis[Z] = proyect[i].axis[Z] / divisor;
+		map_points[i].axis[Z] = map_points[i].axis[Z] / divisor;
 		i++;
 	}
 }
