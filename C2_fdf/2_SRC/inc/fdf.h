@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 15:40:13 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/11 13:13:54 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/11 16:42:24 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,8 +60,8 @@ void	mydrawframe(t_meta *meta, t_point *wire);
 void	mydrawframe_row_lines(t_point *point, t_meta *meta, \
 			int density, int line);
 int		mydrawline(t_meta *meta, t_point start, t_point end);
-int		myputpixel(t_meta *meta, t_point pixel);
-void	myputpixel_writer(char *buffer, int endian, int color, int alpha);
+int		myputpixel_check(t_meta *meta, t_point pixel);
+void	myputpixel(char *buffer, int endian, int color, int alpha);
 
 /* ***************************************************************** */
 /* 0.1 Draw Circle													 */
@@ -132,7 +132,7 @@ void	go_polar(t_map *map);
 /*#####################################################################	*/
 /* 3. MAP RENDER															*/
 /*#####################################################################	*/
-void	map_render(t_meta *meta, t_point *map_points, int fit);
+void	map_render(t_meta *meta, t_point *map_points);
 
 /* ***************************************************************** */
 /* 3.1 Render											 */

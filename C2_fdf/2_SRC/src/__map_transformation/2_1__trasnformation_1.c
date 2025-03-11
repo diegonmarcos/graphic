@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   3_1_2_parse_matrix.c                               :+:      :+:    :+:   */
+/*   2_1__trasnformation_1.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 15:59:26 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/09 10:58:10 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/11 15:40:22 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,7 +90,7 @@ void	rotate_z(t_point *points, t_point *projection, float ang, int len)
 }
 
 /*
-*   Calculate len "points" of the array to orto projection
+*   Calculate len "points" of the array to ortho projection
 *   and store in "projection" array.
 */
 void	ortogonal_projection(t_point *points, t_point *projection, int len)

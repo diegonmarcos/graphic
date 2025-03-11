@@ -1,1 +1,0 @@
-../__mylibx_draw/4_1_myputpixel.c

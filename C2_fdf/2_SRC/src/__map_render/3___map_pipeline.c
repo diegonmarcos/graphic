@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 15:58:57 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/11 12:51:11 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/11 16:48:11 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,8 @@ int	map_pipeline(t_meta *meta, int fit)
 						meta->map.colors.menucolor);
 	copy_map(meta->map.points, map_points, meta->map.len);
 	map_transformation(meta, map_points);
-	map_render(meta, map_points, fit);
+	fit_to_scale(meta, map_points, fit);
+	map_render(meta, map_points);
 	mlx_put_image_to_window(meta->vars.mlx, meta->vars.win, \
 							meta->bitmap.img, 0, 0);
 	render_menu(meta);

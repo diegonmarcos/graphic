@@ -6,7 +6,7 @@
 #    By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/14 16:00:50 by dinepomu          #+#    #+#              #
-#    Updated: 2025/03/11 15:19:24 by dinepomu         ###   ########.fr        #
+#    Updated: 2025/03/11 16:32:11 by dinepomu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ NAME			:= fdf
 SRC_DIR			:= src/src_all/
 OBJ_DIR			:= obj/
 CC				:= gcc
-CFLAGS			:= -g -O3 -Wall -Werror -Wextra
+CFLAGS			:= -g -O3 -Wall -Wextra
 RM				:= rm -rf
 MAKEFLAGS 		+= --silent
 
@@ -69,7 +69,6 @@ SRC_FILES_SRC		= 							\
 					3___map_pipeline			\
 					4_0_mydrawcircle			\
 					4_0_mydrawline				\
-					4_1_myputpixel				\
 					5___control_keys			\
 					5___control_keys2			\
 					5___control_mouse			\

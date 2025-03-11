@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 15:59:49 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/11 13:14:39 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/11 16:40:42 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -130,8 +130,6 @@ int	mydrawline(t_meta *meta, t_point start, t_point end)
 	int		pixels;
 	int		len;
 
-	if (valid_pixel(start) == 0 && valid_pixel(end) == 0)
-		return (0);
 	delta.axis[X] = end.axis[X] - start.axis[X];
 	delta.axis[Y] = end.axis[Y] - start.axis[Y];
 	pixels = sqrt((delta.axis[X] * delta.axis[X]) + \
@@ -144,10 +142,56 @@ int	mydrawline(t_meta *meta, t_point start, t_point end)
 	while (pixels > 0)
 	{
 		pixel.color = gradient(start.color, end.color, len, len - pixels);
-		myputpixel(meta, pixel);
+		pixel.color = color_convert_depth(meta, pixel.color);
+		myputpixel_check(meta, pixel);
 		pixel.axis[X] += delta.axis[X];
 		pixel.axis[Y] += delta.axis[Y];
 		pixels = pixels - 1;
 	}
+	return (1);
+}
+
+/*
+*	Once the function confirms that the pixel is within bounds, it calculates 
+* the exact memory position (mypixel) where the pixel data should be stored in 
+* the linear bitmap buffer. 
+*
+*	This calculation converts the 2D coordinates into a 1D memory offset using 
+* the formula (Y * WINX * 4) + (X * 4), where 
+* the multiplication by 4 accounts for the four bytes typically used to 
+* store each pixel's color information (likely RGBA components).
+* 
+*   Checks if the display's bit depth (bitxpixel) is not the standard 32 bits
+* 
+* 	Calls set_color to write the pixel data
+*/
+int	myputpixel_check(t_meta *meta, t_point pixel)
+{
+	int	mypixel;
+	int	alpha;
+
+	alpha = 0;
+	if (pixel.axis[X] < MENU_WIDTH)
+		alpha = -10;
+	if (!valid_pixel(pixel))
+		return (-1);
+	mypixel = ((int)pixel.axis[Y] * WINX * 4) + ((int)pixel.axis[X] * 4);
+	myputpixel(&meta->bitmap.buffer[mypixel], \
+		meta->bitmap.endian, pixel.color, alpha);
+	return (0);
+}
+
+/*
+*	This function checks if the point is in the windows limit to avoid draw it
+*/
+int	valid_pixel(t_point pixel)
+{
+	if (pixel.axis[X] < 0 || pixel.axis[X] > WINX)
+		return (0);
+	if (pixel.axis[Y] < 0 || pixel.axis[Y] > WINY)
+		return (0);
+	if (pixel.axis[X] >= WINX || pixel.axis[Y] >= WINY || \
+		pixel.axis[X] < 0 || pixel.axis[Y] < 0)
+		return (0);
 	return (1);
 }

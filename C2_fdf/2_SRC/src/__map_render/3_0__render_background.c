@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 15:59:06 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/11 13:14:15 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/11 16:17:06 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ void	render_background(t_meta *meta, int backcolor, int menucolor)
 			else
 				color = backcolor;
 			pixel = (axis[Y] * meta->bitmap.lines) + (axis[X] * 4);
-			myputpixel_writer(&meta->bitmap.buffer[pixel], \
+			myputpixel(&meta->bitmap.buffer[pixel], \
 						meta->bitmap.endian, color, 1);
 			axis[X]++;
 		}

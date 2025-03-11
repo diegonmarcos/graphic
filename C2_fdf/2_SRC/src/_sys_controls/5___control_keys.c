@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 16:00:24 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/11 13:16:40 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/11 16:49:51 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,7 +90,7 @@ void	control_keys2(int key, t_meta *meta)
 	if (key == KEY_H)
 		meta->map.b_shadow = !meta->map.b_shadow;
 	if (key == KEY_F)
-		map_pipeline(meta, FREE);
+		map_pipeline(meta, FIT);
 	if (key == KEY_CMD)
 		meta->keys.b_keyctrl = 1;
 }

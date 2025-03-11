@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 15:59:55 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/11 13:14:30 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/11 16:26:40 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,10 +86,10 @@ void	dot_util(t_meta *meta, t_point pixel, t_point point, int coord)
 	{
 		pixel.axis[X] = i;
 		pixel.axis[Y] = (int)point.axis[Y] + coord;
-		myputpixel(meta, pixel);
+		myputpixel_check(meta, pixel);
 		pixel.axis[X] = i;
 		pixel.axis[Y] = (int)point.axis[Y] - coord;
-		myputpixel(meta, pixel);
+		myputpixel_check(meta, pixel);
 		i++;
 	}
 }
