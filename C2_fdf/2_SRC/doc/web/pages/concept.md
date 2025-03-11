@@ -44,6 +44,123 @@ So the pixel data starts at byte `16,040` in the buffer.
 <br><br><br><br><br><br>
 
 
+# TRANFORMATION AND RENDERING PIPELINES:
+<details>
+
+## 3D TO 2D TRANSFORMATION
+
+PROJECTION TRANSFORMATIONS:
+- Orthogonal Projection
+Projects 3D points onto a 2D plane using orthographic projection. This transformation preserves parallel lines and relative sizes regardless of distance, making it ideal for technical visualizations.
+
+- Characteristics:
+	- Objects maintain the same size regardless of distance
+	- Parallel lines remain parallel in the projection
+	- No foreshortening effect
+	- Preserves measurements and proportions
+	- Less realistic but more precise for technical applications
+
+- Perspective Projection
+Perspective projection mimics how human eyes and cameras see the world. Objects appear smaller as they get farther away, and parallel lines converge at vanishing points, creating a realistic sense of depth and distance.
+
+- Characteristics:
+	- Objects appear smaller as they get farther away
+	- Parallel lines converge at vanishing points
+	- Creates realistic depth perception
+	- The perspective effect is controlled by field of view (FOV)
+	- More realistic and immersive visual experience
+
+VIEWING TRANSFORMATIONS
+- Rotatations(x, y, z)
+Applies 3D rotation matrices to rotate all points around the X, Y, and Z axes. This allows viewing the terrain from different angles by applying standard 3D rotation transformations.
+
+- Scale
+Multiplies all coordinates by a scale factor to resize the projection. This allows zooming in and out of the visualized terrain.
+
+- Traslate
+Moves the entire projection by adding offset values to each point. This centers the visualization in the display window or allows panning across the terrain.
+
+- z_division
+This transformation adjusts the height scale of the terrain by dividing all Z-coordinates by a constant factor. This allows controlling how pronounced the elevation features appear in the visualization.
+
+
+
+FROM CARTESIAN TO POLAR COORDINATES TRANSFORMATIONS
+- Spherize
+Transforms a flat terrain map into a spherical or globe-like shape. It calculates the distance of each point from the center, then converts planar XYZ coordinates to spherical coordinates. Points closer to the center "rise up" while points farther away "curve down," creating a rounded surface
+
+- Bending
+Applies additional curvature to the terrain based on a specified range parameter. This creates wave-like deformations or controlled bending of the surface in specified directions.
+
+
+
+- Shadow
+Computes lighting effects based on surface normals and a simulated light direction. This enhances the 3D perception by adding shading that emphasizes the terrain's topography.
+
+## RENDERING
+### Wireframe 2 lines per point
+The standard grid-based wireframe rendering approach that draws two lines from each point: one horizontally to the next point in the same row, and one vertically to the point below in the grid. This creates a regular grid pattern that efficiently represents terrain surfaces.
+
+Advantages:
+- Computationally efficient (fewer lines to draw)
+- Clean, uncluttered visualization
+- Sufficient for most terrain visualization needs
+
+``` sh
+A---B---C
+|   |   |
+D---E---F
+|   |   |
+G---H---I
+
+    B      
+   / \     
+  /   \    
+ A     C   
+/|    /|   
+D-+---F |  
+| |   | |  
+| G---+-I  
+|/    |/   
+H------    
+
+    B      
+   / \     
+  /   \    
+ A-----C   
+ |\   /|   
+ | \ / |   
+ |  E  |   
+ | / \ |   
+ |/   \|   
+ D-----F   
+ |\   /|   
+ | \ / |   
+ |  H  |   
+ | / \ |   
+ |/   \|   
+ G-----I   
+
+ ```
+
+### Wireframe 3 lines per point
+An enhanced wireframe rendering approach that adds diagonal lines to create triangular faces. This approach draws three lines from each point: one horizontally, one vertically, and one diagonally to the point below and to the right.
+
+Advantages:
+- Creates triangular faces for better surface representation
+- Enhances visual perception of terrain features
+- Provides more complete representation of the underlying geometry
+- Better visual result after 3D transformations like rotation
+
+Disadvantages:
+- Increased computational cost (50% more lines to draw)
+- Can create visual clutter in complex terrains
+- May obscure some features due to line density
+
+</details>
+<br><br><br><br><br><br>
+
+
 
 
 # A) GRAPHICS RENDER ALGOS, FRAMEWORKS AND APIs: 

@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 15:39:49 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/10 10:58:51 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/11 12:39:36 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,6 +80,7 @@ typedef struct m_map
 	int			len;
 	float		brange;
 	int			renders;
+	int			fit;
 	bool		b_lines;
 	bool		b_dots;
 	bool		b_pluslines;

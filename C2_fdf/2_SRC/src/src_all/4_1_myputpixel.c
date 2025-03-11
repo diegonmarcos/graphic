@@ -1,1 +1,1 @@
-../map_draw/4_1_myputpixel.c
+../__mylibx_draw/4_1_myputpixel.c

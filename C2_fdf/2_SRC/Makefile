@@ -6,7 +6,7 @@
 #    By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/14 16:00:50 by dinepomu          #+#    #+#              #
-#    Updated: 2025/03/10 15:16:35 by dinepomu         ###   ########.fr        #
+#    Updated: 2025/03/11 15:19:24 by dinepomu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -54,26 +54,28 @@ SRC_FILES_SRC		= 							\
 					1_0_load_mapsize			\
 					1_1_load_getpoints			\
 					1_2_load_colorize			\
+					1_3_map_checker				\
 					1___map_load				\
+					2_1__transformation			\
+					2_1__trasnformation_1		\
+					2_1__trasnformation_2		\
+					2_2__tarnsf_views_bonus_1	\
 					2___sys_ini					\
-					3_0__draw_background		\
-					3_1_2_parse_matrix			\
-					3_1__draw_parsemap			\
-					4_0_mydrawcircle.c			\
+					3_0__render_background		\
+					3_2__map_render				\
+					3_2__render_fittoscale		\
+					3_3__render_views_bonus		\
+					3_5__render_menu_bonus		\
+					3___map_pipeline			\
+					4_0_mydrawcircle			\
 					4_0_mydrawline				\
 					4_1_myputpixel				\
-					3_2__draw_drawning			\
-					3_2__drawning_gofit			\
-					3___map_draw				\
 					5___control_keys			\
 					5___control_keys2			\
 					5___control_mouse			\
-					6___utils
-SRC_FILES_BONUS = 									\
-					4_0__parse_operations_bonus		\
-					4_1__views_bonus				\
-					4_2__gopolar_spherize_bonus		\
-					5___draw_menu_bonus
+					6___utils			
+SRC_FILES_BONUS = 								\
+
 
 SRC_FILES			= $(SRC_FILES_MAIN) $(SRC_FILES_SRC) $(SRC_FILES_BONUS)
 

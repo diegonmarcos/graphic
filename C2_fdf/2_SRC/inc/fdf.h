@@ -6,17 +6,16 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 15:40:13 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/10 14:56:51 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/11 13:13:54 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #ifndef FDF_H
 # define FDF_H
 
 // ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓	//
 /*#####################################################################	*/
-/* 0. HEADERS/MACROS													*/
+/* 0. HEADERS															*/
 /*#####################################################################	*/
 /* ***************************************************************** */
 /* 0.1 C Library													 */
@@ -52,15 +51,52 @@
 
 // ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓	//
 /*#####################################################################	*/
+/* 0. MYLIBX															*/
+/*#####################################################################	*/
+/* ***************************************************************** */
+/* 0.1 Draw Frame/Line												*/
+/* ***************************************************************** */
+void	mydrawframe(t_meta *meta, t_point *wire);
+void	mydrawframe_row_lines(t_point *point, t_meta *meta, \
+			int density, int line);
+int		mydrawline(t_meta *meta, t_point start, t_point end);
+int		myputpixel(t_meta *meta, t_point pixel);
+void	myputpixel_writer(char *buffer, int endian, int color, int alpha);
+
+/* ***************************************************************** */
+/* 0.1 Draw Circle													 */
+/* ***************************************************************** */
+void	mydrawcircle(t_meta *meta, t_point *map_points);
+void	draw_dot(t_meta *meta, t_point point, int radius);
+void	dot_util(t_meta *meta, t_point pixel, t_point point, int coord);
+
+/* ***************************************************************** */
+/* 3.4 Draw Utils													 */
+/* ***************************************************************** */
+int		valid_pixel(t_point pixel);
+int		limits(t_point *points, int len);
+int		color_convert_depth(t_meta *meta, int color);
+
+/* ***************************************************************** */
+/* 3.4 Draw Utils/Colorize											 */
+/* ***************************************************************** */
+void	load_color(int max, int min, t_point *point, t_colors	colors);
+void	colorize(t_map *map);
+int		gradient(int startcolor, int endcolor, int len, int pix);
+
+// ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓	//
+/*#####################################################################	*/
 /* 1. MAP LOAD															*/
 /*#####################################################################	*/
-void	load_map(t_map *map, char *path);
+void	map_load(t_map *map, char *path);
 /* ***************************************************************** */
 /* 1.1 Map Load														 */
 /* ***************************************************************** */
 void	map_ini(t_map *map, int total);
 void	map_ini_colors(t_map *map);
 void	map_size(t_map *map);
+void	copy_map(t_point *src, t_point *dst, int len);
+void	map_checker(char c);
 
 /* ***************************************************************** */
 /* 1.1 Get points													 */
@@ -70,45 +106,18 @@ int		load_points(char *line, t_map *map, int numline);
 int		valid_point(char *value);
 int		has_hexcolors(char *line);
 
-/* ***************************************************************** */
-/* 1.1 Colorize														 */
-/* ***************************************************************** */
-void	colorize(t_map *map);
-void	load_color(int max, int min, t_point *point, t_colors	colors);
-int		gradient(int startcolor, int endcolor, int len, int pix);
-void	shadow(t_point *points, int len);
-
-/* ***************************************************************** */
-/* 1.1 Colorize														 */
-/* ***************************************************************** */
-void	go_polar(t_map *map);
-
 // ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓	//
-/*#####################################################################	*/
-/* 2. SYSTEM															*/
-/*#####################################################################	*/
-void	system_init(t_meta *meta);
-void	system_init_keys(t_meta *meta);
+int		map_pipeline(t_meta *meta, int fit);
 
-// ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓	//
 /*#####################################################################	*/
-/* 3. MAP DRAW															*/
+/* 2. MAP TRANSFORMATION												*/
 /*#####################################################################	*/
-int		draw_map(t_meta *meta, int fit);
+void	map_transformation(t_meta *meta, t_point *map_points);
 
 /* ***************************************************************** */
-/* 3.1 Generate Background											 */
+/* 2. Map Transformation											 */
 /* ***************************************************************** */
-void	generate_background(t_meta *meta, int backcolor, int menucolor);
-int		color_convert_depth(t_meta *meta, int color);
-void	my_putpixel_writer(char *buffer, int endian, int color, int alpha);
-void	copy_map(t_point *src, t_point *dst, int len);
-
-/* ***************************************************************** */
-/* 3.2 Parse Map													 */
-/* ***************************************************************** */
-void	parse_map(t_meta *meta, t_point *proyect);
-void	z_division(t_point *proyect, float divisor, int len);
+void	z_division(t_point *map_points, float divisor, int len);
 void	bending(t_point *points, int len, float range);
 void	rotate_x(t_point *points, t_point *projection, float ang, int len);
 void	rotate_y(t_point *points, t_point *projection, float ang, int len);
@@ -117,53 +126,51 @@ void	ortogonal_projection(t_point *points, t_point *projection, int len);
 t_point	matrix3_multp(float matrix[3][3], t_point point);
 void	scale(t_point *points, int scale, int len);
 void	traslate(t_point *points, t_point move, int len);
+void	go_polar(t_map *map);
+
+// ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓	//
+/*#####################################################################	*/
+/* 3. MAP RENDER															*/
+/*#####################################################################	*/
+void	map_render(t_meta *meta, t_point *map_points, int fit);
 
 /* ***************************************************************** */
-/* 3.3 Drawining													 */
+/* 3.1 Render											 */
 /* ***************************************************************** */
-void	drawing(t_meta *meta, t_point *proyect, int fit);
-void	generate_stars(t_meta *meta);
-void	go_fit(t_meta *meta, t_point *proyect);
-void	wired(t_meta *meta, t_point *wire);
-void	wire_line(t_point *point, t_meta *meta, int density, int line);
-int		draw_line(t_meta *meta, t_point start, t_point end);
-void	doted(t_meta *meta, t_point *proyect);
-void	draw_dot(t_meta *meta, t_point point, int radius);
-void	dot_util(t_meta *meta, t_point pixel, t_point point, int coord);
+void	render_background(t_meta *meta, int backcolor, int menucolor);
+void	fit_to_scale(t_meta *meta, t_point *map_points, int fit);
 
 /* ***************************************************************** */
-/* 3.4 Menu															 */
+/* 3.2 Menu															 */
 /* ***************************************************************** */
-void	draw_menu(t_meta *meta);
+void	render_menu(t_meta *meta);
 void	draw_info(t_meta *meta);
 void	draw_controls(t_meta *meta);
 void	draw_mapinfo(t_meta *meta);
 void	draw_colorscheme(t_meta *meta);
 
 /* ***************************************************************** */
-/* 3.4 Draw Utils													 */
-/* ***************************************************************** */
-int		valid_pixel(t_point pixel);
-int		limits(t_point *points, int len);
-int		my_putpixel(t_meta *meta, t_point pixel);
-
-// ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓	//
-/*#####################################################################	*/
-/* 4. VIEWS																*/
-/*#####################################################################	*/
-/* ***************************************************************** */
-/* 1.1 Views Features												 */
+/* 3.3 Views Features/Bonus											 */
 /* ***************************************************************** */
 void	isometric(t_map *map);
 void	parallel(t_map *map);
 void	spherize(t_map *map, t_point *points);
+void	render_stars(t_meta *meta);
+void	shadow(t_point *points, int len);
 
 // ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓	//
 /*#####################################################################	*/
-/* 5. CONTROLS															*/
+/* 4. SYSTEM															*/
 /*#####################################################################	*/
 /* ***************************************************************** */
-/* 5.1 Control Keys													 */
+/* 4.1 System														 */
+/* ***************************************************************** */
+void	system_init(t_meta *meta);
+void	system_init_keys(t_meta *meta);
+
+
+/* ***************************************************************** */
+/* 4.2 Control Keys													 */
 /* ***************************************************************** */
 //# include "keycodes.h"
 int		key_press(int key, void *param);
@@ -173,18 +180,23 @@ void	control_keys2(int key, t_meta *meta);
 void	control_keys3(int key, t_meta *meta);
 
 /* ***************************************************************** */
-/* 5.2 Control Mouse												 */
+/* 4.3 Control Mouse												 */
 /* ***************************************************************** */
 int		mouse_move(int x, int y, void *param);
 int		mouse_release(int button, int x, int y, void *param);
 int		mouse_press(int button, int x, int y, void *param);
 
 /* ***************************************************************** */
-/* 5.3 Control Utils												 */
+/* 4.4 Control Utils												 */
 /* ***************************************************************** */
 void	control_colorscheme(int key, t_map *map);
 void	angle_control(int key, t_meta *meta);
 void	angle(float *ang, float value);
+
+// ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓	//
+/*#####################################################################	*/
+/* 4. UTILS															*/
+/*#####################################################################	*/
 int		halt_exit_program(void *param);
 void	terminate(char *s);
 void	terminate1(char *s, t_meta *meta);

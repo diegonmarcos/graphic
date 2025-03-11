@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 15:58:01 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/09 10:55:48 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/11 13:01:47 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
  *    coordinates. The goal is to display the model in a window and allow 
  *    for basic interactions such as zooming and rotating.
  *
-* @par Usage Make: make MAP=[map]
+ * @par Usage Make: make MAP=[map]
  * 	- [42]		make MAP=42
  * 	- [mars]	make MAP=mars
  * 	- [earth]	make MAP=earth
@@ -52,10 +52,9 @@ int	main(int argv, char **argc)
 
 	if (argv != 2)
 		terminate(ERR_ARGS);
-	load_map(&meta.map, argc[1]);
+	map_load(&meta.map, argc[1]);
 	system_init(&meta);
-	if (draw_map(&meta, FIT) < 0)
-		halt_exit_program(ERR_MAP);
+	map_pipeline(&meta, FIT);
 	system_init_keys(&meta);
 	free (meta.map.memory);
 	free (meta.map.points);
