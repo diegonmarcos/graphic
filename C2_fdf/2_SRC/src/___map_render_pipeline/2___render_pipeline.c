@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   3___map_pipeline.c                                 :+:      :+:    :+:   */
+/*   2___render_pipeline.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 15:58:57 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/12 10:17:49 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/12 11:14:47 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ int	map_pipeline(t_meta *meta, int fit)
 	return (1);
 }
 
-void	system_init_keys(t_meta *meta1)
+void	map_pipeline_recursive(t_meta *meta1)
 {
 	t_meta	meta;
 

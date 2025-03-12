@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 15:58:01 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/12 10:53:59 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/12 11:14:47 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ int	main(int argv, char **argc)
 	map_load(&meta.map, argc[1], &meta);
 	vars_init_map(&meta);
 	map_pipeline(&meta, FIT);
-	system_init_keys(&meta);
+	map_pipeline_recursive(&meta);
 	free (meta.map.memory);
 	free (meta.map.points);
 	return (0);

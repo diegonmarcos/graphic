@@ -6,7 +6,7 @@
 #    By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/14 16:00:50 by dinepomu          #+#    #+#              #
-#    Updated: 2025/03/12 11:09:44 by dinepomu         ###   ########.fr        #
+#    Updated: 2025/03/12 11:12:38 by dinepomu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -58,11 +58,11 @@ SRC_FILES_SRC		= 							\
 					1_3_map_checker				\
 					1___map_load				\
 					2_0_render_events			\
-					2_2__tarnsf_views_bonus_1	\
+					2_2__transf_views_bonus_1	\
 					2___render_pipeline			\
-					3_1__transformation			\
-					3_1__trasnformation_1		\
-					3_1__trasnformation_2		\
+					3_1__transformation_0		\
+					3_1__transformation_1		\
+					3_1__transformation_2		\
 					3_3__render_views_bonus		\
 					3_5__render_menu_bonus		\
 					4_0__render_background		\
