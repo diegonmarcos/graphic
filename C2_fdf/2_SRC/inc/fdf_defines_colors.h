@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 15:39:58 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/10 13:49:48 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/12 12:13:52 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,9 @@
 # define WINX 1920	
 # define WINY 1080
 
+# define MENU_WIDTH			350
+# define FIT_MARGIN			50
+
 # define X 0
 # define Y 1
 # define Z 2
@@ -32,8 +35,7 @@
 # define LAT 0
 # define LONG 1
 
-# define MENU_WIDTH			350
-# define FIT_MARGIN			50
+
 
 # define FIT				1
 # define FREE				0

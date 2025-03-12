@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   3_2__render_gofit.c                                :+:      :+:    :+:   */
+/*   4_2__render_fittoscale.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 15:59:41 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/11 12:56:27 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/12 12:27:29 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,3 +52,21 @@ int	limits(t_point *points, int len)
 	}
 	return (0);
 }
+
+/* void fit_to_scale(t_meta *meta, t_point *map_points, int fit)
+{
+    if (!fit)
+        return;
+        
+    // Set center position
+    meta->map.source.axis[X] = ((WINX - MENU_WIDTH) / 2) + MENU_WIDTH;
+    meta->map.source.axis[Y] = WINY / 2;
+    meta->map.source.axis[Z] = 0;
+    
+    // Calculate the optimal scale directly
+    meta->map.scale = calculate_max_scale(meta, map_points);
+    
+    // Apply transformations once with the calculated optimal scale
+    copy_map(meta->map.points, map_points, meta->map.len);
+    map_transformation(meta, map_points);
+} */

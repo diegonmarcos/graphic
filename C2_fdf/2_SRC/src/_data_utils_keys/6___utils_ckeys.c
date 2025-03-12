@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 16:00:24 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/12 11:44:43 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/12 12:09:25 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -124,6 +124,7 @@ void	angle_control(int key, t_meta *meta)
 	if (key == KEY_W)
 		angle(&meta->map.ang[Z], -ang);
 }
+
 /* 
 *	This function handle the colorscheme dependig the key pressed
 */
