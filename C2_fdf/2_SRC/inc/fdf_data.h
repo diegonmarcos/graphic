@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 15:39:49 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/11 12:39:36 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/12 11:40:21 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,6 +87,7 @@ typedef struct m_map
 	bool		b_geo;
 	bool		b_stars;
 	bool		b_shadow;
+	bool		b_auto_rotate;
 	double		performance;
 	float		proportion;
 	float		radius;

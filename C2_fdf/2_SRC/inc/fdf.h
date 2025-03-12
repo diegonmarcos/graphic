@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 15:40:13 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/12 11:15:13 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/12 11:43:35 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -192,6 +192,8 @@ int		mouse_press(int button, int x, int y, void *param);
 void	control_colorscheme(int key, t_map *map, t_meta *meta);
 void	angle_control(int key, t_meta *meta);
 void	angle(float *ang, float value);
+int		auto_rotation_1(void *param);
+int		auto_rotation_2(void *param);
 
 // ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓	//
 /*#####################################################################	*/

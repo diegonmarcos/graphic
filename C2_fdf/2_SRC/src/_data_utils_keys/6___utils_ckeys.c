@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   5___control_keys.c                                 :+:      :+:    :+:   */
+/*   6___utils_ckeys.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 16:00:24 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/12 11:02:35 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/12 11:44:43 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	control_keys1(int key, t_meta *meta)
 {
 	if (key == KEY_ESC)
 		halt_exit_program(meta);
-	if (key == KEY_R)
+	if (key == KEY_A)
 	{
 		map_ini(&meta->map, 0);
 		meta->map.proportion = \
@@ -62,6 +62,11 @@ void	control_keys2(int key, t_meta *meta)
 		map_pipeline(meta, FIT);
 	if (key == KEY_CMD)
 		meta->keys.b_keyctrl = 1;
+	if (key == KEY_R)
+	{
+		meta->map.b_auto_rotate = !meta->map.b_auto_rotate;
+		mlx_loop_hook(meta->vars.mlx, auto_rotation_2, meta);
+	}
 }
 
 /* 
@@ -119,7 +124,6 @@ void	angle_control(int key, t_meta *meta)
 	if (key == KEY_W)
 		angle(&meta->map.ang[Z], -ang);
 }
-
 /* 
 *	This function handle the colorscheme dependig the key pressed
 */
