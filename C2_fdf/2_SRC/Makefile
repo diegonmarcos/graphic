@@ -6,7 +6,7 @@
 #    By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/14 16:00:50 by dinepomu          #+#    #+#              #
-#    Updated: 2025/03/12 12:39:49 by dinepomu         ###   ########.fr        #
+#    Updated: 2025/03/12 14:31:39 by dinepomu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -100,15 +100,12 @@ endif
 
 ################################################################################
 ### RULES ###
-all:	mkdir clone_repos makelibs $(NAME) run
+all:	mkdir makelibs $(NAME) run
 
-#### Clone Repos ####
-clone_repos: mkdir libs/minilibx/minilibx_linux
-libs/minilibx/minilibx_linux:
 
 #### Make Libs ####
 makelibs:	
-#	$(MAKE) -C $(FT_MYLIB_DIR)
+	$(MAKE) -C $(FT_MYLIB_DIR)
 
 ifeq ($(UNAME_S),Linux)
 	cd $(MINILIBX_DIR) && ./configure
@@ -121,7 +118,6 @@ $(NAME):	$(OBJ)
 			$(CC) $(CFLAGS) $(FSANITIZE) $(OBJ) $(LIBRARIES) -o $(NAME)		
 			@echo " $(BLUE)$(CC) $(CFLAGS) $(FSANITIZE) $(OBJ) $(LIBRARIES) -o $(NAME)$(DEF_COLOR)"
 			@echo "$(GREEN) Bin Linked!$(DEF_COLOR)"
-#			$(MAKE) run
 			
 $(OBJ_DIR)%.o: $(SRC_DIR)%.c $(INCS)
 			mkdir -p $(OBJ_DIR)
@@ -153,13 +149,11 @@ fclean:		clean
 			@echo "$(CYAN)files cleaned!$(DEF_COLOR)"
 			rm -rf log
 
-
 re:			fclean all
 			@$(MAKE)	
 			@echo "$(GREEN)Rebuilded!$(DEF_COLOR)"
 
 fclean_all: fclean
-			$(RM) libs/minilibx
 
 .PHONY:		all clean fclean re norm mkdir
 
