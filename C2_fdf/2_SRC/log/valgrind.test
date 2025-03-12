@@ -1,0 +1,614 @@
+==51822== Memcheck, a memory error detector
+==51822== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==51822== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==51822== Command: ./fdf maps/42.fdf
+==51822== Parent PID: 51821
+==51822== 
+==51822== Syscall param writev(vector[0]) points to uninitialised byte(s)
+==51822==    at 0x4BD9864: writev (writev.c:26)
+==51822==    by 0x4CD0ACA: ??? (in /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0)
+==51822==    by 0x4CD0C4E: ??? (in /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0)
+==51822==    by 0x4CD1D7E: xcb_writev (in /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0)
+==51822==    by 0x48CB0B8: _XSend (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x48D0148: _XReadEvents (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x48D052B: XWindowEvent (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x112F25: mlx_int_wait_first_expose (in /home/diego/Documents/Git/graphic/C2_fdf/2_SRC/fdf)
+==51822==    by 0x112C55: mlx_new_window (in /home/diego/Documents/Git/graphic/C2_fdf/2_SRC/fdf)
+==51822==    by 0x10A654: vars_init_x11 (0___vars_ini.c:50)
+==51822==    by 0x10A4AE: main (_main.c:55)
+==51822==  Address 0x4d2f74c is 28 bytes inside a block of size 16,384 alloc'd
+==51822==    at 0x484D953: calloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==51822==    by 0x48BA42D: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x112A06: mlx_init (in /home/diego/Documents/Git/graphic/C2_fdf/2_SRC/fdf)
+==51822==    by 0x10A628: vars_init_x11 (0___vars_ini.c:46)
+==51822==    by 0x10A4AE: main (_main.c:55)
+==51822==  Uninitialised value was created by a stack allocation
+==51822==    at 0x112E30: mlx_int_anti_resize_win (in /home/diego/Documents/Git/graphic/C2_fdf/2_SRC/fdf)
+==51822== 
+==51822== Conditional jump or move depends on uninitialised value(s)
+==51822==    at 0x1106A4: ft_digit_count (src/src_all/1c_ft_itoa.c:36)
+==51822==    by 0x11074B: ft_itoa (src/src_all/1c_ft_itoa.c:66)
+==51822==    by 0x10D50D: print_nbr (6___utils.c:19)
+==51822==    by 0x10C74D: draw_info (3_5__render_menu_bonus.c:94)
+==51822==    by 0x10C874: render_menu (3_5__render_menu_bonus.c:114)
+==51822==    by 0x10B56E: map_pipeline (2___render_pipeline.c:57)
+==51822==    by 0x10A4D4: main (_main.c:58)
+==51822==  Uninitialised value was created by a stack allocation
+==51822==    at 0x10A470: main (_main.c:50)
+==51822== 
+==51822== Conditional jump or move depends on uninitialised value(s)
+==51822==    at 0x1106C6: ft_digit_count (src/src_all/1c_ft_itoa.c:41)
+==51822==    by 0x11074B: ft_itoa (src/src_all/1c_ft_itoa.c:66)
+==51822==    by 0x10D50D: print_nbr (6___utils.c:19)
+==51822==    by 0x10C74D: draw_info (3_5__render_menu_bonus.c:94)
+==51822==    by 0x10C874: render_menu (3_5__render_menu_bonus.c:114)
+==51822==    by 0x10B56E: map_pipeline (2___render_pipeline.c:57)
+==51822==    by 0x10A4D4: main (_main.c:58)
+==51822==  Uninitialised value was created by a stack allocation
+==51822==    at 0x10A470: main (_main.c:50)
+==51822== 
+==51822== Conditional jump or move depends on uninitialised value(s)
+==51822==    at 0x110799: ft_itoa (src/src_all/1c_ft_itoa.c:71)
+==51822==    by 0x10D50D: print_nbr (6___utils.c:19)
+==51822==    by 0x10C74D: draw_info (3_5__render_menu_bonus.c:94)
+==51822==    by 0x10C874: render_menu (3_5__render_menu_bonus.c:114)
+==51822==    by 0x10B56E: map_pipeline (2___render_pipeline.c:57)
+==51822==    by 0x10A4D4: main (_main.c:58)
+==51822==  Uninitialised value was created by a stack allocation
+==51822==    at 0x10A470: main (_main.c:50)
+==51822== 
+==51822== 
+==51822== HEAP SUMMARY:
+==51822==     in use at exit: 90,171 bytes in 114 blocks
+==51822==   total heap usage: 84,237 allocs, 84,123 frees, 2,301,664 bytes allocated
+==51822== 
+==51822== 3 bytes in 1 blocks are still reachable in loss record 1 of 58
+==51822==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==51822==    by 0x4B6435E: strdup (strdup.c:42)
+==51822==    by 0x48BA0DA: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x112A06: mlx_init (in /home/diego/Documents/Git/graphic/C2_fdf/2_SRC/fdf)
+==51822==    by 0x10A628: vars_init_x11 (0___vars_ini.c:46)
+==51822==    by 0x10A4AE: main (_main.c:55)
+==51822== 
+==51822== 8 bytes in 1 blocks are still reachable in loss record 2 of 58
+==51822==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==51822==    by 0x4B6435E: strdup (strdup.c:42)
+==51822==    by 0x48B70CE: XInitExtension (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x487C83F: XextAddDisplay (in /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0)
+==51822==    by 0x4881C44: XShmQueryVersion (in /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0)
+==51822==    by 0x112843: mlx_int_deal_shm (in /home/diego/Documents/Git/graphic/C2_fdf/2_SRC/fdf)
+==51822==    by 0x112AB0: mlx_init (in /home/diego/Documents/Git/graphic/C2_fdf/2_SRC/fdf)
+==51822==    by 0x10A628: vars_init_x11 (0___vars_ini.c:46)
+==51822==    by 0x10A4AE: main (_main.c:55)
+==51822== 
+==51822== 8 bytes in 1 blocks are still reachable in loss record 3 of 58
+==51822==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==51822==    by 0x487AB16: ??? (in /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0)
+==51822==    by 0x487C9F6: XextAddDisplay (in /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0)
+==51822==    by 0x4881C44: XShmQueryVersion (in /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0)
+==51822==    by 0x112843: mlx_int_deal_shm (in /home/diego/Documents/Git/graphic/C2_fdf/2_SRC/fdf)
+==51822==    by 0x112AB0: mlx_init (in /home/diego/Documents/Git/graphic/C2_fdf/2_SRC/fdf)
+==51822==    by 0x10A628: vars_init_x11 (0___vars_ini.c:46)
+==51822==    by 0x10A4AE: main (_main.c:55)
+==51822== 
+==51822== 10 bytes in 1 blocks are still reachable in loss record 4 of 58
+==51822==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==51822==    by 0x4B6435E: strdup (strdup.c:42)
+==51822==    by 0x48B70CE: XInitExtension (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x492C033: XkbUseExtension (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x48BAC72: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x112A06: mlx_init (in /home/diego/Documents/Git/graphic/C2_fdf/2_SRC/fdf)
+==51822==    by 0x10A628: vars_init_x11 (0___vars_ini.c:46)
+==51822==    by 0x10A4AE: main (_main.c:55)
+==51822== 
+==51822== 16 bytes in 1 blocks are still reachable in loss record 5 of 58
+==51822==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==51822==    by 0x4CD346D: xcb_connect_to_fd (in /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0)
+==51822==    by 0x4CD40D9: xcb_connect_to_display_with_auth_info (in /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0)
+==51822==    by 0x48C93C9: _XConnectXCB (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x48BA0FD: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x112A06: mlx_init (in /home/diego/Documents/Git/graphic/C2_fdf/2_SRC/fdf)
+==51822==    by 0x10A628: vars_init_x11 (0___vars_ini.c:46)
+==51822==    by 0x10A4AE: main (_main.c:55)
+==51822== 
+==51822== 16 bytes in 1 blocks are still reachable in loss record 6 of 58
+==51822==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==51822==    by 0x48B156B: ??? (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x48BA3D0: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x112A06: mlx_init (in /home/diego/Documents/Git/graphic/C2_fdf/2_SRC/fdf)
+==51822==    by 0x10A628: vars_init_x11 (0___vars_ini.c:46)
+==51822==    by 0x10A4AE: main (_main.c:55)
+==51822== 
+==51822== 21 bytes in 1 blocks are still reachable in loss record 7 of 58
+==51822==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==51822==    by 0x48BA5D1: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x112A06: mlx_init (in /home/diego/Documents/Git/graphic/C2_fdf/2_SRC/fdf)
+==51822==    by 0x10A628: vars_init_x11 (0___vars_ini.c:46)
+==51822==    by 0x10A4AE: main (_main.c:55)
+==51822== 
+==51822== 24 bytes in 1 blocks are still reachable in loss record 8 of 58
+==51822==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==51822==    by 0x487C021: XextCreateExtension (in /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0)
+==51822==    by 0x487C4C4: ??? (in /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0)
+==51822==    by 0x487C9DF: XextAddDisplay (in /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0)
+==51822==    by 0x4881C44: XShmQueryVersion (in /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0)
+==51822==    by 0x112843: mlx_int_deal_shm (in /home/diego/Documents/Git/graphic/C2_fdf/2_SRC/fdf)
+==51822==    by 0x112AB0: mlx_init (in /home/diego/Documents/Git/graphic/C2_fdf/2_SRC/fdf)
+==51822==    by 0x10A628: vars_init_x11 (0___vars_ini.c:46)
+==51822==    by 0x10A4AE: main (_main.c:55)
+==51822== 
+==51822== 24 bytes in 1 blocks are still reachable in loss record 9 of 58
+==51822==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==51822==    by 0x4B6435E: strdup (strdup.c:42)
+==51822==    by 0x48B70CE: XInitExtension (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x487C83F: XextAddDisplay (in /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0)
+==51822==    by 0x487C502: ??? (in /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0)
+==51822==    by 0x487C9DF: XextAddDisplay (in /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0)
+==51822==    by 0x4881C44: XShmQueryVersion (in /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0)
+==51822==    by 0x112843: mlx_int_deal_shm (in /home/diego/Documents/Git/graphic/C2_fdf/2_SRC/fdf)
+==51822==    by 0x112AB0: mlx_init (in /home/diego/Documents/Git/graphic/C2_fdf/2_SRC/fdf)
+==51822==    by 0x10A628: vars_init_x11 (0___vars_ini.c:46)
+==51822==    by 0x10A4AE: main (_main.c:55)
+==51822== 
+==51822== 24 bytes in 1 blocks are still reachable in loss record 10 of 58
+==51822==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==51822==    by 0x487CA10: XextAddDisplay (in /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0)
+==51822==    by 0x4881C44: XShmQueryVersion (in /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0)
+==51822==    by 0x112843: mlx_int_deal_shm (in /home/diego/Documents/Git/graphic/C2_fdf/2_SRC/fdf)
+==51822==    by 0x112AB0: mlx_init (in /home/diego/Documents/Git/graphic/C2_fdf/2_SRC/fdf)
+==51822==    by 0x10A628: vars_init_x11 (0___vars_ini.c:46)
+==51822==    by 0x10A4AE: main (_main.c:55)
+==51822== 
+==51822== 24 bytes in 1 blocks are still reachable in loss record 11 of 58
+==51822==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==51822==    by 0x48C76B6: ??? (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x48D05CD: _XReply (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x48D0AA4: XSync (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x112D6F: mlx_loop (in /home/diego/Documents/Git/graphic/C2_fdf/2_SRC/fdf)
+==51822==    by 0x10B6B9: map_pipeline_recursive (2___render_pipeline.c:75)
+==51822==    by 0x10A4DC: main (_main.c:59)
+==51822== 
+==51822== 29 bytes in 1 blocks are still reachable in loss record 12 of 58
+==51822==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==51822==    by 0x48B300C: _XUpdateAtomCache (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x48B5FE6: XInternAtom (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x112AA2: mlx_init (in /home/diego/Documents/Git/graphic/C2_fdf/2_SRC/fdf)
+==51822==    by 0x10A628: vars_init_x11 (0___vars_ini.c:46)
+==51822==    by 0x10A4AE: main (_main.c:55)
+==51822== 
+==51822== 32 bytes in 1 blocks are still reachable in loss record 13 of 58
+==51822==    at 0x484DB80: realloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==51822==    by 0x4CD7712: ??? (in /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0)
+==51822==    by 0x4CD780A: xcb_get_extension_data (in /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0)
+==51822==    by 0x4CD78CE: xcb_prefetch_maximum_request_length (in /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0)
+==51822==    by 0x4CD7945: xcb_get_maximum_request_length (in /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0)
+==51822==    by 0x48BA96A: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x112A06: mlx_init (in /home/diego/Documents/Git/graphic/C2_fdf/2_SRC/fdf)
+==51822==    by 0x10A628: vars_init_x11 (0___vars_ini.c:46)
+==51822==    by 0x10A4AE: main (_main.c:55)
+==51822== 
+==51822== 32 bytes in 1 blocks are still reachable in loss record 14 of 58
+==51822==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==51822==    by 0x4CD0257: ??? (in /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0)
+==51822==    by 0x4CD0A95: ??? (in /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0)
+==51822==    by 0x4CD0EEF: ??? (in /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0)
+==51822==    by 0x4CD1E6D: xcb_wait_for_reply (in /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0)
+==51822==    by 0x4CD785A: xcb_get_extension_data (in /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0)
+==51822==    by 0x4CD78CE: xcb_prefetch_maximum_request_length (in /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0)
+==51822==    by 0x4CD7945: xcb_get_maximum_request_length (in /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0)
+==51822==    by 0x48BA96A: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x112A06: mlx_init (in /home/diego/Documents/Git/graphic/C2_fdf/2_SRC/fdf)
+==51822==    by 0x10A628: vars_init_x11 (0___vars_ini.c:46)
+==51822==    by 0x10A4AE: main (_main.c:55)
+==51822== 
+==51822== 32 bytes in 1 blocks are still reachable in loss record 15 of 58
+==51822==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==51822==    by 0x487C812: XextAddDisplay (in /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0)
+==51822==    by 0x4881C44: XShmQueryVersion (in /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0)
+==51822==    by 0x112843: mlx_int_deal_shm (in /home/diego/Documents/Git/graphic/C2_fdf/2_SRC/fdf)
+==51822==    by 0x112AB0: mlx_init (in /home/diego/Documents/Git/graphic/C2_fdf/2_SRC/fdf)
+==51822==    by 0x10A628: vars_init_x11 (0___vars_ini.c:46)
+==51822==    by 0x10A4AE: main (_main.c:55)
+==51822== 
+==51822== 32 bytes in 1 blocks are still reachable in loss record 16 of 58
+==51822==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==51822==    by 0x487C812: XextAddDisplay (in /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0)
+==51822==    by 0x487C502: ??? (in /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0)
+==51822==    by 0x487C9DF: XextAddDisplay (in /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0)
+==51822==    by 0x4881C44: XShmQueryVersion (in /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0)
+==51822==    by 0x112843: mlx_int_deal_shm (in /home/diego/Documents/Git/graphic/C2_fdf/2_SRC/fdf)
+==51822==    by 0x112AB0: mlx_init (in /home/diego/Documents/Git/graphic/C2_fdf/2_SRC/fdf)
+==51822==    by 0x10A628: vars_init_x11 (0___vars_ini.c:46)
+==51822==    by 0x10A4AE: main (_main.c:55)
+==51822== 
+==51822== 33 bytes in 1 blocks are still reachable in loss record 17 of 58
+==51822==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==51822==    by 0x48B300C: _XUpdateAtomCache (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x48B5FE6: XInternAtom (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x112A8D: mlx_init (in /home/diego/Documents/Git/graphic/C2_fdf/2_SRC/fdf)
+==51822==    by 0x10A628: vars_init_x11 (0___vars_ini.c:46)
+==51822==    by 0x10A4AE: main (_main.c:55)
+==51822== 
+==51822== 40 bytes in 1 blocks are still reachable in loss record 18 of 58
+==51822==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==51822==    by 0x48B15B5: ??? (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x48BA3D0: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x112A06: mlx_init (in /home/diego/Documents/Git/graphic/C2_fdf/2_SRC/fdf)
+==51822==    by 0x10A628: vars_init_x11 (0___vars_ini.c:46)
+==51822==    by 0x10A4AE: main (_main.c:55)
+==51822== 
+==51822== 40 bytes in 1 blocks are still reachable in loss record 19 of 58
+==51822==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==51822==    by 0x48C96F9: _XPollfdCacheInit (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x48BA3E0: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x112A06: mlx_init (in /home/diego/Documents/Git/graphic/C2_fdf/2_SRC/fdf)
+==51822==    by 0x10A628: vars_init_x11 (0___vars_ini.c:46)
+==51822==    by 0x10A4AE: main (_main.c:55)
+==51822== 
+==51822== 48 bytes in 1 blocks are still reachable in loss record 20 of 58
+==51822==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==51822==    by 0x48C9350: _XConnectXCB (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x48BA0FD: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x112A06: mlx_init (in /home/diego/Documents/Git/graphic/C2_fdf/2_SRC/fdf)
+==51822==    by 0x10A628: vars_init_x11 (0___vars_ini.c:46)
+==51822==    by 0x10A4AE: main (_main.c:55)
+==51822== 
+==51822== 48 bytes in 1 blocks are still reachable in loss record 21 of 58
+==51822==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==51822==    by 0x48C9365: _XConnectXCB (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x48BA0FD: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x112A06: mlx_init (in /home/diego/Documents/Git/graphic/C2_fdf/2_SRC/fdf)
+==51822==    by 0x10A628: vars_init_x11 (0___vars_ini.c:46)
+==51822==    by 0x10A4AE: main (_main.c:55)
+==51822== 
+==51822== 48 bytes in 1 blocks are still reachable in loss record 22 of 58
+==51822==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==51822==    by 0x48B15A4: ??? (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x48BA3D0: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x112A06: mlx_init (in /home/diego/Documents/Git/graphic/C2_fdf/2_SRC/fdf)
+==51822==    by 0x10A628: vars_init_x11 (0___vars_ini.c:46)
+==51822==    by 0x10A4AE: main (_main.c:55)
+==51822== 
+==51822== 48 bytes in 1 blocks are still reachable in loss record 23 of 58
+==51822==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==51822==    by 0x48B15C5: ??? (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x48BA3D0: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x112A06: mlx_init (in /home/diego/Documents/Git/graphic/C2_fdf/2_SRC/fdf)
+==51822==    by 0x10A628: vars_init_x11 (0___vars_ini.c:46)
+==51822==    by 0x10A4AE: main (_main.c:55)
+==51822== 
+==51822== 48 bytes in 1 blocks are still reachable in loss record 24 of 58
+==51822==    at 0x484D953: calloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==51822==    by 0x491E422: XkbGetMap (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x491E4B8: ??? (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x491E7D7: XkbKeycodeToKeysym (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x1138F7: mlx_int_param_KeyPress (in /home/diego/Documents/Git/graphic/C2_fdf/2_SRC/fdf)
+==51822==    by 0x112DB5: mlx_loop (in /home/diego/Documents/Git/graphic/C2_fdf/2_SRC/fdf)
+==51822==    by 0x10B6B9: map_pipeline_recursive (2___render_pipeline.c:75)
+==51822==    by 0x10A4DC: main (_main.c:59)
+==51822== 
+==51822== 72 bytes in 1 blocks are still reachable in loss record 25 of 58
+==51822==    at 0x484D953: calloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==51822==    by 0x48BA48C: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x112A06: mlx_init (in /home/diego/Documents/Git/graphic/C2_fdf/2_SRC/fdf)
+==51822==    by 0x10A628: vars_init_x11 (0___vars_ini.c:46)
+==51822==    by 0x10A4AE: main (_main.c:55)
+==51822== 
+==51822== 72 bytes in 1 blocks are still reachable in loss record 26 of 58
+==51822==    at 0x484D953: calloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==51822==    by 0x491E406: XkbGetMap (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x491E4B8: ??? (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x491E7D7: XkbKeycodeToKeysym (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x1138F7: mlx_int_param_KeyPress (in /home/diego/Documents/Git/graphic/C2_fdf/2_SRC/fdf)
+==51822==    by 0x112DB5: mlx_loop (in /home/diego/Documents/Git/graphic/C2_fdf/2_SRC/fdf)
+==51822==    by 0x10B6B9: map_pipeline_recursive (2___render_pipeline.c:75)
+==51822==    by 0x10A4DC: main (_main.c:59)
+==51822== 
+==51822== 88 bytes in 1 blocks are still reachable in loss record 27 of 58
+==51822==    at 0x484D953: calloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==51822==    by 0x11313B: mlx_int_new_xshm_image (in /home/diego/Documents/Git/graphic/C2_fdf/2_SRC/fdf)
+==51822==    by 0x113480: mlx_new_image (in /home/diego/Documents/Git/graphic/C2_fdf/2_SRC/fdf)
+==51822==    by 0x10A66A: vars_init_x11 (0___vars_ini.c:52)
+==51822==    by 0x10A4AE: main (_main.c:55)
+==51822== 
+==51822== 112 bytes in 1 blocks are still reachable in loss record 28 of 58
+==51822==    at 0x484D953: calloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==51822==    by 0x48C9255: _XConnectXCB (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x48BA0FD: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x112A06: mlx_init (in /home/diego/Documents/Git/graphic/C2_fdf/2_SRC/fdf)
+==51822==    by 0x10A628: vars_init_x11 (0___vars_ini.c:46)
+==51822==    by 0x10A4AE: main (_main.c:55)
+==51822== 
+==51822== 112 bytes in 1 blocks are still reachable in loss record 29 of 58
+==51822==    at 0x484D953: calloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==51822==    by 0x48BA751: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x112A06: mlx_init (in /home/diego/Documents/Git/graphic/C2_fdf/2_SRC/fdf)
+==51822==    by 0x10A628: vars_init_x11 (0___vars_ini.c:46)
+==51822==    by 0x10A4AE: main (_main.c:55)
+==51822== 
+==51822== 128 bytes in 1 blocks are still reachable in loss record 30 of 58
+==51822==    at 0x484D953: calloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==51822==    by 0x48BA67F: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x112A06: mlx_init (in /home/diego/Documents/Git/graphic/C2_fdf/2_SRC/fdf)
+==51822==    by 0x10A628: vars_init_x11 (0___vars_ini.c:46)
+==51822==    by 0x10A4AE: main (_main.c:55)
+==51822== 
+==51822== 128 bytes in 1 blocks are still reachable in loss record 31 of 58
+==51822==    at 0x484D953: calloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==51822==    by 0x48B70BE: XInitExtension (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x492C033: XkbUseExtension (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x48BAC72: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x112A06: mlx_init (in /home/diego/Documents/Git/graphic/C2_fdf/2_SRC/fdf)
+==51822==    by 0x10A628: vars_init_x11 (0___vars_ini.c:46)
+==51822==    by 0x10A4AE: main (_main.c:55)
+==51822== 
+==51822== 128 bytes in 1 blocks are still reachable in loss record 32 of 58
+==51822==    at 0x484D953: calloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==51822==    by 0x48B70BE: XInitExtension (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x487C83F: XextAddDisplay (in /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0)
+==51822==    by 0x4881C44: XShmQueryVersion (in /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0)
+==51822==    by 0x112843: mlx_int_deal_shm (in /home/diego/Documents/Git/graphic/C2_fdf/2_SRC/fdf)
+==51822==    by 0x112AB0: mlx_init (in /home/diego/Documents/Git/graphic/C2_fdf/2_SRC/fdf)
+==51822==    by 0x10A628: vars_init_x11 (0___vars_ini.c:46)
+==51822==    by 0x10A4AE: main (_main.c:55)
+==51822== 
+==51822== 128 bytes in 1 blocks are still reachable in loss record 33 of 58
+==51822==    at 0x484D953: calloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==51822==    by 0x48B70BE: XInitExtension (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x487C83F: XextAddDisplay (in /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0)
+==51822==    by 0x487C502: ??? (in /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0)
+==51822==    by 0x487C9DF: XextAddDisplay (in /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0)
+==51822==    by 0x4881C44: XShmQueryVersion (in /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0)
+==51822==    by 0x112843: mlx_int_deal_shm (in /home/diego/Documents/Git/graphic/C2_fdf/2_SRC/fdf)
+==51822==    by 0x112AB0: mlx_init (in /home/diego/Documents/Git/graphic/C2_fdf/2_SRC/fdf)
+==51822==    by 0x10A628: vars_init_x11 (0___vars_ini.c:46)
+==51822==    by 0x10A4AE: main (_main.c:55)
+==51822== 
+==51822== 136 bytes in 1 blocks are still reachable in loss record 34 of 58
+==51822==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==51822==    by 0x1129EE: mlx_init (in /home/diego/Documents/Git/graphic/C2_fdf/2_SRC/fdf)
+==51822==    by 0x10A628: vars_init_x11 (0___vars_ini.c:46)
+==51822==    by 0x10A4AE: main (_main.c:55)
+==51822== 
+==51822== 136 bytes in 1 blocks are still reachable in loss record 35 of 58
+==51822==    at 0x484D953: calloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==51822==    by 0x487B0A6: XShmCreateImage (in /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0)
+==51822==    by 0x11316B: mlx_int_new_xshm_image (in /home/diego/Documents/Git/graphic/C2_fdf/2_SRC/fdf)
+==51822==    by 0x113480: mlx_new_image (in /home/diego/Documents/Git/graphic/C2_fdf/2_SRC/fdf)
+==51822==    by 0x10A66A: vars_init_x11 (0___vars_ini.c:52)
+==51822==    by 0x10A4AE: main (_main.c:55)
+==51822== 
+==51822== 143 bytes in 1 blocks are still reachable in loss record 36 of 58
+==51822==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==51822==    by 0x48BACE1: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x112A06: mlx_init (in /home/diego/Documents/Git/graphic/C2_fdf/2_SRC/fdf)
+==51822==    by 0x10A628: vars_init_x11 (0___vars_ini.c:46)
+==51822==    by 0x10A4AE: main (_main.c:55)
+==51822== 
+==51822== 152 bytes in 1 blocks are still reachable in loss record 37 of 58
+==51822==    at 0x484D953: calloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==51822==    by 0x492C21E: XkbUseExtension (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x48BAC72: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x112A06: mlx_init (in /home/diego/Documents/Git/graphic/C2_fdf/2_SRC/fdf)
+==51822==    by 0x10A628: vars_init_x11 (0___vars_ini.c:46)
+==51822==    by 0x10A4AE: main (_main.c:55)
+==51822== 
+==51822== 160 bytes in 1 blocks are still reachable in loss record 38 of 58
+==51822==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==51822==    by 0x48A8938: XCreateGC (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x48BA9EC: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x112A06: mlx_init (in /home/diego/Documents/Git/graphic/C2_fdf/2_SRC/fdf)
+==51822==    by 0x10A628: vars_init_x11 (0___vars_ini.c:46)
+==51822==    by 0x10A4AE: main (_main.c:55)
+==51822== 
+==51822== 168 bytes in 1 blocks are still reachable in loss record 39 of 58
+==51822==    at 0x484D953: calloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==51822==    by 0x48BAB34: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x112A06: mlx_init (in /home/diego/Documents/Git/graphic/C2_fdf/2_SRC/fdf)
+==51822==    by 0x10A628: vars_init_x11 (0___vars_ini.c:46)
+==51822==    by 0x10A4AE: main (_main.c:55)
+==51822== 
+==51822== 192 bytes in 1 blocks are still reachable in loss record 40 of 58
+==51822==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==51822==    by 0x48B1586: ??? (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x48BA3D0: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x112A06: mlx_init (in /home/diego/Documents/Git/graphic/C2_fdf/2_SRC/fdf)
+==51822==    by 0x10A628: vars_init_x11 (0___vars_ini.c:46)
+==51822==    by 0x10A4AE: main (_main.c:55)
+==51822== 
+==51822== 208 bytes in 1 blocks are still reachable in loss record 41 of 58
+==51822==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==51822==    by 0x487AAC9: ??? (in /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0)
+==51822==    by 0x487C9F6: XextAddDisplay (in /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0)
+==51822==    by 0x4881C44: XShmQueryVersion (in /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0)
+==51822==    by 0x112843: mlx_int_deal_shm (in /home/diego/Documents/Git/graphic/C2_fdf/2_SRC/fdf)
+==51822==    by 0x112AB0: mlx_init (in /home/diego/Documents/Git/graphic/C2_fdf/2_SRC/fdf)
+==51822==    by 0x10A628: vars_init_x11 (0___vars_ini.c:46)
+==51822==    by 0x10A4AE: main (_main.c:55)
+==51822== 
+==51822== 208 bytes in 1 blocks are still reachable in loss record 42 of 58
+==51822==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==51822==    by 0x48CB51D: _XEnq (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x48CE9AE: ??? (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x48D01B0: _XReadEvents (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x48D052B: XWindowEvent (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x112F25: mlx_int_wait_first_expose (in /home/diego/Documents/Git/graphic/C2_fdf/2_SRC/fdf)
+==51822==    by 0x112C55: mlx_new_window (in /home/diego/Documents/Git/graphic/C2_fdf/2_SRC/fdf)
+==51822==    by 0x10A654: vars_init_x11 (0___vars_ini.c:50)
+==51822==    by 0x10A4AE: main (_main.c:55)
+==51822== 
+==51822== 208 bytes in 1 blocks are still reachable in loss record 43 of 58
+==51822==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==51822==    by 0x48CB51D: _XEnq (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x48CE9AE: ??? (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x48D071C: _XReply (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x48D0AA4: XSync (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x113228: mlx_int_new_xshm_image (in /home/diego/Documents/Git/graphic/C2_fdf/2_SRC/fdf)
+==51822==    by 0x113480: mlx_new_image (in /home/diego/Documents/Git/graphic/C2_fdf/2_SRC/fdf)
+==51822==    by 0x10A66A: vars_init_x11 (0___vars_ini.c:52)
+==51822==    by 0x10A4AE: main (_main.c:55)
+==51822== 
+==51822== 208 bytes in 1 blocks are still reachable in loss record 44 of 58
+==51822==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==51822==    by 0x48CB51D: _XEnq (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x48CE9AE: ??? (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x48CEA51: _XEventsQueued (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x48A9885: XFlush (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x1130B7: mlx_string_put (in /home/diego/Documents/Git/graphic/C2_fdf/2_SRC/fdf)
+==51822==    by 0x10C5DD: draw_controls (3_5__render_menu_bonus.c:61)
+==51822==    by 0x10C86C: render_menu (3_5__render_menu_bonus.c:113)
+==51822==    by 0x10B56E: map_pipeline (2___render_pipeline.c:57)
+==51822==    by 0x10A4D4: main (_main.c:58)
+==51822== 
+==51822== 256 bytes in 1 blocks are still reachable in loss record 45 of 58
+==51822==    at 0x484D953: calloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==51822==    by 0x492575D: XkbAllocClientMap (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x491E07C: _XkbReadGetMapReply (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x491E380: XkbGetUpdatedMap (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x491E44D: XkbGetMap (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x491E4B8: ??? (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x491E7D7: XkbKeycodeToKeysym (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x1138F7: mlx_int_param_KeyPress (in /home/diego/Documents/Git/graphic/C2_fdf/2_SRC/fdf)
+==51822==    by 0x112DB5: mlx_loop (in /home/diego/Documents/Git/graphic/C2_fdf/2_SRC/fdf)
+==51822==    by 0x10B6B9: map_pipeline_recursive (2___render_pipeline.c:75)
+==51822==    by 0x10A4DC: main (_main.c:59)
+==51822== 
+==51822== 288 bytes in 6 blocks are still reachable in loss record 46 of 58
+==51822==    at 0x484D953: calloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==51822==    by 0x491D8F9: _XkbReadGetMapReply (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x491E380: XkbGetUpdatedMap (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x491E44D: XkbGetMap (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x491E4B8: ??? (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x491E7D7: XkbKeycodeToKeysym (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x1138F7: mlx_int_param_KeyPress (in /home/diego/Documents/Git/graphic/C2_fdf/2_SRC/fdf)
+==51822==    by 0x112DB5: mlx_loop (in /home/diego/Documents/Git/graphic/C2_fdf/2_SRC/fdf)
+==51822==    by 0x10B6B9: map_pipeline_recursive (2___render_pipeline.c:75)
+==51822==    by 0x10A4DC: main (_main.c:59)
+==51822== 
+==51822== 512 bytes in 1 blocks are still reachable in loss record 47 of 58
+==51822==    at 0x484D953: calloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==51822==    by 0x48B5E7A: ??? (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x48B5F1E: XInternAtom (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x112A8D: mlx_init (in /home/diego/Documents/Git/graphic/C2_fdf/2_SRC/fdf)
+==51822==    by 0x10A628: vars_init_x11 (0___vars_ini.c:46)
+==51822==    by 0x10A4AE: main (_main.c:55)
+==51822== 
+==51822== 960 bytes in 1 blocks are still reachable in loss record 48 of 58
+==51822==    at 0x484D953: calloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==51822==    by 0x4925831: XkbAllocClientMap (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x491DABE: _XkbReadGetMapReply (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x491E380: XkbGetUpdatedMap (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x491E44D: XkbGetMap (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x491E4B8: ??? (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x491E7D7: XkbKeycodeToKeysym (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x1138F7: mlx_int_param_KeyPress (in /home/diego/Documents/Git/graphic/C2_fdf/2_SRC/fdf)
+==51822==    by 0x112DB5: mlx_loop (in /home/diego/Documents/Git/graphic/C2_fdf/2_SRC/fdf)
+==51822==    by 0x10B6B9: map_pipeline_recursive (2___render_pipeline.c:75)
+==51822==    by 0x10A4DC: main (_main.c:59)
+==51822== 
+==51822== 1,040 bytes in 5 blocks are still reachable in loss record 49 of 58
+==51822==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==51822==    by 0x48CB51D: _XEnq (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x48CE9AE: ??? (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x48CEA51: _XEventsQueued (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x48A9885: XFlush (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x10B566: map_pipeline (2___render_pipeline.c:56)
+==51822==    by 0x10A4D4: main (_main.c:58)
+==51822== 
+==51822== 1,800 bytes in 23 blocks are still reachable in loss record 50 of 58
+==51822==    at 0x484D953: calloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==51822==    by 0x491D7C1: _XkbReadGetMapReply (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x491E380: XkbGetUpdatedMap (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x491E44D: XkbGetMap (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x491E4B8: ??? (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x491E7D7: XkbKeycodeToKeysym (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x1138F7: mlx_int_param_KeyPress (in /home/diego/Documents/Git/graphic/C2_fdf/2_SRC/fdf)
+==51822==    by 0x112DB5: mlx_loop (in /home/diego/Documents/Git/graphic/C2_fdf/2_SRC/fdf)
+==51822==    by 0x10B6B9: map_pipeline_recursive (2___render_pipeline.c:75)
+==51822==    by 0x10A4DC: main (_main.c:59)
+==51822== 
+==51822== 2,048 bytes in 1 blocks are still reachable in loss record 51 of 58
+==51822==    at 0x484D953: calloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==51822==    by 0x491D91C: _XkbReadGetMapReply (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x491E380: XkbGetUpdatedMap (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x491E44D: XkbGetMap (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x491E4B8: ??? (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x491E7D7: XkbKeycodeToKeysym (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x1138F7: mlx_int_param_KeyPress (in /home/diego/Documents/Git/graphic/C2_fdf/2_SRC/fdf)
+==51822==    by 0x112DB5: mlx_loop (in /home/diego/Documents/Git/graphic/C2_fdf/2_SRC/fdf)
+==51822==    by 0x10B6B9: map_pipeline_recursive (2___render_pipeline.c:75)
+==51822==    by 0x10A4DC: main (_main.c:59)
+==51822== 
+==51822== 4,720 bytes in 1 blocks are still reachable in loss record 52 of 58
+==51822==    at 0x484D953: calloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==51822==    by 0x48BA0C6: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x112A06: mlx_init (in /home/diego/Documents/Git/graphic/C2_fdf/2_SRC/fdf)
+==51822==    by 0x10A628: vars_init_x11 (0___vars_ini.c:46)
+==51822==    by 0x10A4AE: main (_main.c:55)
+==51822== 
+==51822== 5,120 bytes in 1 blocks are still reachable in loss record 53 of 58
+==51822==    at 0x484D953: calloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==51822==    by 0x491DF36: _XkbReadGetMapReply (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x491E380: XkbGetUpdatedMap (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x491E44D: XkbGetMap (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x491E4B8: ??? (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x491E7D7: XkbKeycodeToKeysym (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x1138F7: mlx_int_param_KeyPress (in /home/diego/Documents/Git/graphic/C2_fdf/2_SRC/fdf)
+==51822==    by 0x112DB5: mlx_loop (in /home/diego/Documents/Git/graphic/C2_fdf/2_SRC/fdf)
+==51822==    by 0x10B6B9: map_pipeline_recursive (2___render_pipeline.c:75)
+==51822==    by 0x10A4DC: main (_main.c:59)
+==51822== 
+==51822== 5,200 bytes in 25 blocks are still reachable in loss record 54 of 58
+==51822==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==51822==    by 0x48CB51D: _XEnq (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x48CE9AE: ??? (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x48D01F9: _XReadEvents (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x48D052B: XWindowEvent (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x112F25: mlx_int_wait_first_expose (in /home/diego/Documents/Git/graphic/C2_fdf/2_SRC/fdf)
+==51822==    by 0x112C55: mlx_new_window (in /home/diego/Documents/Git/graphic/C2_fdf/2_SRC/fdf)
+==51822==    by 0x10A654: vars_init_x11 (0___vars_ini.c:50)
+==51822==    by 0x10A4AE: main (_main.c:55)
+==51822== 
+==51822== 8,276 bytes in 1 blocks are still reachable in loss record 55 of 58
+==51822==    at 0x484DB80: realloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==51822==    by 0x4CD3678: xcb_connect_to_fd (in /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0)
+==51822==    by 0x4CD40D9: xcb_connect_to_display_with_auth_info (in /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0)
+==51822==    by 0x48C93C9: _XConnectXCB (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x48BA0FD: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x112A06: mlx_init (in /home/diego/Documents/Git/graphic/C2_fdf/2_SRC/fdf)
+==51822==    by 0x10A628: vars_init_x11 (0___vars_ini.c:46)
+==51822==    by 0x10A4AE: main (_main.c:55)
+==51822== 
+==51822== 16,384 bytes in 1 blocks are still reachable in loss record 56 of 58
+==51822==    at 0x484D953: calloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==51822==    by 0x48BA42D: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x112A06: mlx_init (in /home/diego/Documents/Git/graphic/C2_fdf/2_SRC/fdf)
+==51822==    by 0x10A628: vars_init_x11 (0___vars_ini.c:46)
+==51822==    by 0x10A4AE: main (_main.c:55)
+==51822== 
+==51822== 18,816 bytes in 2 blocks are still reachable in loss record 57 of 58
+==51822==    at 0x484D953: calloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==51822==    by 0x48BA7E0: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x112A06: mlx_init (in /home/diego/Documents/Git/graphic/C2_fdf/2_SRC/fdf)
+==51822==    by 0x10A628: vars_init_x11 (0___vars_ini.c:46)
+==51822==    by 0x10A4AE: main (_main.c:55)
+==51822== 
+==51822== 21,176 bytes in 1 blocks are still reachable in loss record 58 of 58
+==51822==    at 0x484D953: calloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==51822==    by 0x4CD3396: xcb_connect_to_fd (in /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0)
+==51822==    by 0x4CD40D9: xcb_connect_to_display_with_auth_info (in /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0)
+==51822==    by 0x48C93C9: _XConnectXCB (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x48BA0FD: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==51822==    by 0x112A06: mlx_init (in /home/diego/Documents/Git/graphic/C2_fdf/2_SRC/fdf)
+==51822==    by 0x10A628: vars_init_x11 (0___vars_ini.c:46)
+==51822==    by 0x10A4AE: main (_main.c:55)
+==51822== 
+==51822== LEAK SUMMARY:
+==51822==    definitely lost: 0 bytes in 0 blocks
+==51822==    indirectly lost: 0 bytes in 0 blocks
+==51822==      possibly lost: 0 bytes in 0 blocks
+==51822==    still reachable: 90,171 bytes in 114 blocks
+==51822==         suppressed: 0 bytes in 0 blocks
+==51822== 
+==51822== For lists of detected and suppressed errors, rerun with: -s
+==51822== ERROR SUMMARY: 4 errors from 4 contexts (suppressed: 0 from 0)

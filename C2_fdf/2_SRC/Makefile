@@ -6,7 +6,7 @@
 #    By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/14 16:00:50 by dinepomu          #+#    #+#              #
-#    Updated: 2025/03/12 11:12:38 by dinepomu         ###   ########.fr        #
+#    Updated: 2025/03/12 12:39:49 by dinepomu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,12 +37,7 @@ MINILIBX_DIR	:= libs/minilibx/minilibx_linux/
 LIBS			:= -lXext -lX11 -lm
 
 HEADER 			:= -Iinc -I$(FT_MYLIB_DIR) -I$(FT_MYLIBX_DIR)
-#HEADER 			:= -Iinc -I$(FT_MYLIB_DIR) -I$(MINILIBX_DIR)
 LIBRARIES		:= -L$(FT_MYLIB_DIR) -l$(FT_MYLIB_NAME) -L$(FT_MYLIBX_DIR) -l$(FT_MYLIBX_NAME)
-#LIBRARIES		:= -L$(FT_MYLIB_DIR) -l$(FT_MYLIB_NAME) -L$(FT_MYLIBX_DIR) -l$(FT_MYLIBX_NAME) -L$(MINILIBX_DIR) -lmlx $(LIBS)
-
-
-
 
 
 ################################################################################
@@ -86,13 +81,6 @@ INCS				= 	$(addprefix $(INCLUDE), $(addsuffix .h, $(INC_FILES)))
 
 OBJF				=	.cache_exists
 
-### SUBMODULES ###
-MINILIBX_CODAM_URL	= https://github.com/codam-coding-college/MLX42.git
-MINILIBX_CODAM_DIR	= libs/minilibx/minilibx_codam
-
-MINILIBX_LINUX_URL	= https://github.com/42Paris/minilibx-linux.git
-MINILIBX_LINUX_DIR	= libs/minilibx/minilibx_linux
-
 MAP = 0
 MAPS = maps/$(MAP).fdf
 ifeq ($(MAP),earth)
@@ -117,8 +105,6 @@ all:	mkdir clone_repos makelibs $(NAME) run
 #### Clone Repos ####
 clone_repos: mkdir libs/minilibx/minilibx_linux
 libs/minilibx/minilibx_linux:
-#	git clone $(MINILIBX_CODAM_URL) $(MINILIBX_CODAM_DIR)
-#	git clone $(MINILIBX_LINUX_URL) $(MINILIBX_LINUX_DIR)
 
 #### Make Libs ####
 makelibs:	
@@ -157,16 +143,12 @@ endif
 clean:
 #			make clean -C $(FT_MYLIB_DIR)
 #			@echo "$(CYAN)ft_mylib object and dependency files deleted.$(DEF_COLOR)"
-#			make clean -C $(MINILIBX_DIR)
-#			@echo "$(CYAN)Minilibx object files deleted.$(DEF_COLOR)"	
 			$(RM) -rf $(OBJ_DIR)
 			@echo "$(CYAN)Object files deleted!$(DEF_COLOR)"
 
 fclean:		clean
 #			make fclean -C $(FT_MYLIB_DIR)
-#			@echo "$(CYAN)libft_mylib.a lib cleaned!$(DEF_COLOR)"
-#			$(RM) -f $(MINILIBX_DIR)libmlx.a
-#			@echo "$(CYAN)libmlx.a lib cleaned!$(DEF_COLOR)"			
+#			@echo "$(CYAN)libft_mylib.a lib cleaned!$(DEF_COLOR)"		
 			$(RM) -f $(NAME)
 			@echo "$(CYAN)files cleaned!$(DEF_COLOR)"
 			rm -rf log
