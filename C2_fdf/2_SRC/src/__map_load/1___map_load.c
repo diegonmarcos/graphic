@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 15:58:09 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/11 16:40:58 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/12 09:14:22 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 *	Read the map
 *	Load each point to the structure
 */
-void	map_load(t_map *map, char *path)
+void	map_load(t_map *map, char *path, t_meta *meta)
 {
 	int	fd;
 
@@ -31,7 +31,7 @@ void	map_load(t_map *map, char *path)
 	close (fd);
 	map_size(map);
 	map_get_points(map);
-	colorize(map);
+	colorize(map, meta);
 	go_polar(map);
 //	map_checker(map);
 	ft_printf("\nLoading GUI\n");

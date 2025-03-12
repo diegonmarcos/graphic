@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 15:58:41 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/11 16:06:19 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/12 10:42:29 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 *	of the point and the max and min values of the map.
 */
 
-void	colorize(t_map *map)
+void	colorize(t_map *map, t_meta *meta)
 {
 	int	i;
 
@@ -26,6 +26,7 @@ void	colorize(t_map *map)
 	{
 		load_color((int)map->limits.axis[Z], map->zmin, \
 		&map->points[i], map->colors);
+		map->points[i].color = color_convert_depth(meta, map->points[i].color);
 		i++;
 	}
 }
@@ -35,7 +36,7 @@ void	colorize(t_map *map)
 *	this function set the color needed of the point received.
 *	All the colors are defined in fdf.h 
 */
-void	load_color(int max, int min, t_point *point, t_colors	colors)
+void	load_color(int max, int min, t_point *point, t_colors colors)
 {
 	point->paint = 1;
 	point->color = DEFAULT_COLOR;

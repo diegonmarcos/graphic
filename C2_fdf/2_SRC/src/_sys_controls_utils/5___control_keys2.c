@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 16:00:24 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/09 10:58:10 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/12 09:16:31 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ void	angle_control(int key, t_meta *meta)
 /* 
 *	This function handle the colorscheme dependig the key pressed
 */
-void	control_colorscheme(int key, t_map *map)
+void	control_colorscheme(int key, t_map *map, t_meta *meta)
 {
 	map->colors.backcolor = CARBON;
 	map->colors.bottomcolor = AZUL;
@@ -64,5 +64,5 @@ void	control_colorscheme(int key, t_map *map)
 		map->colors.topcolor = ROJO;
 		map->colors.groundcolor = VERDE;
 	}
-	colorize(map);
+	colorize(map, meta);
 }

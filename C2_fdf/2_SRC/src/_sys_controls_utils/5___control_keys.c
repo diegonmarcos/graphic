@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 16:00:24 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/11 16:49:51 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/12 09:21:26 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	key_press(int key, void *param)
 	control_keys2(key, meta);
 	control_keys3(key, meta);
 	if (key >= KEY_1 && key <= KEY_4)
-		control_colorscheme(key, &meta->map);
+		control_colorscheme(key, &meta->map, meta);
 	map_pipeline(meta, FREE);
 	return (0);
 }
@@ -57,7 +57,7 @@ void	control_keys1(int key, t_meta *meta)
 		meta->map.limits.axis[Z] / meta->map.limits.axis[X];
 		if (meta->map.proportion > 0.5)
 			meta->map.zdivisor = meta->map.proportion * 30;
-		colorize(&meta->map);
+		colorize(&meta->map, meta);
 		map_pipeline(meta, FREE);
 	}
 	if (key == KEY_C)

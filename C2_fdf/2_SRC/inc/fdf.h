@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 15:40:13 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/11 16:54:17 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/12 10:42:17 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,15 +80,15 @@ int		color_convert_depth(t_meta *meta, int color);
 /* ***************************************************************** */
 /* 3.4 Draw Utils/Colorize											 */
 /* ***************************************************************** */
-void	load_color(int max, int min, t_point *point, t_colors	colors);
-void	colorize(t_map *map);
+void	load_color(int max, int min, t_point *point, t_colors colors);
+void	colorize(t_map *map, t_meta *meta);
 int		gradient(int startcolor, int endcolor, int len, int pix);
 
 // ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓	//
 /*#####################################################################	*/
 /* 1. MAP LOAD															*/
 /*#####################################################################	*/
-void	map_load(t_map *map, char *path);
+void	map_load(t_map *map, char *path, t_meta *meta);
 /* ***************************************************************** */
 /* 1.1 Map Load														 */
 /* ***************************************************************** */
@@ -165,6 +165,7 @@ void	shadow(t_point *points, int len);
 /* ***************************************************************** */
 /* 4.1 System														 */
 /* ***************************************************************** */
+void	system_init_0(t_meta *meta);
 void	system_init(t_meta *meta);
 void	system_init_keys(t_meta *meta);
 
@@ -188,7 +189,7 @@ int		mouse_press(int button, int x, int y, void *param);
 /* ***************************************************************** */
 /* 4.4 Control Utils												 */
 /* ***************************************************************** */
-void	control_colorscheme(int key, t_map *map);
+void	control_colorscheme(int key, t_map *map, t_meta *meta);
 void	angle_control(int key, t_meta *meta);
 void	angle(float *ang, float value);
 
