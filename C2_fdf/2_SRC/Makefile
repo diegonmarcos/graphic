@@ -6,7 +6,7 @@
 #    By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/14 16:00:50 by dinepomu          #+#    #+#              #
-#    Updated: 2025/03/11 16:32:11 by dinepomu         ###   ########.fr        #
+#    Updated: 2025/03/12 11:09:44 by dinepomu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -50,29 +50,29 @@ LIBRARIES		:= -L$(FT_MYLIB_DIR) -l$(FT_MYLIB_NAME) -L$(FT_MYLIBX_DIR) -l$(FT_MYL
 SRC_FILES_MAIN		=							\
 					_main				
 SRC_FILES_SRC		= 							\
+					0___vars_ini				\
 					1_0_load_mapini				\
 					1_0_load_mapsize			\
 					1_1_load_getpoints			\
 					1_2_load_colorize			\
 					1_3_map_checker				\
 					1___map_load				\
-					2_1__transformation			\
-					2_1__trasnformation_1		\
-					2_1__trasnformation_2		\
+					2_0_render_events			\
 					2_2__tarnsf_views_bonus_1	\
-					2___sys_ini					\
-					3_0__render_background		\
-					3_2__map_render				\
-					3_2__render_fittoscale		\
+					2___render_pipeline			\
+					3_1__transformation			\
+					3_1__trasnformation_1		\
+					3_1__trasnformation_2		\
 					3_3__render_views_bonus		\
 					3_5__render_menu_bonus		\
-					3___map_pipeline			\
-					4_0_mydrawcircle			\
-					4_0_mydrawline				\
-					5___control_keys			\
-					5___control_keys2			\
-					5___control_mouse			\
-					6___utils			
+					4_0__render_background		\
+					4_2__map_render				\
+					4_2__render_fittoscale		\
+					5_0_mydrawcircle			\
+					5_0_mydrawline				\
+					6___utils					\
+					6___utils_ckeys				\
+					6___utils_control
 SRC_FILES_BONUS = 								\
 
 
@@ -135,7 +135,7 @@ $(NAME):	$(OBJ)
 			$(CC) $(CFLAGS) $(FSANITIZE) $(OBJ) $(LIBRARIES) -o $(NAME)		
 			@echo " $(BLUE)$(CC) $(CFLAGS) $(FSANITIZE) $(OBJ) $(LIBRARIES) -o $(NAME)$(DEF_COLOR)"
 			@echo "$(GREEN) Bin Linked!$(DEF_COLOR)"
-			$(MAKE) run
+#			$(MAKE) run
 			
 $(OBJ_DIR)%.o: $(SRC_DIR)%.c $(INCS)
 			mkdir -p $(OBJ_DIR)

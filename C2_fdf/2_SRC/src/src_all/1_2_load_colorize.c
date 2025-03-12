@@ -1,1 +1,1 @@
-../__map_load/1_2_load_colorize.c
+../___map_load/1_2_load_colorize.c

@@ -1,16 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   5___control_mouse.c                                :+:      :+:    :+:   */
+/*   3_events.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/14 16:00:31 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/11 13:17:00 by dinepomu         ###   ########.fr       */
+/*   Created: 2025/03/12 10:58:34 by dinepomu          #+#    #+#             */
+/*   Updated: 2025/03/12 11:02:35 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../inc/fdf.h"
+
+/* 
+*	This function handle when a key is pressed
+*/
+int	key_press(int key, void *param)
+{
+	t_meta	*meta;
+
+	meta = (t_meta *)param;
+	angle_control(key, meta);
+	control_keys1(key, meta);
+	control_keys2(key, meta);
+	control_keys3(key, meta);
+	if (key >= KEY_1 && key <= KEY_4)
+		control_colorscheme(key, &meta->map, meta);
+	map_pipeline(meta, FREE);
+	return (0);
+}
 
 /* 
 *	This function handle every time a mouse button is pressed
@@ -44,23 +62,6 @@ int	mouse_press(int button, int x, int y, void *param)
 }
 
 /* 
-*	This function handle every time a mouse button is relased
-*/
-int	mouse_release(int button, int x, int y, void *param)
-{
-	t_meta	*meta;
-
-	(void)x;
-	(void)y;
-	meta = (t_meta *)param;
-	if (button == 1)
-		meta->keys.b_mouse_l = 0;
-	if (button == 2 || button == 3)
-		meta->keys.b_mouse_r = 0;
-	return (0);
-}
-
-/* 
 *	This function handle every time the mouse is moved
 */
 int	mouse_move(int x, int y, void *param)
@@ -88,16 +89,4 @@ int	mouse_move(int x, int y, void *param)
 		map_pipeline(meta, FREE);
 	}
 	return (0);
-}
-
-/* 
-*	This function increment the ang value by value, checking is under the limits
-*/
-void	angle(float *ang, float value)
-{
-	*ang += value;
-	if (*ang < 0)
-		*ang = 360 + *ang;
-	if (*ang >= 360)
-		*ang = *ang - 360;
 }

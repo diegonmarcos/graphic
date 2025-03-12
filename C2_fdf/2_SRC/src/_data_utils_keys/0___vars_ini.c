@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 15:58:49 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/12 10:41:28 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/12 11:03:23 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,17 +40,10 @@
  * mlx_loop will start the event loop
  * mlx_hook will set the hooks for the events
  */
-void	system_init_0(t_meta *meta)
-{
-	meta->vars.mlx = mlx_init();
-}
-
-void	system_init(t_meta *meta)
+void	vars_init_x11(t_meta *meta)
 {
 	meta->map.renders = 0;
-	meta->map.proportion = meta->map.limits.axis[Z] / meta->map.limits.axis[X];
-	if (meta->map.proportion > 0.5)
-		meta->map.zdivisor = meta->map.proportion * 30;
+	meta->vars.mlx = mlx_init();
 	meta->keys.b_keyctrl = 0;
 	meta->keys.b_mouse_l = 0;
 	meta->keys.b_mouse_r = 0;
@@ -59,4 +52,12 @@ void	system_init(t_meta *meta)
 	meta->bitmap.img = mlx_new_image(meta->vars.mlx, WINX, WINY);
 	meta->bitmap.buffer = mlx_get_data_addr(meta->bitmap.img, \
 		&meta->bitmap.bitxpixel, &meta->bitmap.lines, &meta->bitmap.endian);
+}
+
+void	vars_init_map(t_meta *meta)
+{
+	meta->map.proportion = meta->map.limits.axis[Z] / meta->map.limits.axis[X];
+	if (meta->map.proportion > 0.5)
+		meta->map.zdivisor = meta->map.proportion * 30;
+
 }

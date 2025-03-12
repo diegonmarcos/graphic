@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 15:40:13 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/12 10:42:17 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/12 10:53:59 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -165,8 +165,8 @@ void	shadow(t_point *points, int len);
 /* ***************************************************************** */
 /* 4.1 System														 */
 /* ***************************************************************** */
-void	system_init_0(t_meta *meta);
-void	system_init(t_meta *meta);
+void	vars_init_x11(t_meta *meta);
+void	vars_init_map(t_meta *meta);
 void	system_init_keys(t_meta *meta);
 
 /* ***************************************************************** */
