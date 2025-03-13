@@ -1,6 +1,6 @@
 # FLOW CHARTS
 
-![alt text](img/fdf_main_doxy_pb.png)
+![alt text](../img/fdf_main_doxy_pb.png)
 
 <br>
 <br>
