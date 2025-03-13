@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   4_0_mydrawline.c                                   :+:      :+:    :+:   */
+/*   5_0_mydrawline.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 15:59:49 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/11 16:40:42 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/13 09:51:52 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -142,7 +142,8 @@ int	mydrawline(t_meta *meta, t_point start, t_point end)
 	while (pixels > 0)
 	{
 		pixel.color = gradient(start.color, end.color, len, len - pixels);
-		pixel.color = color_convert_depth(meta, pixel.color);
+		pixel.color = color_convert_depth(meta->bitmap.bitxpixel, \
+			meta->vars.mlx, pixel.color);
 		myputpixel_check(meta, pixel);
 		pixel.axis[X] += delta.axis[X];
 		pixel.axis[Y] += delta.axis[Y];

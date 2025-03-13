@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 15:40:13 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/13 09:35:34 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/13 09:50:40 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,7 +80,7 @@ void	dot_util(t_meta *meta, t_point pixel, t_point point, int coord);
 /* ***************************************************************** */
 int		valid_pixel(t_point pixel);
 int		limits(t_point *points, int len);
-int		color_convert_depth(t_meta *meta, int color);
+//int		color_convert_depth(t_meta *meta, int color);
 void	copy_map(t_point *src, t_point *dst, int len);
 
 // ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓	//

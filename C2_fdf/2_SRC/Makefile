@@ -6,7 +6,7 @@
 #    By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/14 16:00:50 by dinepomu          #+#    #+#              #
-#    Updated: 2025/03/13 09:32:41 by dinepomu         ###   ########.fr        #
+#    Updated: 2025/03/13 09:52:30 by dinepomu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -108,6 +108,7 @@ all:	mkdir makelibs $(NAME) run
 #### Make Libs ####
 makelibs:	
 	$(MAKE) -C $(FT_MYLIB_DIR)
+	$(MAKE) -C $(FT_MYLIBX_DIR)
 
 ifeq ($(UNAME_S),Linux)
 	cd $(MINILIBX_DIR) && ./configure
