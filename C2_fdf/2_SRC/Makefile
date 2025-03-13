@@ -6,7 +6,7 @@
 #    By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/14 16:00:50 by dinepomu          #+#    #+#              #
-#    Updated: 2025/03/13 14:53:12 by dinepomu         ###   ########.fr        #
+#    Updated: 2025/03/13 16:25:07 by dinepomu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -110,6 +110,12 @@ makelibs:
 	$(MAKE) -C $(FT_MYLIB_DIR)
 	$(MAKE) -C $(FT_MYLIBX_DIR)
 
+$(FT_MYLIB):
+	$(MAKE) -C $(FT_MYLIB_DIR)
+
+$(FT_MYLIBX):
+	$(MAKE) -C $(FT_MYLIBX_DIR)
+
 ifeq ($(UNAME_S),Linux)
 	cd $(MINILIBX_DIR) && ./configure
 	cd ../../..
@@ -117,7 +123,7 @@ endif
 #	@$(MAKE) -C $(MINILIBX_DIR)
 
 #### Make Program ####
-$(NAME):	$(OBJ)	$(FT_MYLIB) $(FT_MYLIBX)	
+$(NAME):	$(OBJ)	$(FT_MYLIB) $(FT_MYLIBX) 
 			$(CC) $(CFLAGS) $(FSANITIZE) $(OBJ) $(LIBRARIES) -o $(NAME)		
 			@echo " $(BLUE)$(CC) $(CFLAGS) $(FSANITIZE) $(OBJ) $(LIBRARIES) -o $(NAME)$(DEF_COLOR)"
 			@echo "$(GREEN) Bin Linked!$(DEF_COLOR)"
@@ -208,11 +214,6 @@ BLUE = \033[0;94m
 MAGENTA = \033[0;95m
 CYAN = \033[0;96m
 WHITE = \033[0;97m
-
-$(FT_MYLIB):
-	$(MAKE) -C $(FT_MYLIB_DIR)
-$(FT_MYLIBX):
-	$(MAKE) -C $(FT_MYLIBX_DIR)
 
 
 
