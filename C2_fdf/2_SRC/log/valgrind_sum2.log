@@ -1,0 +1,3 @@
+==139393==    at 0x4BD9864: writev (writev.c:26)
+==139393==    at 0x113530: mlx_int_anti_resize_win (in /home/diego/Documents/Git/graphic/C2_fdf/2_SRC/fdf)
+==139393==     in use at exit: 1,456 bytes in 5 blocks

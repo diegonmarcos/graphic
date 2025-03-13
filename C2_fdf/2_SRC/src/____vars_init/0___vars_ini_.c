@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 15:58:49 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/13 11:04:14 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/13 15:13:55 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,13 +46,15 @@ void	vars_init0(t_meta *meta);
  * mlx_loop will start the event loop
  * mlx_hook will set the hooks for the events
  */
-void	vars_init(t_meta *meta)
+void	vars_init(t_meta *meta, int argc)
 {
 	vars_init_x11(meta);
 	vars_init0(meta);
 	var_init_map_bools(&meta->map);
 	var_init_map0(&meta->map, 1);
 	var_init_map_colors(&meta->map);
+	if (argc != 2)
+		terminate(ERR_ARGS, meta);
 }
 
 void	vars_init0(t_meta *meta)

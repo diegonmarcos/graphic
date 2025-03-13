@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 15:58:32 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/10 13:32:39 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/13 15:15:04 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@
  * 0x290543 1,0x290543 1,
  * 0x290543 1,0x290543 1,
  */
-void	map_get_points(t_map *map)
+void	map_get_points(t_map *map, t_meta *meta)
 {
 	int			i;
 	char		*line;
@@ -43,7 +43,7 @@ void	map_get_points(t_map *map)
 			free (line);
 			line = ft_substr(NAME_M, last_line, 0, &map->memory[i] - last_line);
 			last_line = &map->memory[i + 1];
-			num_points += load_points(line, map, num_line++);
+			num_points += load_points(line, map, num_line++, meta);
 			ft_printf("\r  %d points reading...", num_points);
 			if (map->memory[i] == '\0')
 				break ;
@@ -57,7 +57,7 @@ void	map_get_points(t_map *map)
 *	Splits the info of line to storage the points in the map->point array. 
 *	Using map->len as index of the array
 */
-int	load_points(char *line, t_map *map, int numline)
+int	load_points(char *line, t_map *map, int numline, t_meta *meta)
 {
 	char		**splited;
 	int			i;
@@ -68,7 +68,7 @@ int	load_points(char *line, t_map *map, int numline)
 	while (splited[i] && splited[i][0] != '\n')
 	{
 		if (!valid_point(&splited[i][0]))
-			terminate(ERR_EMPTY);
+			terminate(ERR_EMPTY, meta);
 		map->points[point_index].axis[Z] = ft_atoi(&splited[i][0]);
 		map->points[point_index].axis[X] = i - map->limits.axis[X] / 2;
 		map->points[point_index].axis[Y] = numline - map->limits.axis[Y] / 2;

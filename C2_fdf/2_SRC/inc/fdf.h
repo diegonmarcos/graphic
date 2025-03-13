@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 15:40:13 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/13 12:40:40 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/13 15:14:26 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,14 +93,14 @@ void	map_load(t_map *map, char *path, t_meta *meta);
 /* ***************************************************************** */
 void	map_ini(t_map *map, int total);
 void	map_ini_colors(t_map *map);
-void	map_size(t_map *map);
+void	map_size(t_map *map, t_meta *meta);
 void	map_checker(char c);
 
 /* ***************************************************************** */
 /* 1.1 Get points													 */
 /* ***************************************************************** */
-void	map_get_points(t_map *map);
-int		load_points(char *line, t_map *map, int numline);
+void	map_get_points(t_map *map, t_meta *meta);
+int		load_points(char *line, t_map *map, int numline, t_meta *meta);
 int		valid_point(char *value);
 int		has_hexcolors(char *line);
 
@@ -185,7 +185,7 @@ void	shadow(t_point *points, int len);
 /* ***************************************************************** */
 /* 6.0 Variables Initialization										 */
 /* ***************************************************************** */
-void	vars_init(t_meta *meta);
+void	vars_init(t_meta *meta, int argc);
 void	var_init_map0(t_map *map, int total);
 void	vars_init_map1(t_meta *meta);
 void	vars_init_x11_events(t_meta *meta1);
@@ -216,7 +216,7 @@ int		auto_rotation_4(void *param);
 /* 6.3 Utils												 		*/
 /* ***************************************************************** */
 int		halt_exit_program(void *param);
-void	terminate(char *s);
+void	terminate(char *s, t_meta *meta);
 void	terminate1(char *s, t_meta *meta);
 void	print_nbr(t_meta *meta, int x, int y, int nbr);
 void	print_str(t_meta *meta, int x, int y, char *str);

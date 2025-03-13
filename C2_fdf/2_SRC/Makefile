@@ -6,7 +6,7 @@
 #    By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/14 16:00:50 by dinepomu          #+#    #+#              #
-#    Updated: 2025/03/13 11:00:57 by dinepomu         ###   ########.fr        #
+#    Updated: 2025/03/13 14:53:12 by dinepomu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,7 @@ MAKEFLAGS 		+= --silent
 
 FT_MYLIB_NAME	:= mylibc
 FT_MYLIB_DIR	:= libs/mylibc/
-FT_MYLIB		:= $(FT_MYLIB_DIR)mylibc.a
+FT_MYLIB		:= $(FT_MYLIB_DIR)libmylibc.a
 FT_MYLIBX_NAME	:= mylibx_
 FT_MYLIBX_DIR	:= libs/mylibx/
 FT_MYLIBX		:= $(FT_MYLIB_DIR)mylibx.a
@@ -117,7 +117,7 @@ endif
 #	@$(MAKE) -C $(MINILIBX_DIR)
 
 #### Make Program ####
-$(NAME):	$(OBJ)		
+$(NAME):	$(OBJ)	$(FT_MYLIB) $(FT_MYLIBX)	
 			$(CC) $(CFLAGS) $(FSANITIZE) $(OBJ) $(LIBRARIES) -o $(NAME)		
 			@echo " $(BLUE)$(CC) $(CFLAGS) $(FSANITIZE) $(OBJ) $(LIBRARIES) -o $(NAME)$(DEF_COLOR)"
 			@echo "$(GREEN) Bin Linked!$(DEF_COLOR)"
@@ -209,7 +209,10 @@ MAGENTA = \033[0;95m
 CYAN = \033[0;96m
 WHITE = \033[0;97m
 
-
+$(FT_MYLIB):
+	$(MAKE) -C $(FT_MYLIB_DIR)
+$(FT_MYLIBX):
+	$(MAKE) -C $(FT_MYLIBX_DIR)
 
 
 

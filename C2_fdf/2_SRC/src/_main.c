@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 15:58:01 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/13 10:41:22 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/13 15:14:49 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,18 +46,15 @@
  * 	- [static analysis]	make linting
  *	- [leaks]			make leaks
  */
-int	main(int argv, char **argc)
+int	main(int argc, char **argv)
 {
 	t_meta	meta;
 
-	if (argv != 2)
-		terminate(ERR_ARGS);
-	vars_init(&meta);
-	map_load(&meta.map, argc[1], &meta);
+	vars_init(&meta, argc);
+	map_load(&meta.map, argv[1], &meta);
 	vars_init_map1(&meta);
 	map_pipeline(&meta, FIT);
 	vars_init_x11_events(&meta);
-	free (meta.map.memory);
-	free (meta.map.points);
+	halt_exit_program(&meta);
 	return (0);
 }

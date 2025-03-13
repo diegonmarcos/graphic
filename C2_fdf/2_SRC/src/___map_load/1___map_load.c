@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 15:58:09 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/13 09:24:11 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/13 15:13:55 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,11 @@ void	map_load(t_map *map, char *path, t_meta *meta)
 
 	fd = open(path, O_RDONLY);
 	if (fd < 2)
-		terminate(ERR_OPEN);
+		terminate(ERR_OPEN, meta);
 	map->memory = get_next_line_join(fd);
 	close (fd);
-	map_size(map);
-	map_get_points(map);
+	map_size(map, meta);
+	map_get_points(map, meta);
 	colorize(map, meta);
 	go_polar(map);
 //	map_checker(map);
