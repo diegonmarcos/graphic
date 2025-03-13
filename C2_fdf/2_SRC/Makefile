@@ -6,7 +6,7 @@
 #    By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/14 16:00:50 by dinepomu          #+#    #+#              #
-#    Updated: 2025/03/13 09:52:30 by dinepomu         ###   ########.fr        #
+#    Updated: 2025/03/13 11:00:57 by dinepomu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,14 +45,14 @@ LIBRARIES		:= -L$(FT_MYLIB_DIR) -l$(FT_MYLIB_NAME) -L$(FT_MYLIBX_DIR) -l$(FT_MYL
 SRC_FILES_MAIN		=							\
 					_main				
 SRC_FILES_SRC		= 							\
-					0___vars_ini				\
-					0___vars_ini1				\
+					0_1__vars_ini_mlx_			\
+					0_2__vars_ini1				\
+					0___vars_ini_				\
 					1_0_load_mapsize			\
 					1_1_load_getpoints			\
 					1_2_load_colorize			\
 					1_3_map_checker				\
 					1___map_load				\
-					2_0_render_events			\
 					2_2__transf_views_bonus_1	\
 					2___render_pipeline			\
 					3_1__transformation_0		\
@@ -65,11 +65,11 @@ SRC_FILES_SRC		= 							\
 					4_2__render_fittoscale		\
 					5_0_mydrawcircle			\
 					5_0_mydrawline				\
-					6___utils					\
-					6___utils_ckeys				\
-					6___utils_ckeys2			\
-					6___utils_control			\
-					6___utils_control2
+					6___ckeys1					\
+					6___ckeys2					\
+					6___ckeys3_utils			\
+					6___ckeys_					\
+					7___utils
 SRC_FILES_BONUS = 								\
 
 

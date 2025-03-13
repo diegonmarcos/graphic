@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 15:40:24 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/13 07:06:45 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/13 12:50:33 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,7 @@
 #  define KEY_U       117
 #  define KEY_I       105
 #  define KEY_P       112
+#  define KEY_O		  111
 #  define KEY_L       108
 #  define KEY_J       106
 #  define KEY_K       107

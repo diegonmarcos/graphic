@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 15:40:13 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/13 09:50:40 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/13 12:40:40 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -172,7 +172,8 @@ void	draw_colorscheme(t_meta *meta);
 /* 4.3 Views Features/Bonus											 */
 /* ***************************************************************** */
 void	isometric(t_map *map);
-void	parallel(t_map *map);
+void	parallel_x(t_map *map);
+void	parallel_y(t_map *map);
 void	spherize(t_map *map, t_point *points);
 void	render_stars(t_meta *meta);
 void	shadow(t_point *points, int len);
@@ -187,6 +188,7 @@ void	shadow(t_point *points, int len);
 void	vars_init(t_meta *meta);
 void	var_init_map0(t_map *map, int total);
 void	vars_init_map1(t_meta *meta);
+void	vars_init_x11_events(t_meta *meta1);
 
 
 /* ***************************************************************** */

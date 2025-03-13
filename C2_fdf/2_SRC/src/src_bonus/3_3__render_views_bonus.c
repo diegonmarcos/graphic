@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   4_1__views_bonus.c                                 :+:      :+:    :+:   */
+/*   3_3__render_views_bonus.c                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 16:00:15 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/11 12:21:34 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/13 12:58:46 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,12 +29,23 @@ void	isometric(t_map *map)
 /*
 *	Set the values to draw PARALLEL view
 */
-void	parallel(t_map *map)
+void	parallel_x(t_map *map)
 {
 	map->b_geo = 0;
 	map->ang[X] = 90;
-	map->ang[Y] = 0;
+	map->ang[Y] = 90;
 	map->ang[Z] = 0;
+	map->brange = 0;
+	map->source.axis[X] = ((WINX - MENU_WIDTH) / 2) + MENU_WIDTH;
+	map->source.axis[Y] = WINY / 2;
+}
+
+void	parallel_y(t_map *map)
+{
+	map->b_geo = 0;
+	map->ang[X] = 0;
+	map->ang[Y] = 90;
+	map->ang[Z] = 90;
 	map->brange = 0;
 	map->source.axis[X] = ((WINX - MENU_WIDTH) / 2) + MENU_WIDTH;
 	map->source.axis[Y] = WINY / 2;
