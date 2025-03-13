@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   4_2_render_menu_bonus.c                            :+:      :+:    :+:   */
+/*   3_5__render_menu_bonus.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 16:00:01 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/11 12:43:59 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/13 08:48:25 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -110,6 +110,8 @@ void	draw_info(t_meta *meta)
 
 void	render_menu(t_meta *meta)
 {
+	if(!meta->map.b_menu)
+		return ;
 	draw_controls(meta);
 	draw_info(meta);
 	draw_mapinfo(meta);

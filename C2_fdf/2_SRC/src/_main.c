@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 15:58:01 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/12 11:25:08 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/13 09:29:20 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,9 +52,10 @@ int	main(int argv, char **argc)
 
 	if (argv != 2)
 		terminate(ERR_ARGS);
-	vars_init_x11(&meta);
+	vars_init(&meta);
+//	map_ini(&meta.map, 1);
 	map_load(&meta.map, argc[1], &meta);
-	vars_init_map(&meta);
+	vars_init_map1(&meta);
 	map_pipeline(&meta, FIT);
 	map_pipeline_recursive(&meta);
 	free (meta.map.memory);

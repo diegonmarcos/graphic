@@ -6,7 +6,7 @@
 #    By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/14 16:00:50 by dinepomu          #+#    #+#              #
-#    Updated: 2025/03/12 14:31:39 by dinepomu         ###   ########.fr        #
+#    Updated: 2025/03/13 09:32:41 by dinepomu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,7 +46,7 @@ SRC_FILES_MAIN		=							\
 					_main				
 SRC_FILES_SRC		= 							\
 					0___vars_ini				\
-					1_0_load_mapini				\
+					0___vars_ini1				\
 					1_0_load_mapsize			\
 					1_1_load_getpoints			\
 					1_2_load_colorize			\
@@ -67,7 +67,9 @@ SRC_FILES_SRC		= 							\
 					5_0_mydrawline				\
 					6___utils					\
 					6___utils_ckeys				\
-					6___utils_control
+					6___utils_ckeys2			\
+					6___utils_control			\
+					6___utils_control2
 SRC_FILES_BONUS = 								\
 
 

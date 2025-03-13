@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/12 10:58:34 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/12 11:32:06 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/13 08:13:08 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,16 @@ int	key_press(int key, void *param)
 	t_meta	*meta;
 
 	meta = (t_meta *)param;
-	angle_control(key, meta);
-	control_keys1(key, meta);
-	control_keys2(key, meta);
-	control_keys3(key, meta);
 	if (key >= KEY_1 && key <= KEY_4)
 		control_colorscheme(key, &meta->map, meta);
+	else
+	{
+		control_keys1(key, meta);
+		control_keys2(key, meta);
+		control_keys3(key, meta);
+		control_keys4(key, meta);
+		angle_control(key, meta);
+	}
 	map_pipeline(meta, FREE);
 	return (0);
 }

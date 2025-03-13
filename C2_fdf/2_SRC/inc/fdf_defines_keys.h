@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 15:40:24 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/10 13:50:06 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/13 07:06:45 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@
 #  define KEY_7       55
 #  define KEY_8       56
 #  define KEY_9       57
-#  define KEY_0       48
+#  define KEY_0       58
 #  define KEY_SUM     46    // '=' key 61
 #  define KEY_RES     45    // '-' key 45
 #  define KEY_SUM2    65451 // '+' on numeric keypad

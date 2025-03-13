@@ -6,11 +6,16 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 15:58:49 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/12 11:41:20 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/13 09:36:15 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../inc/fdf.h"
+
+void	var_init_map_bools(t_map *map);
+void	var_init_map_0(t_map *map, int total);
+void	var_init_map_colors(t_map *map);
+void	vars_init_x11(t_meta *meta);
 
 /**
  * @file 2___sys_ini.c
@@ -40,6 +45,14 @@
  * mlx_loop will start the event loop
  * mlx_hook will set the hooks for the events
  */
+void	vars_init(t_meta *meta)
+{
+	vars_init_x11(meta);
+	var_init_map_bools(&meta->map);
+	var_init_map0(&meta->map, 1);
+	var_init_map_colors(&meta->map);
+}
+
 void	vars_init_x11(t_meta *meta)
 {
 	meta->map.renders = 0;
@@ -54,11 +67,44 @@ void	vars_init_x11(t_meta *meta)
 		&meta->bitmap.bitxpixel, &meta->bitmap.lines, &meta->bitmap.endian);
 }
 
-void	vars_init_map(t_meta *meta)
+void	var_init_map_bools(t_map *map)
 {
-	meta->map.proportion = meta->map.limits.axis[Z] / meta->map.limits.axis[X];
-	if (meta->map.proportion > 0.5)
-		meta->map.zdivisor = meta->map.proportion * 30;
-	meta->map.b_auto_rotate = 0;
+	map->b_lines = 1;
+	map->b_dots = 0;
+	map->b_pluslines = 0;
+	map->b_geo = 0;
+	map->b_stars = 0;
+	map->b_shadow = 1;
+	map->b_menu = 0;
+}
 
+void	var_init_map0(t_map *map, int total)
+{
+	if (total)
+	{
+		map->len = 0;
+		map->limits.axis[X] = 0;
+		map->limits.axis[Y] = 0;
+		map->limits.axis[Z] = 0;
+		map->zmin = 0;
+	}
+	map->fit = FIT;
+	map->scale = 1;
+	map->zdivisor = 1;
+	map->brange = 0;
+	map->source.axis[X] = ((WINX - MENU_WIDTH) / 2) + MENU_WIDTH;
+	map->source.axis[Y] = WINY / 2;
+	map->source.axis[Z] = 0;
+	map->ang[X] = 0;
+	map->ang[Y] = 0;
+	map->ang[Z] = 0;
+}
+
+void	var_init_map_colors(t_map *map)
+{
+	map->colors.backcolor = CARBON;
+	map->colors.bottomcolor = BLUE;
+	map->colors.groundcolor = SAFFRON;
+	map->colors.topcolor = BRICK_RED;
+	map->colors.menucolor = MENU_COLOR;
 }

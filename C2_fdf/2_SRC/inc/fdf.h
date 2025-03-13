@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 15:40:13 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/12 12:01:28 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/13 09:35:34 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -184,8 +184,10 @@ void	shadow(t_point *points, int len);
 /* ***************************************************************** */
 /* 6.0 Variables Initialization										 */
 /* ***************************************************************** */
-void	vars_init_x11(t_meta *meta);
-void	vars_init_map(t_meta *meta);
+void	vars_init(t_meta *meta);
+void	var_init_map0(t_map *map, int total);
+void	vars_init_map1(t_meta *meta);
+
 
 /* ***************************************************************** */
 /* 6.1 Control Keys													 */
@@ -194,6 +196,7 @@ int		key_release(int key, void *param);
 void	control_keys1(int key, t_meta *meta);
 void	control_keys2(int key, t_meta *meta);
 void	control_keys3(int key, t_meta *meta);
+void	control_keys4(int key, t_meta *meta);
 
 /* ***************************************************************** */
 /* 6.2 Control Keys Utils											 */
@@ -204,6 +207,8 @@ void	angle_control(int key, t_meta *meta);
 void	angle(float *ang, float value);
 int		auto_rotation_1(void *param);
 int		auto_rotation_2(void *param);
+int		auto_rotation_3(void *param);
+int		auto_rotation_4(void *param);
 
 /* ***************************************************************** */
 /* 6.3 Utils												 		*/

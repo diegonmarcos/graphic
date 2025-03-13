@@ -1,9 +1,0 @@
-==51822==    at 0x4BD9864: writev (writev.c:26)
-==51822==    at 0x112E30: mlx_int_anti_resize_win (in /home/diego/Documents/Git/graphic/C2_fdf/2_SRC/fdf)
-==51822==    at 0x1106A4: ft_digit_count (src/src_all/1c_ft_itoa.c:36)
-==51822==    at 0x10A470: main (_main.c:50)
-==51822==    at 0x1106C6: ft_digit_count (src/src_all/1c_ft_itoa.c:41)
-==51822==    at 0x10A470: main (_main.c:50)
-==51822==    at 0x110799: ft_itoa (src/src_all/1c_ft_itoa.c:71)
-==51822==    at 0x10A470: main (_main.c:50)
-==51822==     in use at exit: 90,171 bytes in 114 blocks
