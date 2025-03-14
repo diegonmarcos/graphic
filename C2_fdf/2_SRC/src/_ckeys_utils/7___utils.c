@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 16:00:42 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/13 15:08:14 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/14 14:21:37 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,7 @@ int	halt_exit_program(void *param)
 	meta = (t_meta *)param;
 	free(meta->map.memory);
 	free(meta->map.points);
+	mlx_destroy_window(meta->vars.mlx, meta->vars.win);
 	mlx_destroy_display(meta->vars.mlx);
 	exit(0);
 }
