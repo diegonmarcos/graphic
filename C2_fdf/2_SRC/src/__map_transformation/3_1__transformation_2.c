@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   2_1__trasnformation_2.c                            :+:      :+:    :+:   */
+/*   3_1__transformation_2.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 15:59:34 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/11 16:53:42 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/14 15:17:33 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,20 @@ void	z_division(t_point *map_points, float divisor, int len)
 *	Bending for curvature effects
 */
 
+/**
+ * @brief bending transformation function.
+ *
+ *  The bending function modifies the Z-axis value of each point in the given 
+ * array of points based on a bending transformation formula.
+ *
+ *  This formula applies a quadratic transformation to the X and Y coordinates of each point,
+ * scaled by the range parameter, and subtracts the result from the Z coordinate.
+ * 
+ *  The bending function effectively reduces the Z coordinate of each point based
+ * on the squared values of the X and Y coordinates, scaled by the range factor.
+ * This creates a bending effect where points with larger X and Y values 
+ * experience a greater reduction in their Z coordinate.
+ */
 void	bending(t_point *points, int len, float range)
 {
 	int		i;
