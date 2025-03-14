@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 15:59:06 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/13 09:51:52 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/14 16:09:00 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,6 @@ void	render_background(t_meta *meta, int backcolor, int menucolor)
 
 	backcolor = color_convert_depth(meta->bitmap.bitxpixel, \
 			meta->vars.mlx, backcolor);
-	menucolor = color_convert_depth(meta->bitmap.bitxpixel, \
-			meta->vars.mlx, menucolor);
 	axis[X] = 0;
 	axis[Y] = 0;
 	while (axis[Y] < WINY)
@@ -35,7 +33,7 @@ void	render_background(t_meta *meta, int backcolor, int menucolor)
 		while (axis[X] < WINX)
 		{
 			if (axis[X] < MENU_WIDTH)
-				color = menucolor;
+				color = backcolor;
 			else
 				color = backcolor;
 			pixel = (axis[Y] * meta->bitmap.lines) + (axis[X] * 4);

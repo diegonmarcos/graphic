@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 15:39:58 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/13 12:29:11 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/14 16:02:23 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,10 @@
 /* ***************************************************************** */
 # define BLOCK_READ 500000
 
-//# define WINX 1920
-//# define WINY 1080
-# define WINX 2048
-# define WINY 1152
+# define WINX 1920
+# define WINY 1080
+//# define WINX 2048
+//# define WINY 1152
 //# define WINX 2400
 //# define WINY 1600
 
@@ -45,12 +45,12 @@
 /* ***************************************************************** */
 /* 1.1 Draw Menu													 */
 /* ***************************************************************** */
-# define DRAWINFO_BOX		50
-# define MAPINFO_BOX		200
-# define MENU0_BOX			350
-# define MENU1_BOX			600
-# define MENU2_BOX			850
-# define MENU3_BOX			1000
+# define DRAWINFO_BOX		25
+# define MAPINFO_BOX		170
+# define MENU0_BOX			325
+# define MENU1_BOX			575
+# define MENU2_BOX			800
+# define MENU3_BOX			950
 
 # define LINE_SIZE			20
 # define MENU_TAB			30

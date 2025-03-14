@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 15:59:49 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/13 09:51:52 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/14 16:06:48 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -173,7 +173,7 @@ int	myputpixel_check(t_meta *meta, t_point pixel)
 
 	alpha = 0;
 	if (pixel.axis[X] < MENU_WIDTH)
-		alpha = -10;
+		alpha = -100;
 	if (!valid_pixel(pixel))
 		return (-1);
 	mypixel = ((int)pixel.axis[Y] * WINX * 4) + ((int)pixel.axis[X] * 4);

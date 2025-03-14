@@ -6,7 +6,7 @@
 #    By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/14 16:00:50 by dinepomu          #+#    #+#              #
-#    Updated: 2025/03/13 16:25:07 by dinepomu         ###   ########.fr        #
+#    Updated: 2025/03/14 15:54:48 by dinepomu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,7 +37,7 @@ MINILIBX_DIR	:= libs/minilibx/minilibx_linux/
 LIBS			:= -lXext -lX11 -lm
 
 HEADER 			:= -Iinc -I$(FT_MYLIB_DIR) -I$(FT_MYLIBX_DIR)
-LIBRARIES		:= -L$(FT_MYLIB_DIR) -l$(FT_MYLIB_NAME) -L$(FT_MYLIBX_DIR) -l$(FT_MYLIBX_NAME)
+LIBRARIES		:= -L$(FT_MYLIB_DIR) -l$(FT_MYLIB_NAME) -L$(FT_MYLIBX_DIR) -l$(FT_MYLIBX_NAME) -no-pie
 
 
 ################################################################################

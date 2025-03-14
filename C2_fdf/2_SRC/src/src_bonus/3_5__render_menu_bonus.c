@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 16:00:01 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/13 12:19:08 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/14 16:03:19 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -172,6 +172,7 @@ void	draw_menu2(t_meta *meta)
 	print_str(meta, MENU_TAB, line, "3:  change to color scheme third");
 	line += LINE_SIZE;
 	print_str(meta, MENU_TAB, line, "4:  change to color scheme fourth");
+	line += LINE_SIZE;
 	line += LINE_SIZE;
 	print_str(meta, MENU_TAB, line, "//// AUTO ROTATION ////");
 	line += LINE_SIZE;
