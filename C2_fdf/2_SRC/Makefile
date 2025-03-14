@@ -6,7 +6,7 @@
 #    By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/14 16:00:50 by dinepomu          #+#    #+#              #
-#    Updated: 2025/03/14 15:54:48 by dinepomu         ###   ########.fr        #
+#    Updated: 2025/03/14 16:34:26 by dinepomu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ NAME			:= fdf
 SRC_DIR			:= src/src_all/
 OBJ_DIR			:= obj/
 CC				:= gcc
-CFLAGS			:= -g -O3 -Wall -Wextra
+CFLAGS			:= -g -O3 -Wall -Wextra -fPIC
 RM				:= rm -rf
 MAKEFLAGS 		+= --silent
 
@@ -37,7 +37,7 @@ MINILIBX_DIR	:= libs/minilibx/minilibx_linux/
 LIBS			:= -lXext -lX11 -lm
 
 HEADER 			:= -Iinc -I$(FT_MYLIB_DIR) -I$(FT_MYLIBX_DIR)
-LIBRARIES		:= -L$(FT_MYLIB_DIR) -l$(FT_MYLIB_NAME) -L$(FT_MYLIBX_DIR) -l$(FT_MYLIBX_NAME) -no-pie
+LIBRARIES		:= -L$(FT_MYLIB_DIR) -l$(FT_MYLIB_NAME) -L$(FT_MYLIBX_DIR) -l$(FT_MYLIBX_NAME)
 
 
 ################################################################################
