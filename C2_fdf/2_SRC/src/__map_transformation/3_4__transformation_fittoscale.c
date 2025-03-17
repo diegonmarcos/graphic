@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   4_2__render_fittoscale.c                           :+:      :+:    :+:   */
+/*   3_4__transformation_fittoscale.c                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 15:59:41 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/12 12:27:29 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/17 10:44:33 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,11 +26,11 @@ void	fit_to_scale(t_meta *meta, t_point *map_points, int fit)
 	meta->map.source.axis[Z] = 0;
 	meta->map.scale = 1;
 	copy_map(meta->map.points, map_points, meta->map.len);
-	map_transformation(meta, map_points);
+	map_transformation1(meta, map_points);
 	while (!(limits(map_points, meta->map.len)))
 	{
 		copy_map(meta->map.points, map_points, meta->map.len);
-		map_transformation(meta, map_points);
+		map_transformation1(meta, map_points);
 		meta->map.scale = meta->map.scale + 0.2;
 	}
 }

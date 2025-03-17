@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 15:58:01 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/14 14:49:05 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/17 13:32:48 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,6 @@ int	main(int argc, char **argv)
 	vars_init_map1(&meta);
 	map_pipeline(&meta, FIT);
 	vars_init_x11_events(&meta);
-//	halt_exit_program(&meta);
+	halt_exit_program(&meta);
 	return (0);
 }

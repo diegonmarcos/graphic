@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   3_5__render_menu_bonus.c                           :+:      :+:    :+:   */
+/*   4_1__render_menu_bonus.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 16:00:01 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/14 16:03:19 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/17 13:02:35 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,8 @@
 * #PROJECTIONS VIEWS
 * P will apply the parallel projection
 * I will apply the isometric projection
-* B will aplying bending to the map
+* B will aplying bending+ to the map
+* V will aplying bending- to the map
 * G will apply the geo transformation
 *
 * #SHOW HIDE
@@ -49,6 +50,7 @@
 * R will start/stop the auto rotation 2
 * T will start/stop the auto rotation 3
 * Y will start/stop the auto rotation 4
+* U will start/stop the auto rotation 5
 */
 void	draw_mapinfo(t_meta *meta)
 {
@@ -183,15 +185,4 @@ void	draw_menu2(t_meta *meta)
 	print_str(meta, MENU_TAB, line, "T: start/stop the auto rotation 3");
 	line += LINE_SIZE;
 	print_str(meta, MENU_TAB, line, "Y: start/stop the auto rotation 4");
-}
-
-void	render_menu(t_meta *meta)
-{
-	if (!meta->map.b_menu)
-		return ;
-	draw_info(meta);
-	draw_mapinfo(meta);
-	draw_menu0(meta);
-	draw_menu1(meta);
-	draw_menu2(meta);
 }

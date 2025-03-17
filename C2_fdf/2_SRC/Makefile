@@ -6,7 +6,7 @@
 #    By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/14 16:00:50 by dinepomu          #+#    #+#              #
-#    Updated: 2025/03/14 16:34:26 by dinepomu         ###   ########.fr        #
+#    Updated: 2025/03/17 11:17:33 by dinepomu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,35 +42,35 @@ LIBRARIES		:= -L$(FT_MYLIB_DIR) -l$(FT_MYLIB_NAME) -L$(FT_MYLIBX_DIR) -l$(FT_MYL
 
 ################################################################################
 ### SOURCES ###
-SRC_FILES_MAIN		=							\
+SRC_FILES_MAIN		=								\
 					_main				
-SRC_FILES_SRC		= 							\
-					0_1__vars_ini_mlx_			\
-					0_2__vars_ini1				\
-					0___vars_ini_				\
-					1_0_load_mapsize			\
-					1_1_load_getpoints			\
-					1_2_load_colorize			\
-					1_3_map_checker				\
-					1___map_load				\
-					2_2__transf_views_bonus_1	\
-					2___render_pipeline			\
-					3_1__transformation_0		\
-					3_1__transformation_1		\
-					3_1__transformation_2		\
-					3_3__render_views_bonus		\
-					3_5__render_menu_bonus		\
-					4_0__render_background		\
-					4_2__map_render				\
-					4_2__render_fittoscale		\
-					5_0_mydrawcircle			\
-					5_0_mydrawline				\
-					6___ckeys1					\
-					6___ckeys2					\
-					6___ckeys3_utils			\
-					6___ckeys_					\
+SRC_FILES_SRC		= 								\
+					0_1__vars_ini_mlx_				\
+					0_2__vars_ini1					\
+					0___vars_ini_					\
+					1_0_load_mapsize				\
+					1_1_load_getpoints				\
+					1_2_load_colorize				\
+					1_3_xpm_load_init_rend			\
+					1___map_load					\
+					2___render_pipeline				\
+					3_1___transformation_pipeline	\
+					3_1__transformation_shape		\
+					3_2__transformation_move		\
+					3_3__transformation_projection	\
+					3_4__transformation_fittoscale	\
+					4___map_render					\
+					4_0__render_background			\
+					4_1__render_menu_bonus			\
+					4_2__render_views_bonus			\
+					5_0_mydrawcircle				\
+					5_0_mydrawline					\
+					6___ckeys1						\
+					6___ckeys2						\
+					6___ckeys3_utils				\
+					6___ckeys_						\
 					7___utils
-SRC_FILES_BONUS = 								\
+SRC_FILES_BONUS = 									\
 
 
 SRC_FILES			= $(SRC_FILES_MAIN) $(SRC_FILES_SRC) $(SRC_FILES_BONUS)
@@ -80,8 +80,6 @@ OBJ 				= 	$(addprefix $(OBJ_DIR), $(addsuffix .o, $(SRC_FILES)))
 DEPS 				= 	$(addprefix $(OBJ_DIR), $(addsuffix .d, $(SRC_FILES)))
 INCS				= 	$(addprefix $(INCLUDE), $(addsuffix .h, $(INC_FILES)))
 ###
-
-OBJF				=	.cache_exists
 
 MAP = 0
 MAPS = maps/$(MAP).fdf
@@ -191,7 +189,7 @@ normimette:
 mkdir:
 	mkdir -p $(OBJ_DIR)
 #	mkdir -p $(LIB)
-	mkdir -p $(FT_MYLIB_DIR)
+#	mkdir -p $(FT_MYLIB_DIR)
 	mkdir -p log/2.Memory_Check/allocs
 
 help:

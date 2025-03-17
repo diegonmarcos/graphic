@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 15:58:41 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/13 09:50:40 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/17 12:29:02 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ void	colorize(t_map *map, t_meta *meta)
 	{
 		load_color((int)map->limits.axis[Z], map->zmin, \
 		&map->points[i], map->colors);
-//		map->points[i].color = color_convert_depth(meta, map->points[i].color);
 		map->points[i].color = color_convert_depth(meta->bitmap.bitxpixel, \
 			meta->vars.mlx, map->points[i].color);
 		i++;

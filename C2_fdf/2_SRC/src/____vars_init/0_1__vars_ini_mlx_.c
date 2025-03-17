@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 15:58:20 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/13 11:22:45 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/17 13:40:00 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -135,6 +135,7 @@ void	vars_init_x11(t_meta *meta)
 * 1L << 2 (ButtonPressMask): Interested in which button was pressed
 * 1L << 3 (ButtonReleaseMask): Interested in which button was released
 * 1L << 6 (ButtonMotionMask): mouse motion while buttons are pressed
+* 17 and 0 is used for the window close event
 */
 void	vars_init_x11_events(t_meta *meta1)
 {

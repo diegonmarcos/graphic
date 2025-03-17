@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 15:58:09 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/13 15:13:55 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/17 10:26:01 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,5 @@ void	map_load(t_map *map, char *path, t_meta *meta)
 	map_size(map, meta);
 	map_get_points(map, meta);
 	colorize(map, meta);
-	go_polar(map);
-//	map_checker(map);
 	ft_printf("\nLoading GUI\n");
 }

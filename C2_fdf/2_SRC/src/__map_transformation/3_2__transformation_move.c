@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   2_1__trasnformation_1.c                            :+:      :+:    :+:   */
+/*   3_1__transformation_move.c                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 15:59:26 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/11 15:40:22 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/17 10:06:34 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,21 +90,19 @@ void	rotate_z(t_point *points, t_point *projection, float ang, int len)
 }
 
 /*
-*   Calculate len "points" of the array to ortho projection
-*   and store in "projection" array.
+*  - Translation of points to position them correctly perfoming the 
+*	"move" traslation
 */
-void	ortogonal_projection(t_point *points, t_point *projection, int len)
+void	traslate(t_point *points, t_point move, int len)
 {
-	int		i;
-	float	projection_matrix[3][3];
+	int	i;
 
-	matrix3_init(projection_matrix);
-	projection_matrix[0][0] = 1;
-	projection_matrix[1][1] = 1;
 	i = 0;
 	while (i < len)
 	{
-		projection[i] = matrix3_multp(projection_matrix, points[i]);
+		points[i].axis[X] = points[i].axis[X] + move.axis[X];
+		points[i].axis[Y] = points[i].axis[Y] + move.axis[Y];
+		points[i].axis[Z] = points[i].axis[Z] + move.axis[Z];
 		i++;
 	}
 }

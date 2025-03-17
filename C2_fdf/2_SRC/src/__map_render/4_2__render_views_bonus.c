@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   3_3__render_views_bonus.c                          :+:      :+:    :+:   */
+/*   4_2__render_views_bonus.c                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 16:00:15 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/13 12:58:46 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/17 10:54:15 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,17 @@ void	parallel_y(t_map *map)
 	map->source.axis[Y] = WINY / 2;
 }
 
+/**
+ * @brief Applies shadow effect to an array of points based on their 
+ * Z-axis value.
+ *
+ * This function iterates through an array of points and sets the 
+ * `paint` attribute
+ * to 0 if the Z-axis value of the point is less than 0, indicating 
+ * a shadowed point.
+ * Otherwise, it sets the `paint` attribute to 1.
+ *
+ */
 void	shadow(t_point *points, int len)
 {
 	int		i;
@@ -74,8 +85,6 @@ void	render_stars(t_meta *meta)
 	int		lim_y[2];
 
 	if (!meta->map.b_stars)
-		return ;
-	if (meta->map.b_geo == 0)
 		return ;
 	lim_x[0] = meta->map.source.axis[X] - (meta->map.radius * meta->map.scale);
 	lim_x[1] = meta->map.source.axis[X] + (meta->map.radius * meta->map.scale);

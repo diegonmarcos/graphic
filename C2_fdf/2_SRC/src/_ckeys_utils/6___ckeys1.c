@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 16:00:24 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/13 12:42:20 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/17 13:58:31 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,9 +99,9 @@ void	control_keys_projections(int key, t_meta *meta)
 		isometric(&meta->map);
 		map_pipeline(meta, FREE);
 	}
-	if (key == KEY_B)
+	if (key == KEY_B || key == KEY_V)
 	{
-		if (meta->keys.b_keyctrl)
+		if (meta->keys.b_keyctrl || key == KEY_V)
 			meta->map.brange -= 0.0001;
 		else
 			meta->map.brange += 0.0001;
@@ -120,6 +120,8 @@ void	control_keys_showhide(int key, t_meta *meta)
 		meta->map.b_stars = !meta->map.b_stars;
 	if (key == KEY_H)
 		meta->map.b_shadow = !meta->map.b_shadow;
+	if (key == KEY_Z)
+		xpm_load_init_rend();
 }
 
 /* 

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   2_1__transformation.c                              :+:      :+:    :+:   */
+/*   3_1___transformation_pipeline.c                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 15:59:14 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/11 12:06:57 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/17 10:44:08 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,27 @@
  * - Parsing and interpreting map data to modify points accordingly.
  * - Integration with other modules to ensure seamless data flow and 
  *   transformation.
+ 
+ * Manipulate the shape:
+ * - z_division, 
+ * - spherize, 
+ * - bending
+ * Apply orientation changes:
+ * - rotate_x, 
+ * - rotate_y, 
+ * - rotate_z)
+ * Apply projection and scaling
+ * Position the object in space(translate) from events that changes map.source
  */
-void	map_transformation(t_meta *meta, t_point *map_points)
+void	map_transformation(t_meta *meta, t_point *map_points, int fit)
 {
+	map_transformation1(meta, map_points);
+	fit_to_scale(meta, map_points, fit);
+}
+
+void	map_transformation1(t_meta *meta, t_point *map_points)
+{
+	go_polar(&meta->map);
 	z_division(map_points, meta->map.zdivisor, meta->map.len);
 	if (meta->map.b_geo)
 		spherize(&meta->map, map_points);

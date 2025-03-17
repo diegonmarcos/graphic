@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 15:40:13 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/13 15:14:26 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/17 13:58:12 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -132,7 +132,8 @@ int		mouse_move(int x, int y, void *param);
 /*#####################################################################	*/
 /* 3. MAP TRANSFORMATION												*/
 /*#####################################################################	*/
-void	map_transformation(t_meta *meta, t_point *map_points);
+void	map_transformation(t_meta *meta, t_point *map_points, int fit);
+void	map_transformation1(t_meta *meta, t_point *map_points);
 
 /* ***************************************************************** */
 /* 2. Map Transformation											 */
@@ -156,7 +157,7 @@ void	map_render(t_meta *meta, t_point *map_points);
 /* ***************************************************************** */
 /* 4.1 Render											 */
 /* ***************************************************************** */
-void	render_background(t_meta *meta, int backcolor, int menucolor);
+void	render_background(t_meta *meta, int backcolor);
 void	fit_to_scale(t_meta *meta, t_point *map_points, int fit);
 
 /* ***************************************************************** */
@@ -199,6 +200,7 @@ void	control_keys1(int key, t_meta *meta);
 void	control_keys2(int key, t_meta *meta);
 void	control_keys3(int key, t_meta *meta);
 void	control_keys4(int key, t_meta *meta);
+void	control_keys_menu(int key, t_meta *meta);
 
 /* ***************************************************************** */
 /* 6.2 Control Keys Utils											 */
@@ -211,6 +213,7 @@ int		auto_rotation_1(void *param);
 int		auto_rotation_2(void *param);
 int		auto_rotation_3(void *param);
 int		auto_rotation_4(void *param);
+int		auto_rotation_5(void *param);
 
 /* ***************************************************************** */
 /* 6.3 Utils												 		*/
@@ -220,5 +223,6 @@ void	terminate(char *s, t_meta *meta);
 void	terminate1(char *s, t_meta *meta);
 void	print_nbr(t_meta *meta, int x, int y, int nbr);
 void	print_str(t_meta *meta, int x, int y, char *str);
+void	xpm_load_init_rend(void);
 
 #endif

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   4_0_mydrawcircle.c                                 :+:      :+:    :+:   */
+/*   5_0_mydrawcircle.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 15:59:55 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/11 16:26:40 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/17 10:48:55 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@
 * 	The change tracks the incremental changes needed for the algorithm, 
 * and radius_error keeps track of the accumulated error in the approximation.
 * The function also creates a pixel structure that inherits its color from the
-* input point, which will be used to render each pixel  of the circle.
+* input point, which will be used to render each pixel of the circle.
 *
 */
 void	mydrawcircle(t_meta *meta, t_point *map_points)

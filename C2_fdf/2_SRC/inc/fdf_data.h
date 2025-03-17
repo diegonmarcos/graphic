@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 15:39:49 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/13 08:40:04 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/17 12:40:42 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,5 +101,37 @@ typedef struct s_meta
 	t_map		map;
 	t_keys		keys;
 }				t_meta;
+
+typedef struct s_xpm_image
+{
+	char	*xpm_path;
+	void	*xpm_ptr;
+}			t_xpm_image;
+
+typedef struct s_xpm
+{
+	void		*mlx_ptr;
+	void		*win_ptr;
+	int			win_width;
+	int			win_height;
+	int			column;
+	int			line;
+	t_xpm_image	*xpm1;
+	t_xpm_image	*xpm2;
+	char		*xpm_path;
+	char		*xpm_path2;
+	void		*xpm_ptr;
+	void		*xpm_ptr2;
+	int			image_width_x;
+	int			image_height_y;
+	int			image_pos_x;
+	int			image_pos_y;
+	void		*black_img;
+	int			bpp;
+	int			sl;
+	int			en;
+	char		*black_ptr;
+	int			frame_count;
+}			t_xpm;
 
 #endif

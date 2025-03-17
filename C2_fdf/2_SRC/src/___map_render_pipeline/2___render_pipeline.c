@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 15:58:57 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/13 10:44:22 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/17 10:46:16 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,12 +49,8 @@ int	map_pipeline(t_meta *meta, int fit)
 		terminate1(ERR_MEM, meta);
 	meta->map.renders = meta->map.renders + 1;
 	copy_map(meta->map.points, map_points, meta->map.len);
-	map_transformation(meta, map_points);
-	fit_to_scale(meta, map_points, fit);
-	render_background(meta, meta->map.colors.backcolor, \
-						meta->map.colors.menucolor);
+	map_transformation(meta, map_points, fit);
 	map_render(meta, map_points);
-	render_menu(meta);
 	free (map_points);
 	t = clock() - t;
 	meta->map.performance = ((double)t) / CLOCKS_PER_SEC;

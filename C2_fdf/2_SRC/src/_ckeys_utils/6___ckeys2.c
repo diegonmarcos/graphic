@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 16:00:24 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/13 11:49:21 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/17 13:28:48 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,4 +66,32 @@ void	control_keys_autorotation(int key, t_meta *meta)
 		meta->map.b_auto_rotate = !meta->map.b_auto_rotate;
 		mlx_loop_hook(meta->vars.mlx, auto_rotation_4, meta);
 	}
+	if (key == KEY_U)
+	{
+		meta->map.b_auto_rotate = !meta->map.b_auto_rotate;
+		mlx_loop_hook(meta->vars.mlx, auto_rotation_5, meta);
+	}
+}
+
+/* 
+*	This function increment the ang value by value, checking is under the limits
+*/
+void	angle(float *ang, float value)
+{
+	*ang += value;
+	if (*ang < 0)
+		*ang = 360 + *ang;
+	if (*ang >= 360)
+		*ang = *ang - 360;
+}
+
+void	win_atrib_ontop(void)
+{
+	char	command[256];
+
+	usleep(100000);
+	ft_snprintf(command, sizeof(command), \
+		"wmctrl -r \"=)\" -b add,above || true");
+	if (system(command))
+		exit(0);
 }

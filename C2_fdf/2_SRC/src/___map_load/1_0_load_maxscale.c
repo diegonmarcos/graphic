@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/12 12:27:20 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/12 12:34:25 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/17 10:27:33 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,8 @@
  * @param map_points Array of map points to be scaled
  * @return The optimal scale factor
  */
-float	calculate_scale_factors(float map_width, float map_height, float screen_width, float screen_height)
+/* float	calculate_scale_factors(float map_width, float map_height, \
+		float screen_width, float screen_height)
 {
 	float scale_x, scale_y, max_scale;
 
@@ -47,9 +48,10 @@ float	calculate_scale_factors(float map_width, float map_height, float screen_wi
 	}
 	max_scale *= 0.95;
 	return (max_scale);
-}
-
-void find_min_max_coordinates(t_point *points, int len, float *min_x, float *max_x, float *min_y, float *max_y)
+} */
+/* 
+void find_min_max_coordinates(t_point *points, int len, float *min_x, \
+		float *max_x, float *min_y, float *max_y)
 {
 	int	i;
 	*min_x = *max_x = points[0].axis[X];
@@ -97,12 +99,14 @@ float	max_scale(t_meta *meta, t_point *map_points)
 
 	copy_map(temp_points, meta->map.points, meta->map.len);
 	apply_transformations(meta, temp_points, meta->map.len);
-	find_min_max_coordinates(temp_points, meta->map.len, &min_x, &max_x, &min_y, &max_y);
+	find_min_max_coordinates(temp_points, meta->map.len, &min_x, &max_x, \
+			&min_y, &max_y);
 	map_width = max_x - min_x;
 	map_height = max_y - min_y;
 	screen_width = (WINX - MENU_WIDTH - 2 * FIT_MARGIN);
 	screen_height = (WINY - 2 * FIT_MARGIN);
-	max_scale_factor = calculate_scale_factors(map_width, map_height, screen_width, screen_height);
+	max_scale_factor = calculate_scale_factors(map_width, map_height, \
+			screen_width, screen_height);
 	free(temp_points);
 	return (max_scale_factor);
-}
+} */

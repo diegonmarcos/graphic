@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 15:40:24 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/13 12:50:33 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/17 11:02:04 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@
 #  define KEY_DOWN    65364
 #  define KEY_UP      65362
 #  define KEY_CTRL    65507
-#  define KEY_CMD     65515 
+#  define KEY_CMD     65507 //65515CMD_MAC
 # endif
 
 #endif
