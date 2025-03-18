@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/11 08:01:54 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/18 07:53:24 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/18 08:41:28 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,6 +62,7 @@ void	black_image_initiate(t_xpm *x)
 {
 	x->black_img = mlx_new_image(x->mlx_ptr, x->image_width_x, \
 		x->image_height_y);
+	x->bitmap.img = NULL;
 	x->black_ptr = mlx_get_data_addr(x->black_img, &x->bpp, &x->sl, &x->en);
 	ft_memset(x->black_ptr, 0, x->image_width_x * x->image_height_y);
 }
@@ -70,7 +71,7 @@ int	draw_xpm_loop(t_xpm *x)
 {
 	x->frame_count++;
 	if (x->frame_count == 16000)
-		terminate(0, 0, "0", (t_meta *)x);
+		terminate(-1, 0, "0", (t_meta *)x);
 	if (x->frame_count % 1600 < 800)
 		draw_xpm(x, x->xpm_ptr);
 	else

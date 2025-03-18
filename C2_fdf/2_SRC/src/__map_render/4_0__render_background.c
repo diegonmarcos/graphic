@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 15:59:06 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/17 13:03:49 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/18 08:45:19 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,8 @@ void	render_background(t_meta *meta, int backcolor)
 
 void	render_menu(t_meta *meta)
 {
+	if (!BONUS)
+		return ;
 	if (!meta->map.b_menu)
 		return ;
 	draw_info(meta);

@@ -6,7 +6,7 @@
 #    By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/14 16:00:50 by dinepomu          #+#    #+#              #
-#    Updated: 2025/03/17 11:17:33 by dinepomu         ###   ########.fr        #
+#    Updated: 2025/03/18 09:01:34 by dinepomu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,6 +39,7 @@ LIBS			:= -lXext -lX11 -lm
 HEADER 			:= -Iinc -I$(FT_MYLIB_DIR) -I$(FT_MYLIBX_DIR)
 LIBRARIES		:= -L$(FT_MYLIB_DIR) -l$(FT_MYLIB_NAME) -L$(FT_MYLIBX_DIR) -l$(FT_MYLIBX_NAME)
 
+BONUS = 0
 
 ################################################################################
 ### SOURCES ###
@@ -97,7 +98,10 @@ MAP1 = mandelbrot
 MAPS = maps/$(MAP1).fdf
 endif
 
-
+MACROS :=
+ifeq ($(BONUS),1)
+	MACROS 		+= -DBONUS=$(BONUS)
+endif
 ################################################################################
 ### RULES ###
 all:	mkdir makelibs $(NAME) run
@@ -129,11 +133,12 @@ $(NAME):	$(OBJ)	$(FT_MYLIB) $(FT_MYLIBX)
 $(OBJ_DIR)%.o: $(SRC_DIR)%.c $(INCS)
 			mkdir -p $(OBJ_DIR)
 			@echo "$(YELLOW)Compiling: $< $(DEF_COLOR)"
-			$(CC) $(CFLAGS) -MMD -c $< -o $@
+			$(CC) $(CFLAGS) $(MACROS) -MMD -c $< -o $@
 -include 	${DEPS}
 
 bonus:		
-			$(MAKE) all
+			$(MAKE) clean
+			$(MAKE) BONUS=1
 
 run:
 ifneq ($(MAP), 0)
@@ -156,7 +161,7 @@ fclean:		clean
 			@echo "$(CYAN)files cleaned!$(DEF_COLOR)"
 			rm -rf log
 
-re:			fclean all
+re:			fclean
 			@$(MAKE)	
 			@echo "$(GREEN)Rebuilded!$(DEF_COLOR)"
 

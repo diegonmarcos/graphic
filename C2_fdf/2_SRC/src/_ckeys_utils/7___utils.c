@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 16:00:42 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/18 07:48:58 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/18 08:41:59 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,8 @@ void	terminate(int stage, int exit_mode, char *s, t_meta *meta)
 		else
 			perror(s);
 	}
+	if (meta->bitmap.img && stage != -1)
+		mlx_destroy_image(meta->vars.mlx, meta->bitmap.img);
 	mlx_destroy_window(meta->vars.mlx, meta->vars.win);
 	mlx_destroy_display(meta->vars.mlx);
 	exit(exit_mode);
@@ -61,4 +63,5 @@ void	terminate(int stage, int exit_mode, char *s, t_meta *meta)
 int	terminate_x_click(void *meta)
 {
 	terminate(2, 0, "0", meta);
+	return (0);
 }

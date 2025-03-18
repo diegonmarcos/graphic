@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 15:39:49 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/18 07:20:55 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/18 08:05:54 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -128,6 +128,7 @@ typedef struct s_xpm
 	int			image_pos_x;
 	int			image_pos_y;
 	void		*black_img;
+	t_bitmap	bitmap;
 	int			bpp;
 	int			sl;
 	int			en;
