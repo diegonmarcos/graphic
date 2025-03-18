@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 15:40:13 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/18 08:28:44 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/18 12:18:45 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,11 +43,11 @@
 /* ************************************************************* */
 /* ************************************************************* */
 //# include "../libs/minilibx/minilibx_linux/mlx.h"
-# include "../libs/mylibc/inc/mylibc.h"
-# include "../libs/mylibc/inc/mylibc_data.h"
-# include "../libs/mylibc/inc/mylibc_defines.h"
-# include "../libs/mylibx/inc/mylibx.h"
-# include "../libs/mylibx/inc/mylibx_data.h"
+# include "../libs/mylibs/mylibc/inc/mylibc.h"
+# include "../libs/mylibs/mylibc/inc/mylibc_data.h"
+# include "../libs/mylibs/mylibc/inc/mylibc_defines.h"
+# include "../libs/mylibs/mylibx/inc/mylibx.h"
+# include "../libs/mylibs/mylibx/inc/mylibx_data.h"
 
 // ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓	//
 /*#####################################################################	*/

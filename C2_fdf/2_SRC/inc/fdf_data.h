@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 15:39:49 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/18 08:05:54 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/18 12:18:01 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 # define FDF_DATA_H
 
 # include "fdf.h"
-# include "../libs/mylibx/inc/mylibx_data.h"
+# include "../libs/mylibs/mylibx/inc/mylibx_data.h"
 
 /* ***************************************************************** */
 /* 1.1 Data Structure												 */
