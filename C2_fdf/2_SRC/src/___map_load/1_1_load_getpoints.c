@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 15:58:32 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/13 15:15:04 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/18 07:31:59 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ int	load_points(char *line, t_map *map, int numline, t_meta *meta)
 	while (splited[i] && splited[i][0] != '\n')
 	{
 		if (!valid_point(&splited[i][0]))
-			terminate(ERR_EMPTY, meta);
+			terminate(0, 0, ERR_EMPTY, meta);
 		map->points[point_index].axis[Z] = ft_atoi(&splited[i][0]);
 		map->points[point_index].axis[X] = i - map->limits.axis[X] / 2;
 		map->points[point_index].axis[Y] = numline - map->limits.axis[Y] / 2;

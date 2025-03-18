@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 16:00:24 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/17 13:58:31 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/18 07:49:42 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ void	control_keys_menu(int key, t_meta *meta)
 	if (key == KEY_CMD)
 		meta->keys.b_keyctrl = 1;
 	if (key == KEY_ESC)
-		halt_exit_program(meta);
+		terminate(2, 0, "0", meta);
 }
 
 /* 

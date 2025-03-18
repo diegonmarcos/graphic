@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 15:58:57 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/17 10:46:16 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/18 07:31:59 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ int	map_pipeline(t_meta *meta, int fit)
 	t = clock();
 	map_points = malloc (meta->map.len * sizeof(t_point));
 	if (!map_points)
-		terminate1(ERR_MEM, meta);
+		terminate(1, 1, ERR_MEM, meta);
 	meta->map.renders = meta->map.renders + 1;
 	copy_map(meta->map.points, map_points, meta->map.len);
 	map_transformation(meta, map_points, fit);

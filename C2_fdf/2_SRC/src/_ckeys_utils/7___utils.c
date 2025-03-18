@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 16:00:42 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/14 14:21:37 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/18 07:48:58 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,42 +26,39 @@ void	print_str(t_meta *meta, int x, int y, char *str)
 	mlx_string_put(meta->vars.mlx, meta->vars.win, x, y, TEXT_COLOR, str);
 }
 
-/* 
-*	This function handle the program shut down when a error happends
-*/
-void	terminate(char *s, t_meta *meta)
+/**
+ * @brief 
+ * 
+ * @param param 
+ * @return int 
+ * 
+ * 1. mlx_destroy_window(mlx_ptr, win_ptr)
+ * Can be used to close one window while keeping others open
+ * When you have multiple windows and want to close just one
+ * 
+ * 2. mlx_destroy_display(mlx_ptr)
+ * Closes the connection to the X display server
+ * Must be called after all windows are destroyed
+ */
+void	terminate(int stage, int exit_mode, char *s, t_meta *meta)
 {
-	if (errno == 0)
-		ft_dprintf(2, "Error: %s\n", strerror(errno));
-	else
-		perror(s);
-	mlx_destroy_display(meta->vars.mlx);
-	exit(1);
-}
-
-void	terminate1(char *s, t_meta *meta)
-{
-	if (errno == 0)
-		ft_dprintf(2, "Error: %s\n", strerror(errno));
-	else
-		perror(s);
-	free(meta->map.memory);
-	mlx_destroy_display(meta->vars.mlx);
-	exit(1);
-}
-
-/* 
-*	This function handle the program shut down
-*	mlx_destroy_window(meta->vars.mlx, meta->vars.win); not use this one
-*/
-int	halt_exit_program(void *param)
-{
-	t_meta	*meta;
-
-	meta = (t_meta *)param;
-	free(meta->map.memory);
-	free(meta->map.points);
+	if (stage >= 1)
+		free(meta->map.memory);
+	if (stage > 1)
+		free(meta->map.points);
+	if (exit_mode)
+	{
+		if (errno == 0)
+			ft_dprintf(2, "Error: %s\n", strerror(errno));
+		else
+			perror(s);
+	}
 	mlx_destroy_window(meta->vars.mlx, meta->vars.win);
 	mlx_destroy_display(meta->vars.mlx);
-	exit(0);
+	exit(exit_mode);
+}
+
+int	terminate_x_click(void *meta)
+{
+	terminate(2, 0, "0", meta);
 }

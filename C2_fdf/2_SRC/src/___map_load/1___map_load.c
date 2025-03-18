@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 15:58:09 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/17 10:26:01 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/18 07:31:59 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	map_load(t_map *map, char *path, t_meta *meta)
 
 	fd = open(path, O_RDONLY);
 	if (fd < 2)
-		terminate(ERR_OPEN, meta);
+		terminate(0, 1, ERR_OPEN, meta);
 	map->memory = get_next_line_join(fd);
 	close (fd);
 	map_size(map, meta);

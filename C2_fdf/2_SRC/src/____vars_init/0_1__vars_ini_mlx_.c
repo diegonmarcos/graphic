@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 15:58:20 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/17 13:40:00 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/18 07:44:00 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,44 +99,68 @@ void	vars_init_x11(t_meta *meta)
  * - Mouse move (event 6)
  * - Window close (event 17)
  *
-*The << operator is the bitwise left shift operator, which shifts the bits of the
-* left operand to the left by the number of positions specified by the right
-* operand.In this case, the right operand is 6, meaning that the bits in 1L will
-*   be shifted 6 positions to the left.
-*
-* When 1L is shifted left by 6 positions, the result is a binary number where the
-* bit in the 6th position (counting from the right, starting at position 0) 
-* is set to 1, and all other bits are 0. 
-*In binary, this looks like 0000...1000000, which is equivalent to the value 64.
-*
-* In the context of the MiniLibX (MLX) library used in the file, this expression 
-* is likely being used as an event mask for X Window System event handling. 
-* Event masks in X11 programming are typically represented as bitmasks, 
-* where each bit corresponds to a specific type of event. 
-* By shifting 1 to the left by 6 positions, the code is creating 
-* a mask that specifically selects the event type associated with bit position 6,
-* which in X11 could correspondto ButtonMotionMask.
-*
-* Common event codes include(hich type of event is being handled):
-* 2: KeyPress - A key was pressed
-* 3: KeyRelease - A key was released
-* 4: ButtonPress - A mouse button was pressed
-* 5: ButtonRelease - A mouse button was released
-* 6: MotionNotify - The mouse moved
-* 17: DestroyNotify - The window is being closed
-* 
-* Mask Parameter (Third Parameter)
-* The mask parameter specifies which specific properties of that event
-*For key events, the masks include:
-
-* 1L << 0 (KeyPressMask): Interested in which key was pressed
-* 1L << 1 (KeyReleaseMask): Interested in which key was released
-* For mouse events, masks might include:
-* 1L << 2 (ButtonPressMask): Interested in which button was pressed
-* 1L << 3 (ButtonReleaseMask): Interested in which button was released
-* 1L << 6 (ButtonMotionMask): mouse motion while buttons are pressed
-* 17 and 0 is used for the window close event
-*/
+ * The << operator is the bitwise left shift operator, which shifts the bits 
+ * of the
+ * left operand to the left by the number of positions specified by the right
+ * operand.In this case, the right operand is 6, meaning that the bits in 1L will
+ *   be shifted 6 positions to the left.
+ *
+ * When 1L is shifted left by 6 positions, the result is a binary number where
+ *  the
+ * bit in the 6th position (counting from the right, starting at position 0) 
+ * is set to 1, and all other bits are 0. 
+ * In binary, this looks like 0000...1000000, which is equivalent to the value
+ *  64.
+ *
+ * In the context of the MiniLibX (MLX) library used in the file, this 
+ * expression 
+ * is likely being used as an event mask for X Window System event handling. 
+ * Event masks in X11 programming are typically represented as bitmasks, 
+ * where each bit corresponds to a specific type of event. 
+ * By shifting 1 to the left by 6 positions, the code is creating 
+ * a mask that specifically selects the event type associated with bit 
+ * position 6,
+ * which in X11 could correspondto ButtonMotionMask.
+ *
+ * Common event codes include(hich type of event is being handled):
+ * 2: KeyPress - A key was pressed
+ * 3: KeyRelease - A key was released
+ * 4: ButtonPress - A mouse button was pressed
+ * 5: ButtonRelease - A mouse button was released
+ * 6: MotionNotify - The mouse moved
+ * 17: DestroyNotify - The window is being closed
+ * 
+ * Mask Parameter (Third Parameter)
+ * The mask parameter specifies which specific properties of that event
+ * For key events, the masks include:
+ * 
+ * 1L << 0 (KeyPressMask): Interested in which key was pressed
+ * 1L << 1 (KeyReleaseMask): Interested in which key was released
+ * For mouse events, masks might include:
+ * 1L << 2 (ButtonPressMask): Interested in which button was pressed
+ * 1L << 3 (ButtonReleaseMask): Interested in which button was released
+ * 1L << 6 (ButtonMotionMask): mouse motion while buttons are pressed
+ * 17 and 0 is used for the window close event
+ *
+ * 1. mlx_loop
+ * Purpose: Starts the main event loop of the application.
+ * This function never returns until the program exits
+ * It continuously polls for events (keyboard, mouse, window, etc.)
+ * When no events are pending, it calls the loop hook function
+ * 
+ * 
+ * 1.1. mlx_loop_hook
+ * Purpose: Registers a function to be called when no events are pending.
+ * Only one loop hook can be active at a time
+ * 
+ * 1.2 mlx_hook
+ * Purpose: Registers a function to handle a specific X11 event type.
+ * Allows handling of keyboard, mouse, window, and other events
+ * 
+ * mlx_loop is the engine that drives everything, and you call it once
+ * mlx_loop_hook is for continuous updates (animation/game loop)
+ * mlx_hook is for handling specific user interactions and window events
+ */
 void	vars_init_x11_events(t_meta *meta1)
 {
 	t_meta	meta;
@@ -147,6 +171,6 @@ void	vars_init_x11_events(t_meta *meta1)
 	mlx_hook(meta.vars.win, 4, 1L << 2, mouse_press, &meta);
 	mlx_hook(meta.vars.win, 5, 1L << 3, mouse_release, &meta);
 	mlx_hook(meta.vars.win, 6, 1L << 6, mouse_move, &meta);
-	mlx_hook(meta.vars.win, 17, 0, halt_exit_program, &meta);
+	mlx_hook(meta.vars.win, 17, 0, terminate_x_click, &meta);
 	mlx_loop(meta.vars.mlx);
 }

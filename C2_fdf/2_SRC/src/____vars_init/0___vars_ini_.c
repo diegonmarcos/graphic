@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 15:58:49 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/15 15:49:41 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/18 07:31:59 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ void	vars_init0(t_meta *meta);
 void	vars_init(t_meta *meta, int argc)
 {
 	if (argc != 2)
-		terminate(ERR_ARGS, meta);
+		terminate(0, 1, ERR_ARGS, meta);
 	vars_init_x11(meta);
 	vars_init0(meta);
 	var_init_map_bools(&meta->map);

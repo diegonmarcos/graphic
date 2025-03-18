@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 15:40:13 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/17 13:58:12 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/18 07:45:42 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -218,9 +218,8 @@ int		auto_rotation_5(void *param);
 /* ***************************************************************** */
 /* 6.3 Utils												 		*/
 /* ***************************************************************** */
-int		halt_exit_program(void *param);
-void	terminate(char *s, t_meta *meta);
-void	terminate1(char *s, t_meta *meta);
+int		terminate_x_click(void *meta);
+void	terminate(int stage, int exit_mode, char *s, t_meta *meta);
 void	print_nbr(t_meta *meta, int x, int y, int nbr);
 void	print_str(t_meta *meta, int x, int y, char *str);
 void	xpm_load_init_rend(void);
