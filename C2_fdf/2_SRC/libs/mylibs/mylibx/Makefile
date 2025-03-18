@@ -6,7 +6,7 @@
 #    By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/23 11:09:01 by dinepomu          #+#    #+#              #
-#    Updated: 2025/03/18 12:36:17 by dinepomu         ###   ########.fr        #
+#    Updated: 2025/03/18 16:53:17 by dinepomu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -152,6 +152,7 @@ OBJECTS = $(OBJECTS_MAIN) $(OBJECTS_LIB)
 # ************************************************************************ #
 # *** Default rule *** #
 build_dependencies:
+	$(MAKE) make_minilibx
 	$(MAKE) libs_build
 	$(MAKE) check_up_to_date
 
