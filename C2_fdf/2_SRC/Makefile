@@ -6,7 +6,7 @@
 #    By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/23 11:09:01 by dinepomu          #+#    #+#              #
-#    Updated: 2025/03/18 16:56:56 by dinepomu         ###   ########.fr        #
+#    Updated: 2025/03/18 18:13:02 by dinepomu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -431,23 +431,16 @@ endif
 #	$(MAKE) run_docker
 
 # ************************************************************************ #
-$(NAME):
-	if [ "$(IS_PROGRAM_AND_NOT_LIB)" -eq "1" ]; then \
-		$(MAKE) linking; \
-		chmod +x $(NAME); \
-	else \
-		$(MAKE) archiving; \
-	fi
-
-
-
-linking: $(LIB_OUTPUT_MERGED) $(OBJECTS_MAIN) 
+# ************************************************************************ #
+# ************************************************************************ #
+NAME_PRGM = $(OUTPUT_PLACE)$(NAME0)
+$(NAME_PRGM): $(LIB_OUTPUT_MERGED) $(OBJECTS_MAIN) 
 	$(COMPILER) $(OBJECTS) $(LIBS_PATH) $(CFLAGS_DBG) $(CFLAGS_INCL) $(LDFLAGS) -o $(NAME)
 	echo "  $(GREEN)(•̀ᴗ•́)و $(NAME) Bin Generated!$(RESET)"
 
 
-
-archiving:$(LIB_OUTPUT_MERGED)
+NAME_LIB = lib$(NAME0).a
+$(NAME_LIB): $(OBJECTS_LIB) $(LIBS_PATH) $(LIB_OUTPUT_0) $(LIB_OUTPUT_MERGED)
 	cp $(LIB_OUTPUT_MERGED) $(NAME)
 
 
