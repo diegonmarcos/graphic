@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 15:40:13 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/19 08:16:40 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/19 10:50:46 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -190,7 +190,6 @@ void	vars_init(t_meta *meta, int argc);
 void	var_init_map0(t_map *map, int total);
 void	vars_init_map1(t_meta *meta);
 void	vars_init_x11_events(t_meta *meta1);
-
 
 /* ***************************************************************** */
 /* 6.1 Control Keys													 */
