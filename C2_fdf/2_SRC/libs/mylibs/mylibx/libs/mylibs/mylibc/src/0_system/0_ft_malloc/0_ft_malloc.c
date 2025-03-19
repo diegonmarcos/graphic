@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/08 11:33:50 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/19 09:04:45 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/19 09:10:10 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,9 @@
             }
             current->next = suitable_block;
         }
-    } else {
+    } 
+	else
+	{
         // Step 5: Found a suitable block - mark it as allocated
         suitable_block->is_free = 0;
         
