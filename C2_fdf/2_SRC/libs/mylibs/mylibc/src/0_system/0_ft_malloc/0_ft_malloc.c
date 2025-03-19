@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/08 11:33:50 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/18 10:57:44 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/18 17:12:26 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,9 +49,12 @@
         suitable_block->next = NULL;
         
         // If we have existing blocks, add this to the end of the list
-        if (head == NULL) {
+        if (head == NULL)
+		{
             head = suitable_block;
-        } else {
+        } 
+		else
+		{
             // Find the last block and append
             current = head;
             while (current->next != NULL)
