@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/09 09:07:25 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/10 17:39:08 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/19 10:53:37 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -171,7 +171,8 @@
 	img_ptr = mlx_new_image(mlx_ptr, 800, 600);
 
 	// Get image data address
-	img_data = (unsigned int *)mlx_get_data_addr(img_ptr, &bpp, &size_line, &endian);
+	img_data = (unsigned int *)mlx_get_data_addr(img_ptr, \
+	&bpp, &size_line, &endian);
 
 	// Draw a line to the image (assuming 32 bits per pixel)
 	ft_draw_line2((unsigned int *)img_data, 800, &p);
@@ -181,8 +182,9 @@
 } */
 
 /* 
-void ft_draw_line_gradient_bresenham(unsigned int *img, int width, int x0, int y0, 
-									int x1, int y1, unsigned int color0, unsigned int color1)
+void ft_draw_line_gradient_bresenham(unsigned int *img, \
+		int width, int x0, int y0, int x1, int y1, \
+		unsigned int color0, unsigned int color1)
 {
 	int dx = abs(x1 - x0);
 	int sx = x0 < x1 ? 1 : -1;

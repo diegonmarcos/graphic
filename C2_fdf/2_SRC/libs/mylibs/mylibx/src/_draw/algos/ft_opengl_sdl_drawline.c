@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/10 12:37:45 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/10 17:39:16 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/19 10:53:51 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@
 
 #include "mylibx.h"
 
-
 // Using SDL2 + OpenGL 
-/* void draw_line_SDL_GL(SDL_Renderer* renderer, int x0, int y0, int x1, int y1, 
+/* void draw_line_SDL_GL(SDL_Renderer* renderer, int x0, int y0, int x1, \
+	int y1, 
                        Uint8 r, Uint8 g, Uint8 b, Uint8 a)
 {
     SDL_SetRenderDrawColor(renderer, r, g, b, a);

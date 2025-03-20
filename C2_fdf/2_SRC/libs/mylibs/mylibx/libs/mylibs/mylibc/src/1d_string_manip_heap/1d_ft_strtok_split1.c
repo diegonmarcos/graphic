@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   1d_ft_strtok_split1.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/10 11:00:43 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/01/27 20:44:13 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/19 15:03:30 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,20 @@
 
 #include "mylibc.h"
 
+
+/**
+ * @brief Extracts a substring from a given string.
+ *
+ * This function allocates (with ft_calloc_fd) and returns a substring
+ * from the string 's'. The substring begins at index 'start' and is of
+ * maximum size 'len'.
+ *
+ * @param filename The name of the file to be used with ft_calloc_fd and ft_strdup.
+ * @param s The original string from which the substring will be extracted.
+ * @param start The starting index of the substring in the original string.
+ * @param len The maximum length of the substring to be extracted.
+ * @return A pointer to the newly allocated substring, or NULL if the allocation fails.
+ */
 char	*ft_substr(char *filename, const char *s, unsigned int start,
 					size_t len)
 {

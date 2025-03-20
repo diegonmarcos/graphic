@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 15:59:55 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/11 16:15:50 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/19 10:54:01 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,4 +38,3 @@ void	myputpixel(char *buffer, int endian, int color, int alpha)
 		buffer[3] = alpha;
 	}
 }
-

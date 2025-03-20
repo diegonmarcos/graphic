@@ -6,7 +6,7 @@
 #    By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/23 11:09:01 by dinepomu          #+#    #+#              #
-#    Updated: 2025/03/19 08:57:34 by dinepomu         ###   ########.fr        #
+#    Updated: 2025/03/20 14:33:41 by dinepomu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -488,19 +488,26 @@ ifeq ($(DOCKER),1)
 	$(MAKE) build_docker || true
 endif
 #	$(MAKE) run_docker
+
 build_deps:
+ifneq ($(LIB_1_NAME),0)
 	cd libs && $(GCL) $(LIB_1_REPO) > /dev/null 2>&1 || true && cd .. && $(MAKE) mylibs_clean
 	mv libs/mylibs/.git1 libs/mylibs/.git && git -C $(LIB_1_PATH) pull > /dev/null 2>&1 && mv libs/mylibs/.git libs/mylibs/.git1 || true
 	$(LIB_1_CONFIG)
 	$(MAKE) -C $(LIB_1_PATH) VERBOSE=$(VERBOSE) || true
+endif
+ifneq ($(LIB_2_NAME),0)
 	cd libs && $(GCL) $(LIB_2_REPO) > /dev/null 2>&1 || true
 	git -C $(LIB_2_PATH) pull > /dev/null 2>&1 || true
 	$(LIB_2_CONFIG)
 	$(MAKE) -C $(LIB_2_PATH) VERBOSE=$(VERBOSE) || true
+endif
+ifneq ($(LIB_3_NAME), 0)
 	cd libs && $(GCL) $(LIB_3_REPO) > /dev/null 2>&1 || true
 	git -C $(LIB_3_PATH) pull > /dev/null 2>&1 || true
 	$(LIB_3_CONFIG)
 	$(MAKE) -C $(LIB_3_PATH) MAKEFLAGS="" || true
+endif
 
 # ************************************************************************ #
 # ************************************************************************ #

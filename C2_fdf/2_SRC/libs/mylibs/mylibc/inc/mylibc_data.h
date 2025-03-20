@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 14:19:46 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/16 17:04:11 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/19 10:52:30 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -127,6 +127,5 @@ typedef struct s_bresenham
 	int	sy;
 	int	err;
 }		t_bresenham;
-
 
 #endif
