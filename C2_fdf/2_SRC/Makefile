@@ -6,7 +6,7 @@
 #    By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/23 11:09:01 by dinepomu          #+#    #+#              #
-#    Updated: 2025/03/21 12:17:59 by dinepomu         ###   ########.fr        #
+#    Updated: 2025/03/21 23:01:39 by dinepomu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -568,6 +568,7 @@ fclean_all:	fclean
 	$(RM) doc
 	$(RM) libs
 	$(RM) doc
+	$(RM) maps
 	$(RM) Makedocker.sh
 	if [ -f imgui.ini ]; then \
 		rm imgui.ini; \
@@ -594,6 +595,7 @@ folders_make_build:
 	mkdir -p inc
 	mkdir -p libs
 	mkdir -p objs
+	mkdir -p maps
 
 # *** Build folders Doc *** #
 folders_doc:
@@ -703,7 +705,14 @@ run_docker:
 
 
 
-
+build_maps:
+	mkdir -p maps
+	wget \
+		-O maps/maps.tar \
+		https://raw.githubusercontent.com/diegonmarcos/graphic/main/C2_fdf/1_RM/rsc/maps.tar \
+		> /dev/null 2>&1
+		tar -xvf maps/maps.tar -C maps
+		rm maps/maps.tar
 
 
 
