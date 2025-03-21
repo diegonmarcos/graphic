@@ -6,7 +6,7 @@
 #    By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/23 11:09:01 by dinepomu          #+#    #+#              #
-#    Updated: 2025/03/21 23:01:39 by dinepomu         ###   ########.fr        #
+#    Updated: 2025/03/21 23:39:31 by dinepomu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -411,6 +411,7 @@ build_system_pipeline:
 	$(MAKE) build_dependencies_docker
 	$(MAKE) build_enviroment_docker
 	$(MAKE) build_deps
+	$(MAKE) build_maps
 	$(MAKE) check_up_to_date
 	$(MAKE) $(NAME)
 	$(MAKE) build_doc
@@ -703,16 +704,20 @@ run_docker:
 
 
 
+BUILD_MAPS1 = maps/maps.tar
+BUILD_MAPS = maps/42.fdf
 
-
-build_maps:
+$(BUILD_MAPS1):
 	mkdir -p maps
 	wget \
-		-O maps/maps.tar \
-		https://raw.githubusercontent.com/diegonmarcos/graphic/main/C2_fdf/1_RM/rsc/maps.tar \
-		> /dev/null 2>&1
-		tar -xvf maps/maps.tar -C maps
-		rm maps/maps.tar
+	-O maps/maps.tar \
+	https://raw.githubusercontent.com/diegonmarcos/graphic/main/C2_fdf/1_RM/rsc/maps.tar > /dev/null 2>&1
+
+$(BUILD_MAPS): $(BUILD_MAPS1)
+	tar -xvf maps/maps.tar -C maps > /dev/null 2>&1
+
+build_maps:
+	$(MAKE) $(BUILD_MAPS)
 
 
 
