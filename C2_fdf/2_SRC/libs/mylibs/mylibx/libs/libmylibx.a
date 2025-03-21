@@ -1,0 +1,1 @@
+GROUP ( libs/libmylibx_0.a -lXext -lX11 -lm libs/mylibs/mylibc/libmylibc.a libs/mlx/libmlx.a )

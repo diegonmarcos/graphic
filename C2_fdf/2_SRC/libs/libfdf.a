@@ -1,0 +1,1 @@
+GROUP ( libs/libfdf_0.a  libs/mylibs/mylibc/libmylibc.a libs/mylibs/mylibx/libmylibx.a )
