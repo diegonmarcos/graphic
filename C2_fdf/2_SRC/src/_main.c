@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 15:58:01 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/18 07:50:12 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/21 08:44:21 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,7 @@ int	main(int argc, char **argv)
 	vars_init(&meta, argc);
 	map_load(&meta.map, argv[1], &meta);
 	vars_init_map1(&meta);
+	isometric(&meta.map);
 	map_pipeline(&meta, FIT);
 	vars_init_x11_events(&meta);
 	terminate(2, 0, "0", &meta);

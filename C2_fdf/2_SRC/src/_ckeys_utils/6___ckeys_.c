@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/12 10:58:34 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/13 11:54:59 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/21 10:08:10 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,8 @@ int	mouse_press(int button, int x, int y, void *param)
 {
 	t_meta	*meta;
 
+	if (!BONUS)
+		return (0);
 	meta = (t_meta *)param;
 	if (button == 1)
 	{
@@ -70,8 +72,7 @@ int	mouse_press(int button, int x, int y, void *param)
 	}
 	if (button == 4)
 		meta->map.scale = meta->map.scale * 1.5;
-	map_pipeline(meta, FREE);
-	return (0);
+	return (map_pipeline(meta, FREE), 0);
 }
 
 /* 

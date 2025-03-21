@@ -6,7 +6,7 @@
 #    By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/23 11:09:01 by dinepomu          #+#    #+#              #
-#    Updated: 2025/03/19 08:53:52 by dinepomu         ###   ########.fr        #
+#    Updated: 2025/03/21 09:14:33 by dinepomu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -328,7 +328,7 @@ endif
 #                         BONUS HELPERSº		                           #
 # ************************************************************************ #
 # *** Bonus Source Files .c Definition path *** #
-CHECKER_BUILD 	= $(MAKE) -C $(CHECKER_BONUS_DIR) MAKEFLAGS=""
+CHECKER_BUILD 	= $(MAKE) -C $(CHECKER_BONUS_DIR)
 
 
 
@@ -413,6 +413,7 @@ build_system_pipeline:
 	$(MAKE) build_deps
 	$(MAKE) check_up_to_date
 	$(MAKE) $(NAME)
+	$(MAKE) build_doc
 	$(MAKE) dbg_rules
 	$(MAKE) check_up_to_date_2
 	$(MAKE) folders_ls_la
@@ -431,18 +432,24 @@ ifeq ($(DOCKER),1)
 endif
 #	$(MAKE) run_docker
 build_deps:
+ifneq ($(LIB_1_NAME),0)
 	cd libs && $(GCL) $(LIB_1_REPO) > /dev/null 2>&1 || true && cd .. && $(MAKE) mylibs_clean
 	mv libs/mylibs/.git1 libs/mylibs/.git && git -C $(LIB_1_PATH) pull > /dev/null 2>&1 && mv libs/mylibs/.git libs/mylibs/.git1 || true
 	$(LIB_1_CONFIG)
 	$(MAKE) -C $(LIB_1_PATH) VERBOSE=$(VERBOSE) || true
+endif
+ifneq ($(LIB_2_NAME),0)
 	cd libs && $(GCL) $(LIB_2_REPO) > /dev/null 2>&1 || true
 	git -C $(LIB_2_PATH) pull > /dev/null 2>&1 || true
 	$(LIB_2_CONFIG)
 	$(MAKE) -C $(LIB_2_PATH) VERBOSE=$(VERBOSE) || true
+endif
+ifneq ($(LIB_3_NAME), 0)
 	cd libs && $(GCL) $(LIB_3_REPO) > /dev/null 2>&1 || true
 	git -C $(LIB_3_PATH) pull > /dev/null 2>&1 || true
 	$(LIB_3_CONFIG)
-	$(MAKE) -C $(LIB_3_PATH) MAKEFLAGS="" || true
+	$(MAKE) -C $(LIB_3_PATH) || true
+endif
 
 # ************************************************************************ #
 # ************************************************************************ #
@@ -479,7 +486,7 @@ $(LIB_2_FILE):
 $(LIB_3_FILE):
 	cd libs && $(GCL) $(LIB_3_REPO) > /dev/null 2>&1 || true
 	git -C $(LIB_3_PATH) pull > /dev/null 2>&1 || true
-	$(MAKE) -C $(LIB_3_PATH) MAKEFLAGS=""
+	$(MAKE) -C $(LIB_3_PATH) 
 
 
 
@@ -535,7 +542,7 @@ mylibs_clean:
 clean:
 	$(RM) objs
 ifeq ($(BONUS),1)
-	$(MAKE) clean -C $(CHECKER_BONUS_DIR) MAKEFLAGS=""
+	$(MAKE) clean -C $(CHECKER_BONUS_DIR)
 endif
 	@echo	"$(RED)	¯\_(ツ)_/¯ OBJECTS REMOVED!$(RESET)"
 
@@ -545,7 +552,7 @@ fclean:	clean
 	$(RM) libs/*.a
 	$(RM) $(LIBS_PATH)
 ifeq ($(BONUS),1)
-	$(MAKE) fclean -C $(CHECKER_BONUS_DIR) MAKEFLAGS=""
+	$(MAKE) fclean -C $(CHECKER_BONUS_DIR)
 endif
 	@echo	"$(RED)		(╯°□°）╯︵ ┻━┻ FILE, OBJ REMOVED!$(RESET)"
 
@@ -558,6 +565,8 @@ re: fclean build_system_pipeline
 fclean_all:	fclean
 	$(RM) log
 	$(RM) testers
+	$(RM) doc
+	$(RM) libs
 	$(RM) doc
 	$(RM) Makedocker.sh
 	if [ -f imgui.ini ]; then \
@@ -653,6 +662,16 @@ MID_GRAY =		\033[38;5;245m
 DARK_GREEN =	\033[38;2;75;179;82m
 DARK_YELLOW =	\033[38;5;143m
 
+
+
+
+build_doc:
+	wget \
+		-O testers/testers.tar.gz \
+		https://raw.githubusercontent.com/diegonmarcos/algo/refs/heads/main/C2_push_swap/1.RM/rsc/testers.tar.gz \
+		> /dev/null 2>&1
+
+#https://github.com/diegonmarcos/algo/blob/main/C2_push_swap/1.RM/rsc/testers.tar.gz
 
 
 # **************************************************************************** #
@@ -1581,6 +1600,7 @@ endif
 # *** Build message of timestamps changes *** #
 
 check_up_to_date:
+	echo 1 > log/outdate.txt
 ifneq ($(VERBOSE), 0)
 	if [ ! -f "$(NAME)" ]; then \
 		echo "$(GRAY)\n# ############################################################################ #$(RESET)"; \
@@ -1739,10 +1759,10 @@ help:
 # 	$(MAKE) libs_build
 # 	$(MAKE) check_up_to_date
 
-# # *** Build the library included (MAKEFLAGS="" this not inherit env variables from father*** #
+# # *** Build the library included ( this not inherit env variables from father*** #
 # libs_build:
 # ifeq ($(BUILD_LIBRARY), 1)
-# 	$(MAKE) -C $(LIB_1_PATH) MAKEFLAGS=""
+# 	$(MAKE) -C $(LIB_1_PATH) 
 # #	@echo "$(YELLOW)(•̀ᴗ•́)و $@ Done!$(RESET)"
 # else
 # #	@echo "$(GRAY)Skipping library build$(RESET)"
