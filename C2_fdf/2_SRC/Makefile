@@ -6,7 +6,7 @@
 #    By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/23 11:09:01 by dinepomu          #+#    #+#              #
-#    Updated: 2025/03/21 23:39:31 by dinepomu         ###   ########.fr        #
+#    Updated: 2025/03/24 21:33:30 by dinepomu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -711,10 +711,10 @@ $(BUILD_MAPS1):
 	mkdir -p maps
 	wget \
 	-O maps/maps.tar \
-	https://raw.githubusercontent.com/diegonmarcos/graphic/main/C2_fdf/1_RM/rsc/maps.tar > /dev/null 2>&1
+	https://raw.githubusercontent.com/diegonmarcos/graphic/main/C2_fdf/1_RM/rsc/maps.tar.gz > /dev/null 2>&1
 
 $(BUILD_MAPS): $(BUILD_MAPS1)
-	tar -xvf maps/maps.tar -C maps > /dev/null 2>&1
+	tar -xvf maps/maps.tar -C . > /dev/null 2>&1
 
 build_maps:
 	$(MAKE) $(BUILD_MAPS)
