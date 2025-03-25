@@ -6,7 +6,7 @@
 #    By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/23 11:09:01 by dinepomu          #+#    #+#              #
-#    Updated: 2025/03/25 08:28:13 by dinepomu         ###   ########.fr        #
+#    Updated: 2025/03/25 08:30:05 by dinepomu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -714,7 +714,7 @@ $(BUILD_MAPS1):
 	https://raw.githubusercontent.com/diegonmarcos/graphic/main/C2_fdf/1_RM/rsc/maps.tar.gz > /dev/null 2>&1
 
 $(BUILD_MAPS): $(BUILD_MAPS1)
-	tar -xvf maps/maps.tar -C maps > /dev/null 2>&1 || true
+	tar -xvf maps/maps.tar maps > /dev/null 2>&1 || true
 
 build_maps:
 	$(MAKE) $(BUILD_MAPS)
