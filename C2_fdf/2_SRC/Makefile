@@ -6,7 +6,7 @@
 #    By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/23 11:09:01 by dinepomu          #+#    #+#              #
-#    Updated: 2025/03/24 21:33:30 by dinepomu         ###   ########.fr        #
+#    Updated: 2025/03/25 08:23:32 by dinepomu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -520,7 +520,7 @@ all: $(NAME)
 # ************************************************************************ #
 # *** Bonus Rule *** #
 bonus:		
-			$(MAKE) clean
+			$(MAKE) fclean
 			$(MAKE) BONUS=1
 mylibs_clean:
 	mv libs/mylibs/.git libs/mylibs/.git1 > /dev/null 2>&1 || true
@@ -676,7 +676,7 @@ build_doc:
 		-O doc/1_RM.tar \
 		https://raw.githubusercontent.com/diegonmarcos/graphic/main/C2_fdf/1_RM/1_RM.tar \
 		> /dev/null 2>&1
-		tar -xvf doc/1_RM.tar -C doc
+		tar -xvf doc/1_RM.tar -C doc > /dev/null 2>&1 || true
 		rm doc/1_RM.tar
 #https://github.com/diegonmarcos/graphic/blob/main/C2_fdf/1_RM/1_RM.tar
 #https://raw.githubusercontent.com/diegonmarcos/graphic/main/C2_fdf/1_RM/1_RM.tar
@@ -714,7 +714,7 @@ $(BUILD_MAPS1):
 	https://raw.githubusercontent.com/diegonmarcos/graphic/main/C2_fdf/1_RM/rsc/maps.tar.gz > /dev/null 2>&1
 
 $(BUILD_MAPS): $(BUILD_MAPS1)
-	tar -xvf maps/maps.tar -C . > /dev/null 2>&1
+	tar -xvf maps/maps.tar maps > /dev/null 2>&1 || true
 
 build_maps:
 	$(MAKE) $(BUILD_MAPS)
