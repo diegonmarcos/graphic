@@ -6,7 +6,7 @@
 #    By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/23 11:09:01 by dinepomu          #+#    #+#              #
-#    Updated: 2025/03/26 18:38:14 by dinepomu         ###   ########.fr        #
+#    Updated: 2025/03/26 18:43:10 by dinepomu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -576,6 +576,8 @@ fclean_all:	fclean
 	$(RM) doc
 	$(RM) maps
 	$(RM) Makedocker.sh
+	$(MAKE) fclean_all -C $(LIB_1_PATH)
+	$(MAKE) fclean_all -C $(LIB_2_PATH)
 	if [ -f imgui.ini ]; then \
 		rm imgui.ini; \
 	fi
