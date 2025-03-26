@@ -6,7 +6,7 @@
 #    By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/23 11:09:01 by dinepomu          #+#    #+#              #
-#    Updated: 2025/03/26 18:45:05 by dinepomu         ###   ########.fr        #
+#    Updated: 2025/03/26 19:38:11 by dinepomu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -516,6 +516,8 @@ mylibs_clean:
 # *** Clean Objects only *** #
 clean:
 	$(RM) objs
+	$(MAKE) clean -C $(LIB_1_PATH)
+	$(MAKE) clean -C $(LIB_2_PATH)
 ifeq ($(BONUS),1)
 	$(MAKE) clean -C $(CHECKER_BONUS_DIR) MAKEFLAGS=""
 endif
@@ -528,6 +530,8 @@ fclean:	clean
 ifeq ($(BONUS),1)
 	$(MAKE) fclean -C $(CHECKER_BONUS_DIR) MAKEFLAGS=""
 endif
+	$(MAKE) fclean -C $(LIB_1_PATH)
+#	$(MAKE) fclean -C $(LIB_2_PATH)
 	@echo "$(RED) (╯°□°）╯ Bin and objs cleaned!$(RESET)"
 
 # *** FClean+Build *** #
@@ -544,6 +548,8 @@ fclean_all:	fclean
 	if [ -f imgui.ini ]; then \
 		rm imgui.ini; \
 	fi
+	$(MAKE) fclean_all -C $(LIB_1_PATH)
+#	$(MAKE) fclean_all -C $(LIB_2_PATH)
 	@echo	"$(RED)  (╯°□°）╯ ︵ ┻━┻ Bin, objs and folders removed!$(RESET)"
 
 # *** Re_all *** #
