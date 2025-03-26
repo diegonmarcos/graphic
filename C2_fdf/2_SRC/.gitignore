@@ -1,10 +1,10 @@
 # Folders ignore
-doc/
-log/
-objs/
-testers/
-tests/
-maps/
+**/doc/
+**/log/
+**/objs/
+**/testers/
+**/tests/
+**/maps/
 
 # Files ignore
 **/malloc_alloc.txt
