@@ -6,7 +6,7 @@
 #    By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/23 11:09:01 by dinepomu          #+#    #+#              #
-#    Updated: 2025/03/26 19:40:18 by dinepomu         ###   ########.fr        #
+#    Updated: 2025/03/26 19:50:17 by dinepomu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -149,10 +149,10 @@ LIB_1_REPO		= https://github.com/diegonmarcos/mylibs.git
 LIB_1_CONFIG	=
 
 LIB_2_NAME		= mlx
-LIB_2_PATH		= libs/mlx
+LIB_2_PATH		= libs/minilibx_linux
 LIB_2_FILE		= $(LIB_2_PATH)/lib$(LIB_2_NAME).a
 LIB_2_REPO		= https://github.com/42Paris/minilibx-linux.git $(LIB_2_NAME)
-LIB_2_CONFIG	= cd libs/mlx && ./configure > /dev/null 2>&1 && cd ../../..
+LIB_2_CONFIG	= cd libs/minilibx_linux && ./configure > /dev/null 2>&1 && cd ../../..
 
 LIB_3_NAME		= 0
 LIB_3_PATH		= 
