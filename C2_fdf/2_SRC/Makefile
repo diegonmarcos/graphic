@@ -524,8 +524,10 @@ all: $(NAME)
 # ************************************************************************ #
 # *** Bonus Rule *** #
 bonus:		
-			$(MAKE) fclean
-			$(MAKE) BONUS=1
+	$(RM) $(NAME)
+	$(MAKE) BONUS=1
+	$(MAKE) clean
+
 mylibs_clean:
 	mv libs/mylibs/.git libs/mylibs/.git1 > /dev/null 2>&1 || true
 	$(RM) libs/mylibs/mylibcpp libs/mylibs/mytools libs/mylibs/myunittest
