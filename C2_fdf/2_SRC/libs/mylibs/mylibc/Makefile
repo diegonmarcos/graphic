@@ -6,7 +6,7 @@
 #    By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/23 11:09:01 by dinepomu          #+#    #+#              #
-#    Updated: 2025/03/26 18:13:06 by dinepomu         ###   ########.fr        #
+#    Updated: 2025/03/25 13:27:57 by dinepomu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -92,55 +92,124 @@
 # MAIN (NAME, IS? AND SOURCE FILES)										   #
 # ************************************************************************ #
 # *** Name Output *** #
-NAME0 					= fdf
-NAME_REPO				= https://github.com/diegonmarcos/graphic
+NAME0 					= mylibc
+NAME_REPO				= https://github.com/diegonmarcos/mylibs
 
 # *** ../ or ../../ or empty *** # Libraries autocmactly already have the ../
 OUTPUT_PLACE 			=
 
 # ***Is? *** #
-IS_PROGRAM_AND_NOT_LIB 	= 1# 0 or 1
-INCLUDE_LIB 			= 1# 0 or 1
-BUILD_LIBRARY 			= 1# 0 or 1
+IS_PROGRAM_AND_NOT_LIB 	= 0# 0 or 1
+INCLUDE_LIB 			= 0# 0 or 1
+BUILD_LIBRARY 			= 0# 0 or 1
 BONUS 					= 0# 0 or 1
 VERBOSE 				= 0# 0, 1 or 2 - Vebosity of the makefile
 DOCKER					= 0# 0 or 1
 DBG 					= 0# 0 or 1 - Debug mode for the program
 
-MAP 					= 0# 0 or 1 - Map to be loaded
 # ************************************************************************ #
 # *** Files source *.c *** #
-SOURCE_MAIN 	=								\
-				_main.c		
+SOURCE_MAIN 	=								\		
 
-SOURCE_FILES 	= 								\
-				0_1__vars_ini_mlx_.c			\
-				0_2__vars_ini1.c				\
-				0___vars_ini_.c					\
-				1_0_load_mapsize.c				\
-				1_1_load_getpoints.c			\
-				1_2_load_colorize.c				\
-				1_3_xpm_load_init_rend.c		\
-				1___map_load.c					\
-				2___render_pipeline.c			\
-				3_1___transformation_pipeline.c	\
-				3_1__transformation_shape.c		\
-				3_2__transformation_move.c		\
-				3_3__transformation_projection.c\
-				3_4__transformation_fittoscale.c\
-				4___map_render.c				\
-				4_0__render_background.c		\
-				4_1__render_menu_bonus.c		\
-				4_2__render_views_bonus.c		\
-				5_0_mydrawcircle.c				\
-				5_0_mydrawline.c				\
-				6___ckeys1.c					\
-				6___ckeys2.c					\
-				6___ckeys3_utils.c				\
-				6___ckeys_.c					\
-				7___utils.c
+SOURCE_FILES = 									\
+				0_ft_malloc.c					\
+				0_memory_arena_pool.c			\
+				0a_ft_exec.c					\
+				0a_ft_pipe.c					\
+				1a_ft_calloc.c					\
+				1a_ft_calloc_fd.c				\
+				1a_ft_free.c					\
+				1a_ft_garbage_collector_1.c		\
+				1a_ft_garbage_collector_2.c		\
+				1a_ft_garbage_collector_bff.c	\
+				1a_halt_exit.c					\
+				1b_ft_close.c					\
+				1b_ft_fgets_gnl.c				\
+				1b_ft_open.c					\
+				1b_ft_sed.c						\
+				1b_ft_sscanf.c					\
+				1b_gnl_join_split.c				\
+				1c_0_ft_memcpy.c				\
+				1c_0_ft_memset.c				\
+				1c_0_ft_strlcat.c				\
+				1c_1_ft_memchr.c				\
+				1c_1_ft_memchr1.c				\
+				1c_1_ft_memcmp.c				\
+				1c_ft_atoi.c					\
+				1c_ft_atoi_base.c				\
+				1c_ft_is_sorted.c				\
+				1c_ft_isalnumascii.c			\
+				1c_ft_isdigit.c					\
+				1c_ft_itoa.c					\
+				1c_ft_math.c					\
+				1c_ft_snprintf.c				\
+				1c_ft_striteri.c				\
+				1c_ft_strlen.c					\
+				1c_ft_strmapi.c					\
+				1d_0_ft_strcat_.c				\
+				1d_0_ft_strdup.c				\
+				1d_ft_asprintf.c				\
+				1d_ft_strtok_split.c			\
+				1d_ft_strtok_split1.c			\
+				1e_ft_fprintf.c					\
+				1e_ft_fprintf1.c				\
+				1e_ft_hexa_mayusc.c				\
+				1e_ft_hexa_minusc.c				\
+				1e_ft_num_unsign.c				\
+				1e_ft_pointer_hexa.c			\
+				1e_ft_pointer_hexa_fd_fpr.c		\
+				1e_ft_printf.c					\
+				1e_ft_putchar.c					\
+				1e_ft_putnbr.c					\
+				1e_ft_putstr1.c					\
+				2_0_ft_slinked_list.c			\
+				2_0_ft_slinked_list1.c			\
+				2_0_ft_slinked_list3.c			\
+				2_1_ft_array_to_d_linked_list.c	\
+				2_1_ft_free_list_doubly.c		\
+				2_1_ft_swap_pointers.c			\
+				2_1_linked_list_doubly1.c		\
+				2_1_linked_list_doubly2.c		\
+				2_ft_list_foreach.c				\
+				2_ft_list_remove_if.c			\
+				2_hashtable_headarray.c			\
+				2_hashtable_headnode.c			\
+				2_heapfy_array_bst.c			\
+				2_merge_sort_lsd.c				\
+				2_merge_sort_lss.c				\
+				2_sort_list.c					\
+				3_0_bubble_sort.c				\
+				3_0_insertion_sort.c			\
+				3_0_selection_sort.c			\
+				3_1_fizzbuzz.c					\
+				3_1_merge_sort.c				\
+				3_1_quick_sort.c				\
+				3_2_radix_sort.c				\
+				3_2_union.c						\
+				3_2_wdmatch.c					\
+				3_3_expand_str.c				\
+				3_3_ft_toupper.c				\
+				3_3_intro_sort0.c				\
+				3_3_intro_sort1.c				\
+				3_4_rev_wstr.c					\
+				3_4_rostring.c					\
+				3_bitwise.c						\
+				3_ft_fibonacci.c				\
+				3_ft_prime.c					\
+				3_math.c						\
+				3_probability.c					\
+				3_raster_scan_bresenham.c		\
+				3_raster_scan_flood_fill.c		\
+				3_raytracing_montecarlo.c		\
+				3_statistics.c					\
+				3_statistics1.c					\
+				3_statistics2.c					\
+				4_ft_data_parser.c				\
+				4_ft_memory_design.c			\
+				4_ft_spliter.c					\
+				4_ft_sscanf.c
 
-VPATH 			= src/src_all:					\
+VPATH 			= src/src_all:			\
 
 # *** HEADERS *.h *** #
 HEADER_DIR 		= inc
@@ -157,25 +226,24 @@ LIBS_SO 		=
 
 
 # *** Library *.a (libraries to be included) THE ORDER MATTERS!!! *** #
-LIBS_DIR 		= libs
+LIBS_DIR 	= libs
 
-LIB_1_NAME 		= mylibc
-LIB_1_PATH 		= libs/mylibs/mylibc
-LIB_1_FILE 		= $(LIB_1_PATH)/lib$(LIB_1_NAME).a
-LIB_1_REPO 		= https://github.com/diegonmarcos/mylibs.git
+LIB_1_NAME		= 0
+LIB_1_PATH		= 
+LIB_1_FILE		= 
+LIB_1_REPO		= 
 LIB_1_CONFIG	=
 
-LIB_2_NAME 		= mylibx
-LIB_2_PATH 		= libs/mylibs/mylibx
-LIB_2_FILE 		= $(LIB_2_PATH)/lib$(LIB_2_NAME).a
-LIB_2_REPO 		=
+LIB_2_NAME		= 0
+LIB_2_PATH		= 
+LIB_2_FILE		=
+LIB_2_REPO		=
 LIB_2_CONFIG	=
 
-
-LIB_3_NAME 		= 0
-LIB_3_PATH 		= 
-LIB_3_FILE 		=
-LIB_3_REPO 		=
+LIB_3_NAME		= 0
+LIB_3_PATH		= 
+LIB_3_FILE		=
+LIB_3_REPO		=
 LIB_3_CONFIG	= 
 
 
@@ -191,7 +259,6 @@ LIB_LINK_STATIC 	= ar rcs
 RM 					= rm -rf
 GCL 				= git clone --depth=1
 WGET 				= wget
-CFLAGS_DBG			+= -Wall -Wextra -Werror
 
 
 
@@ -281,7 +348,6 @@ ifneq ($(LIB_4_NAME), 0)
 endif
 
 LIB_PROGRAM 	= -Llibs -l$(NAME0)
-
 LIB_OUTPUT_0=libs/lib$(NAME0)_0.a
 LIB_OUTPUT_MERGED=libs/lib$(NAME0).a
 
@@ -314,22 +380,13 @@ ifneq ($(ALGO),0)
 	MACROS 		+= -D$(M2)=\"$(ALGO)\"
 endif
 
-MACROS :=
-ifeq ($(BONUS),1)
-	MACROS 		+= -DBONUS=$(BONUS)
-endif
-
-run_program:
-ifneq ($(MAP), 0)
-	./$(NAME) maps/$(MAP).fdf
-endif
 
 
 # ************************************************************************ #
 #                         BONUS HELPERSº		                           #
 # ************************************************************************ #
 # *** Bonus Source Files .c Definition path *** #
-CHECKER_BUILD 	= $(MAKE) -C $(CHECKER_BONUS_DIR)
+CHECKER_BUILD 	= $(MAKE) -C $(CHECKER_BONUS_DIR) MAKEFLAGS=""
 
 
 
@@ -412,10 +469,8 @@ build_system_pipeline:
 	$(MAKE) build_dependencies_docker
 	$(MAKE) build_enviroment_docker
 	$(MAKE) build_deps
-	$(MAKE) build_maps
 	$(MAKE) check_up_to_date
 	$(MAKE) $(NAME)
-	$(MAKE) build_doc
 	$(MAKE) dbg_rules
 	$(MAKE) check_up_to_date_2
 	$(MAKE) folders_ls_la
@@ -433,31 +488,32 @@ ifeq ($(DOCKER),1)
 	$(MAKE) build_docker || true
 endif
 #	$(MAKE) run_docker
+
 build_deps:
 ifneq ($(LIB_1_NAME),0)
-#	cd libs && $(GCL) $(LIB_1_REPO) > /dev/null 2>&1 || true && cd .. && $(MAKE) mylibs_clean
-#	mv libs/mylibs/.git1 libs/mylibs/.git && git -C $(LIB_1_PATH) pull > /dev/null 2>&1 && mv libs/mylibs/.git libs/mylibs/.git1 || true
-#	$(LIB_1_CONFIG)
+	cd libs && $(GCL) $(LIB_1_REPO) > /dev/null 2>&1 || true && cd .. && $(MAKE) mylibs_clean
+	mv libs/mylibs/.git1 libs/mylibs/.git && git -C $(LIB_1_PATH) pull > /dev/null 2>&1 && mv libs/mylibs/.git libs/mylibs/.git1 || true
+	$(LIB_1_CONFIG)
 	$(MAKE) -C $(LIB_1_PATH) VERBOSE=$(VERBOSE) || true
 endif
 ifneq ($(LIB_2_NAME),0)
-#	cd libs && $(GCL) $(LIB_2_REPO) > /dev/null 2>&1 || true
-#	git -C $(LIB_2_PATH) pull > /dev/null 2>&1 || true
-#	$(LIB_2_CONFIG)
+	cd libs && $(GCL) $(LIB_2_REPO) > /dev/null 2>&1 || true
+	git -C $(LIB_2_PATH) pull > /dev/null 2>&1 || true
+	$(LIB_2_CONFIG)
 	$(MAKE) -C $(LIB_2_PATH) VERBOSE=$(VERBOSE) || true
 endif
 ifneq ($(LIB_3_NAME), 0)
-#	cd libs && $(GCL) $(LIB_3_REPO) > /dev/null 2>&1 || true
-#	git -C $(LIB_3_PATH) pull > /dev/null 2>&1 || true
-#	$(LIB_3_CONFIG)
-	$(MAKE) -C $(LIB_3_PATH) || true
+	cd libs && $(GCL) $(LIB_3_REPO) > /dev/null 2>&1 || true
+	git -C $(LIB_3_PATH) pull > /dev/null 2>&1 || true
+	$(LIB_3_CONFIG)
+	$(MAKE) -C $(LIB_3_PATH) MAKEFLAGS="" || true
 endif
 
 # ************************************************************************ #
 # ************************************************************************ #
 # ************************************************************************ #
 NAME_PRGM = $(OUTPUT_PLACE)$(NAME0)
-$(NAME_PRGM): folders_build $(LIB_OUTPUT_MERGED) $(OBJECTS_MAIN) 
+$(NAME_PRGM): $(LIB_OUTPUT_MERGED) $(OBJECTS_MAIN) 
 	$(COMPILER) $(OBJECTS) $(LIBS_PATH) $(CFLAGS_DBG) $(CFLAGS_INCL) $(LDFLAGS) -o $(NAME)
 	echo "  $(GREEN)(•̀ᴗ•́)و $(NAME) Bin Generated!$(RESET)"
 
@@ -480,9 +536,7 @@ endif
 $(LIB_1_FILE):
 	cd libs && $(GCL) $(LIB_1_REPO) > /dev/null 2>&1 || true && cd .. && $(MAKE) mylibs_clean
 	mv libs/mylibs/.git1 libs/mylibs/.git && git -C $(LIB_1_PATH) pull > /dev/null 2>&1 && mv libs/mylibs/.git libs/mylibs/.git1 || true
-	$(MAKE) -C $(LIB_1_PATH) VERBOSE=$(VERBOSE) || true
-	$(MAKE) -C $(LIB_2_PATH) VERBOSE=$(VERBOSE) || true
-	$(MAKE) -C $(LIB_3_PATH) VERBOSE=$(VERBOSE) || true
+	$(MAKE) -C $(LIB_1_PATH) VERBOSE=$(VERBOSE)
 $(LIB_2_FILE):
 	cd libs && $(GCL) $(LIB_2_REPO) > /dev/null 2>&1 || true
 	git -C $(LIB_2_PATH) pull > /dev/null 2>&1 || true
@@ -490,8 +544,7 @@ $(LIB_2_FILE):
 $(LIB_3_FILE):
 	cd libs && $(GCL) $(LIB_3_REPO) > /dev/null 2>&1 || true
 	git -C $(LIB_3_PATH) pull > /dev/null 2>&1 || true
-	$(LIB_3_CONFIG)
-	$(MAKE) -C $(LIB_3_PATH) VERBOSE=$(VERBOSE)
+	$(MAKE) -C $(LIB_3_PATH) MAKEFLAGS=""
 
 
 
@@ -524,12 +577,17 @@ all: $(NAME)
 # ************************************************************************ #
 # *** Bonus Rule *** #
 bonus:		
-			$(MAKE) fclean
+			$(MAKE) clean
 			$(MAKE) BONUS=1
 mylibs_clean:
 	mv libs/mylibs/.git libs/mylibs/.git1 > /dev/null 2>&1 || true
-	$(RM) libs/mylibs/mylibcpp libs/mylibs/mytools libs/mylibs/myunittest
+	$(RM) libs/mylibs/mylibcpp libs/mylibs/mytools libs/mylibs/mylibx libs/mylibs/myunittest
 # ************************************************************************ #
+
+
+
+
+
 
 
 
@@ -547,7 +605,7 @@ mylibs_clean:
 clean:
 	$(RM) objs
 ifeq ($(BONUS),1)
-	$(MAKE) clean -C $(CHECKER_BONUS_DIR)
+	$(MAKE) clean -C $(CHECKER_BONUS_DIR) MAKEFLAGS=""
 endif
 	@echo	"$(RED)	¯\_(ツ)_/¯ OBJECTS REMOVED!$(RESET)"
 
@@ -555,9 +613,8 @@ endif
 fclean:	clean
 	$(RM) $(NAME)
 	$(RM) libs/*.a
-	$(RM) $(LIBS_PATH)
 ifeq ($(BONUS),1)
-	$(MAKE) fclean -C $(CHECKER_BONUS_DIR)
+	$(MAKE) fclean -C $(CHECKER_BONUS_DIR) MAKEFLAGS=""
 endif
 	@echo	"$(RED)		(╯°□°）╯︵ ┻━┻ FILE, OBJ REMOVED!$(RESET)"
 
@@ -570,9 +627,6 @@ re: fclean build_system_pipeline
 fclean_all:	fclean
 	$(RM) log
 	$(RM) testers
-	$(RM) doc
-	$(RM) doc
-	$(RM) maps
 	$(RM) Makedocker.sh
 	if [ -f imgui.ini ]; then \
 		rm imgui.ini; \
@@ -599,7 +653,6 @@ folders_make_build:
 	mkdir -p inc
 	mkdir -p libs
 	mkdir -p objs
-	mkdir -p maps
 
 # *** Build folders Doc *** #
 folders_doc:
@@ -620,8 +673,6 @@ folders_log_build:
 	mkdir -p log/6.Make_dbg
 	mkdir -p log/7.Doxygen
 	mkdir -p log/8.Docker
-	echo 1 > log/outdate.txt; 
-
 
 
 
@@ -671,22 +722,6 @@ DARK_YELLOW =	\033[38;5;143m
 
 
 # **************************************************************************** #
-#                         ROADMAP AND DOCUMENTATION                       	   #
-# **************************************************************************** #
-build_doc:
-	mkdir -p doc
-	wget \
-		-O doc/1_RM.tar \
-		https://raw.githubusercontent.com/diegonmarcos/graphic/main/C2_fdf/1_RM/1_RM.tar \
-		> /dev/null 2>&1
-		tar -xvf doc/1_RM.tar -C doc > /dev/null 2>&1 || true
-		rm doc/1_RM.tar
-#https://github.com/diegonmarcos/graphic/blob/main/C2_fdf/1_RM/1_RM.tar
-#https://raw.githubusercontent.com/diegonmarcos/graphic/main/C2_fdf/1_RM/1_RM.tar
-
-
-
-# **************************************************************************** #
 #                         DOCKER AND DEPENDENCIES                          	   #
 # **************************************************************************** #
 
@@ -707,20 +742,8 @@ run_docker:
 
 
 
-BUILD_MAPS1 = maps/maps.tar
-BUILD_MAPS = maps/42.fdf
 
-$(BUILD_MAPS1):
-	mkdir -p maps
-	wget \
-	-O maps/maps.tar \
-	https://raw.githubusercontent.com/diegonmarcos/graphic/main/C2_fdf/1_RM/rsc/maps.tar.gz > /dev/null 2>&1
 
-$(BUILD_MAPS): $(BUILD_MAPS1)
-	tar -xvf maps/maps.tar maps > /dev/null 2>&1 || true
-
-build_maps:
-	$(MAKE) $(BUILD_MAPS)
 
 
 
@@ -864,32 +887,7 @@ log_alles_bonus:
 
 
 
-################################################################################
-### TESTERS ###
 
-valgrind_fdf:	all
-			valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes --log-file=log/valgrind.test ./$(NAME) maps/42.fdf 2>&1
-			
-			cat log/valgrind.test \
-			| grep -E "ERROR SUMMARY|definitely lost|indirectly lost|possibly lost|still reachable|uninitialised" \
-			| tee log/valgrind_sum.log \
-
-			cat log/valgrind.test \
-			| grep -E "at " | grep -v "libexec" \
-			| tee log/valgrind_sum2.log \
-
-
-normimette_fdf:
-			@echo "$(CYAN)Norminette:$(DEF_COLOR)"
-			@norminette $(SRC) $(INCLUDE) | grep -v Norme -B1 || true
-
-help_fdf:
-	printf "Usage: ./fdf [maps]\n\n"
-	printf "Maps:\n"
-	printf "	- maps/42.fdf\n"
-	printf "	- maps/10-2.fdf\n"
-	printf "	- maps/10-2.fdf\n"
-	printf "	- maps/...\n"
 
 
 
@@ -1621,7 +1619,6 @@ ifneq ($(VERBOSE), 0)
 endif
 
 # *** Build message of timestamps changes *** #
-
 check_up_to_date:
 	echo 1 > log/outdate.txt
 ifneq ($(VERBOSE), 0)
@@ -1646,7 +1643,6 @@ ifneq ($(VERBOSE), 0)
 		fi; \
 	fi;
 endif
-
 
 check_up_to_date_2:
 	if [ "$(shell cat log/outdate.txt)" -eq "1" ]; then \
@@ -1782,10 +1778,10 @@ help:
 # 	$(MAKE) libs_build
 # 	$(MAKE) check_up_to_date
 
-# # *** Build the library included ( this not inherit env variables from father*** #
+# # *** Build the library included (MAKEFLAGS="" this not inherit env variables from father*** #
 # libs_build:
 # ifeq ($(BUILD_LIBRARY), 1)
-# 	$(MAKE) -C $(LIB_1_PATH) 
+# 	$(MAKE) -C $(LIB_1_PATH) MAKEFLAGS=""
 # #	@echo "$(YELLOW)(•̀ᴗ•́)و $@ Done!$(RESET)"
 # else
 # #	@echo "$(GRAY)Skipping library build$(RESET)"
