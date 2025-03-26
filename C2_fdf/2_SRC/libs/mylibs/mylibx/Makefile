@@ -6,7 +6,7 @@
 #    By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/23 11:09:01 by dinepomu          #+#    #+#              #
-#    Updated: 2025/03/21 09:39:55 by dinepomu         ###   ########.fr        #
+#    Updated: 2025/03/26 18:37:04 by dinepomu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -152,7 +152,7 @@ LIB_2_NAME		= mlx
 LIB_2_PATH		= libs/mlx
 LIB_2_FILE		= $(LIB_2_PATH)/lib$(LIB_2_NAME).a
 LIB_2_REPO		= https://github.com/42Paris/minilibx-linux.git $(LIB_2_NAME)
-LIB_2_CONFIG	= cd libs/mlx && ./configure && cd ../../..
+LIB_2_CONFIG	= cd libs/mlx && ./configure > /dev/null && cd ../../..
 
 LIB_3_NAME		= 0
 LIB_3_PATH		= 
@@ -406,20 +406,20 @@ endif
 #	$(MAKE) run_docker
 build_deps:
 ifneq ($(LIB_1_NAME),0)
-	cd libs && $(GCL) $(LIB_1_REPO) > /dev/null 2>&1 || true && cd .. && $(MAKE) mylibs_clean
-	mv libs/mylibs/.git1 libs/mylibs/.git && git -C $(LIB_1_PATH) pull > /dev/null 2>&1 && mv libs/mylibs/.git libs/mylibs/.git1 || true
+##	cd libs && $(GCL) $(LIB_1_REPO) > /dev/null 2>&1 || true && cd .. && $(MAKE) mylibs_clean
+##	mv libs/mylibs/.git1 libs/mylibs/.git && git -C $(LIB_1_PATH) pull > /dev/null 2>&1 && mv libs/mylibs/.git libs/mylibs/.git1 || true
 	$(LIB_1_CONFIG)
-	$(MAKE) -C $(LIB_1_PATH) VERBOSE=$(VERBOSE) || true
+	$(MAKE) -C $(LIB_1_PATH) VERBOSE=$(VERBOSE) > /dev/null 2>&1 || true
 endif
 ifneq ($(LIB_2_NAME),0)
-	cd libs && $(GCL) $(LIB_2_REPO) > /dev/null 2>&1 || true
-	git -C $(LIB_2_PATH) pull > /dev/null 2>&1 || true
+##	cd libs && $(GCL) $(LIB_2_REPO) > /dev/null 2>&1 || true
+##	git -C $(LIB_2_PATH) pull > /dev/null 2>&1 || true
 	$(LIB_2_CONFIG)
-	$(MAKE) -C $(LIB_2_PATH) VERBOSE=$(VERBOSE) || true
+	$(MAKE) -C $(LIB_2_PATH) VERBOSE=$(VERBOSE) > /dev/null 2>&1 || true
 endif
 ifneq ($(LIB_3_NAME), 0)
-	cd libs && $(GCL) $(LIB_3_REPO) > /dev/null 2>&1 || true
-	git -C $(LIB_3_PATH) pull > /dev/null 2>&1 || true
+##	cd libs && $(GCL) $(LIB_3_REPO) > /dev/null 2>&1 || true
+##	git -C $(LIB_3_PATH) pull > /dev/null 2>&1 || true
 	$(LIB_3_CONFIG)
 	$(MAKE) -C $(LIB_3_PATH) || true
 endif

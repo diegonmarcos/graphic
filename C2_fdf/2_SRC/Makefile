@@ -6,7 +6,7 @@
 #    By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/23 11:09:01 by dinepomu          #+#    #+#              #
-#    Updated: 2025/03/26 18:13:06 by dinepomu         ###   ########.fr        #
+#    Updated: 2025/03/26 18:38:14 by dinepomu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -546,20 +546,23 @@ mylibs_clean:
 # *** Clean Objects only *** #
 clean:
 	$(RM) objs
+	$(MAKE) clean -C $(LIB_1_PATH)
+	$(MAKE) clean -C $(LIB_2_PATH)
 ifeq ($(BONUS),1)
 	$(MAKE) clean -C $(CHECKER_BONUS_DIR)
 endif
-	@echo	"$(RED)	¯\_(ツ)_/¯ OBJECTS REMOVED!$(RESET)"
+	@echo	"$(RED)¯\_(ツ)_/¯ Objs cleaned!$(RESET)"
 
 # *** Clean+Bins+Libs *** #
 fclean:	clean
 	$(RM) $(NAME)
 	$(RM) libs/*.a
-	$(RM) $(LIBS_PATH)
+	$(MAKE) fclean -C $(LIB_1_PATH)
+	$(MAKE) fclean -C $(LIB_2_PATH)
 ifeq ($(BONUS),1)
 	$(MAKE) fclean -C $(CHECKER_BONUS_DIR)
 endif
-	@echo	"$(RED)		(╯°□°）╯︵ ┻━┻ FILE, OBJ REMOVED!$(RESET)"
+	@echo "$(RED) (╯°□°）╯ Bin and objs cleaned!$(RESET)"
 
 # *** FClean+Build *** #
 re: fclean build_system_pipeline
@@ -571,13 +574,12 @@ fclean_all:	fclean
 	$(RM) log
 	$(RM) testers
 	$(RM) doc
-	$(RM) doc
 	$(RM) maps
 	$(RM) Makedocker.sh
 	if [ -f imgui.ini ]; then \
 		rm imgui.ini; \
 	fi
-	@echo	"$(RED)			(╯°□°）╯︵ ┻━┻ FILE, OBJ AND LOG REMOVED!$(RESET)"
+	@echo	"$(RED)  (╯°□°）╯ ︵ ┻━┻ Bin, objs and folders removed!$(RESET)"
 
 # *** Re_all *** #
 re_all: fclean_all build_system_pipeline
