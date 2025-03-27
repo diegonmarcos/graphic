@@ -6,7 +6,7 @@
 #    By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/23 11:09:01 by dinepomu          #+#    #+#              #
-#    Updated: 2025/03/26 19:50:17 by dinepomu         ###   ########.fr        #
+#    Updated: 2025/03/27 07:10:38 by dinepomu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -517,7 +517,7 @@ mylibs_clean:
 clean:
 	$(RM) objs
 	$(MAKE) clean -C $(LIB_1_PATH)
-	$(MAKE) clean -C $(LIB_2_PATH)
+	$(MAKE) clean -C $(LIB_2_PATH) > /dev/null 2>&1 || true
 ifeq ($(BONUS),1)
 	$(MAKE) clean -C $(CHECKER_BONUS_DIR) MAKEFLAGS=""
 endif

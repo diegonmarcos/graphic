@@ -1,23 +1,36 @@
-# Folders ignore
-**/doc/
-**/log/
-**/objs/
-**/testers/
-**/tests/
-**/maps/
+### Folders ignore
+doc/
+log/
+objs/
+testers/
+tests/
+maps/
 
-# Files ignore
-**/malloc_alloc.txt
-**/malloc_allocs
-**/rclone.log
+### Folders ignore
+#libs/
+#inc/
+#src/
+
+### Files ignore
 **/*.o
 **/*.d
 **/*.a
+**/*.so
 
-# Files ignore 42
-#**/*.so
-#**/*.out
+### Files ignore
 #**/*.log
 #**/*.txt
 #**/*.md
-#fdf
+**/malloc_alloc.txt
+**/malloc_allocs
+**/rclone.log
+
+### Files ignore
+**/*.tar.gz
+**/*.tar
+**/*.zip	
+
+
+# Binaries
+**/*.out
+fdf
