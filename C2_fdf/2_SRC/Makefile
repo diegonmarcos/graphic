@@ -6,7 +6,7 @@
 #    By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/23 11:09:01 by dinepomu          #+#    #+#              #
-#    Updated: 2025/03/27 07:10:30 by dinepomu         ###   ########.fr        #
+#    Updated: 2025/03/27 16:28:58 by dinepomu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -1466,19 +1466,23 @@ log/4.Bins_folder/$(NAME0)_g3: $(OBJECTS)
 .PHONY: create_bins_dbg
 
 # *** Librarys info and make=debug *** #
-debuggers_info:
+log_debugers_info:
+	$(MAKE) prgm_nm
 	$(MAKE) libs_nm_art
 #	$(MAKE) make_dbg
 
+prgm_nm:
+	nm -u $(NAME) > log/6.Make_dbg/program_nm.txt
+	make -d > log/6.Make_dbg/make_d.txt
+	make -n > log/6.Make_dbg/make_n.txt
 
 libs_nm_art:
-	nm libs/lib$(LIB_1_NAME).a > log/5.Libs_nmart/lib$(LIB_1_NAME)_nm.txt
-	ar t libs/lib$(LIB_1_NAME).a > log/5.Libs_nmart/lib$(LIB_1_NAME)_art.txt
-	nm libs/lib$(NAME1).a > log/5.Libs_nmart/lib$(NAME1)_nm.txt
-	ar t libs/lib$(NAME1).a > log/5.Libs_nmart/lib$(NAME1)_art.txt
+	nm libs/mylibs/mylibc/libs/lib$(LIB_1_NAME)_0.a > log/5.Libs_nmart/lib$(LIB_1_NAME)_nm.txt
+	ar t libs/mylibs/mylibc/libs/lib$(LIB_1_NAME)_0.a > log/5.Libs_nmart/lib$(LIB_1_NAME)_art.txt
+#	nm libs/mylibs/mylibc/lib$(NAME1).a > log/5.Libs_nmart/lib$(NAME1)_nm.txt
+#	ar t libs/mylibs/mylibc/lib$(NAME1).a > log/5.Libs_nmart/lib$(NAME1)_art.txt
 
 make_dbg:
-	$(MAKE) -d > log/6.Make_dbg/make_d.txt
 	$(MAKE) CFLAGS_DBG="-v" > log/6.Make_dbg/clang_v.txt
 	$(MAKE) --debug=b -j1 re > log/6.Make_dbg/make_debug_b.txt
 	$(MAKE) --debug=v -j1 re > log/6.Make_dbg/make_debug_v.txt
