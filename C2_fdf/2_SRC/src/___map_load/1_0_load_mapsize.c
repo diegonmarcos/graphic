@@ -6,7 +6,7 @@
 /*   By: dinepomu <dinepomu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 15:58:20 by dinepomu          #+#    #+#             */
-/*   Updated: 2025/03/29 08:00:34 by dinepomu         ###   ########.fr       */
+/*   Updated: 2025/03/29 14:02:55 by dinepomu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,14 +44,14 @@ void	map_size(t_map *map, t_meta *meta)
 		{
 			map->limits.axis[Y]++;
 			if (map->limits.axis[X] != 0 && (map->limits.axis[X] != num_elems))
-				terminate(0, 1, ERR_LINE, meta);
+				terminate(1, 1, ERR_LINE, meta);
 			else
 				map->limits.axis[X] = num_elems;
 			num_elems = 0;
 		}
 	}
 	if ((num_elems > 0 && (map->limits.axis[X] != num_elems)) || num_elems == 0)
-		terminate(0, 1, ERR_LINE, meta);
+		terminate(1, 1, ERR_LINE, meta);
 	map->limits.axis[Y]++;
 	map->len = map->limits.axis[X] * map->limits.axis[Y];
 }
